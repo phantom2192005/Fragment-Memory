@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - AttackRange
+  - EnemyHitBox
+  - PlayerHitBox
+  - HurtBox
+  - Bandit_Dagger
+  - OneHit
+  - Bandit_Archer
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Player
+  - Enemy
+  - PlayerDetect
+  - Wall
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Ground
+    uniqueID: 209286871
+    locked: 0
+  - name: ForeGround
+    uniqueID: 1159639471
+    locked: 0
+  - name: VFX
+    uniqueID: 2035271111
+    locked: 0
+  - name: UI
+    uniqueID: 2068148085
+    locked: 0
