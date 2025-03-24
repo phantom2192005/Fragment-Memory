@@ -1,50 +1,35 @@
-﻿using System.Collections;
-using System.Data;
-using UnityEngine;
-using UnityEngine.SocialPlatforms;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
-    public Gradient gradient;
-    public Slider fill_slider;
-    public Image fill;
-    public Transform target;
-    public Vector2 Offset;
-    public void SetMaxHealth(int value)
+    [SerializeField]
+    private Health _health;
+
+    [SerializeField]
+    private RectTransform _barRect;
+
+    [SerializeField]
+    private RectMask2D _mask;
+
+    private float _maxRightMask;
+    private float _initialRightMask;
+
+    private void Start()
     {
-        fill_slider.maxValue = value;
-        fill_slider.value = value;
-
-        fill.color = gradient.Evaluate(1f);
-
+        //  x = left, w = top, y = bottom , z = right
+        _maxRightMask = _barRect.rect.width  - _mask.padding.x - _mask.padding.z;
+        _initialRightMask = _mask.padding.z;
     }
-    private void LateUpdate()
+    public void SetValue(int newValue)
     {
-        if (transform.parent == null || transform.parent.parent == null) return;
+        float healthRatio = (float)newValue / _health.maxHealth; // Tỷ lệ máu còn lại
+        float newRightMask = Mathf.Lerp(97, 335, 1 - healthRatio); // Nội suy giữa 97 và 335
 
-        Vector3 grandParentScale = transform.parent.parent.localScale;
-        Vector3 localScale = transform.localScale;
-
-        localScale.x = Mathf.Abs(localScale.x) * Mathf.Sign(grandParentScale.x);
-        transform.localScale = localScale;
-    }
-
-    private void Update()
-    {
-        if(target == null) return;
-        transform.position = target.position + (Vector3)Offset;
+        var padding = _mask.padding;
+        padding.z = newRightMask;
+        _mask.padding = padding;
     }
 
 
-    public void SetHealth(int value)
-    {
-        fill_slider.value = Mathf.Clamp(value, 0, fill_slider.maxValue);
-
-        fill.color = gradient.Evaluate(fill_slider.normalizedValue);
-        if (fill_slider.value == 0) 
-        {
-            Destroy(gameObject);
-        }
-    }
 }
