@@ -350,6 +350,7 @@ GameObject:
   - component: {fileID: 5615076606982306306}
   - component: {fileID: 8636227681062337235}
   - component: {fileID: 1317848518459179359}
+  - component: {fileID: 4383135667091322909}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -604,9 +605,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 928f40b651ba77d4eb441c18a98d5702, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 1000
+  maxHealth: 200
   currentHealth: 0
   healthBar: {fileID: 0}
+--- !u!114 &4383135667091322909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6414431574850518634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89d3899540bcf6441ae86ded7cc025d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventoryUI: {fileID: 0}
+  inventorySize: 10
 --- !u!1 &6905749783534926602
 GameObject:
   m_ObjectHideFlags: 0
@@ -844,7 +859,7 @@ GameObject:
   - component: {fileID: 8919678680062311582}
   m_Layer: 6
   m_Name: HurtBox
-  m_TagString: Untagged
+  m_TagString: HurtBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
