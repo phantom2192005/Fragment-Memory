@@ -18,7 +18,7 @@ public class DamageDealer : MonoBehaviour
             lastHitTime = currentTime; // Cập nhật thời gian hit
 
             Debug.Log("Hit Player");
-            trigger.GetComponentInParent<Health>().TakeDamage(damage);
+            trigger.GetComponent<Health>().TakeDamage(damage);
         }
         else if (this.gameObject.CompareTag("PlayerHitBox") && trigger.CompareTag("HurtBox"))
         {
