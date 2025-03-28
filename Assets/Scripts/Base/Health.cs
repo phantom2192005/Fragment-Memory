@@ -27,7 +27,7 @@ public class Health : MonoBehaviour
         }
         if (currentHealth <= 0)
         {
-            //animator.Play("Death");
+            animator.Play("Death");
         }
     }
 
@@ -37,6 +37,7 @@ public class Health : MonoBehaviour
         if (healthBar != null)
         {
             healthBar.SetValue(currentHealth);
+            animator.Play("Heal_VFX");
         }
     }
 }

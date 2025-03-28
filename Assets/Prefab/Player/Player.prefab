@@ -287,7 +287,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2035271111
-  m_SortingLayer: 3
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -349,8 +349,8 @@ GameObject:
   - component: {fileID: 7440006766311493327}
   - component: {fileID: 5615076606982306306}
   - component: {fileID: 8636227681062337235}
-  - component: {fileID: 1317848518459179359}
   - component: {fileID: 4383135667091322909}
+  - component: {fileID: 3280174957945021882}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -594,21 +594,6 @@ MonoBehaviour:
   moveInput: {x: 0, y: 0}
   coreCombat: {fileID: 5002437217706727842}
   isAttacking: 0
---- !u!114 &1317848518459179359
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6414431574850518634}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 928f40b651ba77d4eb441c18a98d5702, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 200
-  currentHealth: 0
-  healthBar: {fileID: 0}
 --- !u!114 &4383135667091322909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -623,17 +608,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryUI: {fileID: 0}
   inventoryData: {fileID: 11400000, guid: 89be2ec3b8153f047a51279a20c19b7b, type: 2}
+  HurtBox: {fileID: 7903777609957261208}
   initalItems:
-  - quantity: 3
-    item: {fileID: 11400000, guid: da8e9bfecc43dee4d863162d665ef0ea, type: 2}
-  - quantity: 0
-    item: {fileID: 0}
-  - quantity: 1
-    item: {fileID: 11400000, guid: aa7732e858ceb65469388b877ee35bc2, type: 2}
-  - quantity: 10
-    item: {fileID: 11400000, guid: da8e9bfecc43dee4d863162d665ef0ea, type: 2}
-  - quantity: 1
-    item: {fileID: 11400000, guid: aa7732e858ceb65469388b877ee35bc2, type: 2}
+  - quantity: 4
+    item: {fileID: 11400000, guid: 88854241989c3a64a852f2330d293e5f, type: 2}
+    itemState: []
+--- !u!114 &3280174957945021882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6414431574850518634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1ca2fa3a4d2e0c408a432d9b6e47ccf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 11400000, guid: 797a3743ba4965f46a18525f0b243806, type: 2}
+  inventoryData: {fileID: 11400000, guid: 89be2ec3b8153f047a51279a20c19b7b, type: 2}
+  parametersToModify:
+  - itemParameter: {fileID: 11400000, guid: 347eebb0ce5d5bd478722d4cd4a9ed44, type: 2}
+    value: -10
+  itemCurrentState: []
 --- !u!1 &6905749783534926602
 GameObject:
   m_ObjectHideFlags: 0
@@ -868,6 +865,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7252467211400071026}
+  - component: {fileID: 3392767232632741687}
+  - component: {fileID: 5769958589383100366}
+  - component: {fileID: 4273067324192447790}
   - component: {fileID: 8919678680062311582}
   m_Layer: 6
   m_Name: HurtBox
@@ -891,6 +891,94 @@ Transform:
   m_Children: []
   m_Father: {fileID: 9002234525630750452}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &3392767232632741687
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7903777609957261208}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 2035271111
+  m_SortingLayer: 5
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 0
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!95 &5769958589383100366
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7903777609957261208}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 33a5bc5a6786b6842acc7acdfcab0935, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4273067324192447790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7903777609957261208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 928f40b651ba77d4eb441c18a98d5702, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 300
+  currentHealth: 0
+  healthBar: {fileID: 0}
 --- !u!70 &8919678680062311582
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -991,9 +1079,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.54}
   serializedVersion: 2
-  m_Radius: 1.4
+  m_Radius: 1
 --- !u!114 &1667985703350309559
 MonoBehaviour:
   m_ObjectHideFlags: 0
