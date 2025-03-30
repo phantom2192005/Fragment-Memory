@@ -67,8 +67,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Button
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: dbde37d2aedfd9740b23149f552949d1, type: 2}
-  m_sharedMaterial: {fileID: 4817140808336113592, guid: dbde37d2aedfd9740b23149f552949d1, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d8996e235eff90e4fa13726a06036b12, type: 2}
+  m_sharedMaterial: {fileID: -7997909953248029628, guid: d8996e235eff90e4fa13726a06036b12, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

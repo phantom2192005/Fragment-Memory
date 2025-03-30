@@ -21,9 +21,12 @@ public class MeleeAttack : MonoBehaviour, IAttackPattern
     {
         if (CanAttack())
         {
-            Debug.Log("Melee Attack!");
-            cooldownTimer = coolDownTime;
-            baseEnemy.SetAnimatorBoolParameter("IsMeleeAttack", true);
+            if (baseEnemy.animator.GetBool("IsRangedAttack") == false)
+            {
+                Debug.Log("Melee Attack!");
+                cooldownTimer = coolDownTime;
+                baseEnemy.SetAnimatorBoolParameter("IsMeleeAttack", true);
+            }
         }
     }
 

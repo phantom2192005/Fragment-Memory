@@ -10,7 +10,7 @@ public class DamageDealer : MonoBehaviour
 
     private void DealDamage(Collider2D trigger)
     {
-        if (this.gameObject.CompareTag("EnemyHitBox") && trigger.CompareTag("HurtBox"))
+        if (this.gameObject.CompareTag("EnemyHitBox") && trigger.tag == "HurtBox")
         {
             float currentTime = Time.time;
             if (!isSingleHit && currentTime - lastHitTime < damageInterval) return;
@@ -18,9 +18,10 @@ public class DamageDealer : MonoBehaviour
             lastHitTime = currentTime; // Cập nhật thời gian hit
 
             Debug.Log("Hit Player");
+            Debug.Log(trigger.gameObject.name);
             trigger.GetComponent<Health>().TakeDamage(damage);
         }
-        else if (this.gameObject.CompareTag("PlayerHitBox") && trigger.CompareTag("HurtBox"))
+        else if (this.gameObject.CompareTag("PlayerHitBox") && trigger.tag == "HurtBox")
         {
             float currentTime = Time.time;
             if (!isSingleHit && currentTime - lastHitTime < damageInterval) return;

@@ -136,10 +136,10 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 157
-        height: 107
+        width: 192
+        height: 192
       alignment: 9
-      pivot: {x: 0.47, y: 0.2}
+      pivot: {x: 0.5, y: 0.45}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -155,12 +155,12 @@ TextureImporter:
       name: Electricuitioner-Appear_1
       rect:
         serializedVersion: 2
-        x: 157
+        x: 192
         y: 0
-        width: 157
-        height: 107
+        width: 192
+        height: 192
       alignment: 9
-      pivot: {x: 0.47, y: 0.2}
+      pivot: {x: 0.5, y: 0.45}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -176,12 +176,12 @@ TextureImporter:
       name: Electricuitioner-Appear_3
       rect:
         serializedVersion: 2
-        x: 470
+        x: 576
         y: 0
-        width: 157
-        height: 107
+        width: 192
+        height: 192
       alignment: 9
-      pivot: {x: 0.47, y: 0.2}
+      pivot: {x: 0.5, y: 0.45}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -197,12 +197,12 @@ TextureImporter:
       name: Electricuitioner-Appear_4
       rect:
         serializedVersion: 2
-        x: 628
+        x: 768
         y: 0
-        width: 157
-        height: 107
+        width: 192
+        height: 192
       alignment: 9
-      pivot: {x: 0.47, y: 0.2}
+      pivot: {x: 0.5, y: 0.45}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -218,12 +218,12 @@ TextureImporter:
       name: Electricuitioner-Appear_5
       rect:
         serializedVersion: 2
-        x: 785
+        x: 960
         y: 0
-        width: 157
-        height: 107
+        width: 192
+        height: 192
       alignment: 9
-      pivot: {x: 0.47, y: 0.2}
+      pivot: {x: 0.5, y: 0.45}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -239,12 +239,12 @@ TextureImporter:
       name: Electricuitioner-Appear_2
       rect:
         serializedVersion: 2
-        x: 314
+        x: 384
         y: 0
-        width: 157
-        height: 107
+        width: 192
+        height: 192
       alignment: 9
-      pivot: {x: 0.47, y: 0.2}
+      pivot: {x: 0.5, y: 0.45}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

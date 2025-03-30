@@ -20,7 +20,7 @@ public class AttackBehaviour : MonoBehaviour
         {
             baseEnemy.FlipObject(baseEnemy.GetTarget().transform);
             baseEnemy.IsAttacking = true;
-            Debug.Log("Call Try Attack");
+            //Debug.Log("Call Try Attack");
             if (baseEnemy.haveRun)
             {
                 baseEnemy.animator.SetBool("IsRun", false);
