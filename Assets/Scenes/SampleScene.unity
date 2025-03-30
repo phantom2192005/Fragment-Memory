@@ -388,7 +388,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4273067324192447790, guid: a38967939d8c2034faa2a110421be7e3, type: 3}
   m_PrefabInstance: {fileID: 7436730907677907322}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 458516702}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 928f40b651ba77d4eb441c18a98d5702, type: 3}
@@ -498,48 +498,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &409155411 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8254224193988118333, guid: 4952472f328ba4b41b4c728ce963692d, type: 3}
-  m_PrefabInstance: {fileID: 1224373219}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &409155416
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 409155411}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4b6e4119489a604bad90f57fe2511be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  knockBackTime: 0.4
-  hitDirectionForce: 6
-  constForce: 2
-  inputForce: 2
---- !u!1 &458516702 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7903777609957261208, guid: a38967939d8c2034faa2a110421be7e3, type: 3}
-  m_PrefabInstance: {fileID: 7436730907677907322}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &458516708
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 458516702}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4b6e4119489a604bad90f57fe2511be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  knockBackTime: 0.2
-  hitDirectionForce: 3
-  constForce: 1
-  inputForce: 1
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1459,22 +1417,6 @@ PrefabInstance:
       propertyPath: Path
       value: 
       objectReference: {fileID: 1489687241}
-    - target: {fileID: 6465723492130589234, guid: 4952472f328ba4b41b4c728ce963692d, type: 3}
-      propertyPath: _flashTime
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6465723492130589234, guid: 4952472f328ba4b41b4c728ce963692d, type: 3}
-      propertyPath: _flashColor.b
-      value: 2.4622889
-      objectReference: {fileID: 0}
-    - target: {fileID: 6465723492130589234, guid: 4952472f328ba4b41b4c728ce963692d, type: 3}
-      propertyPath: _flashColor.g
-      value: 2.3009777
-      objectReference: {fileID: 0}
-    - target: {fileID: 6465723492130589234, guid: 4952472f328ba4b41b4c728ce963692d, type: 3}
-      propertyPath: _flashColor.r
-      value: 0.77585316
-      objectReference: {fileID: 0}
     - target: {fileID: 6620863091621103343, guid: 4952472f328ba4b41b4c728ce963692d, type: 3}
       propertyPath: PatrolPath
       value: 
@@ -1483,17 +1425,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Electrocutioner
       objectReference: {fileID: 0}
-    - target: {fileID: 7045909140611356671, guid: 4952472f328ba4b41b4c728ce963692d, type: 3}
-      propertyPath: canKnockBack
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8254224193988118333, guid: 4952472f328ba4b41b4c728ce963692d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 409155416}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4952472f328ba4b41b4c728ce963692d, type: 3}
 --- !u!1 &1290019124
 GameObject:
@@ -2295,14 +2230,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1197596864058012823, guid: a38967939d8c2034faa2a110421be7e3, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 2d74ce783792a0847b89c16c8084b044, type: 2}
-    - target: {fileID: 3392767232632741687, guid: a38967939d8c2034faa2a110421be7e3, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 4273067324192447790, guid: a38967939d8c2034faa2a110421be7e3, type: 3}
       propertyPath: healthBar
       value: 
@@ -2311,33 +2238,9 @@ PrefabInstance:
       propertyPath: inventoryUI
       value: 
       objectReference: {fileID: 1085004514}
-    - target: {fileID: 4508970958358373231, guid: a38967939d8c2034faa2a110421be7e3, type: 3}
-      propertyPath: _flashTime
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 4508970958358373231, guid: a38967939d8c2034faa2a110421be7e3, type: 3}
-      propertyPath: _flashColor.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4508970958358373231, guid: a38967939d8c2034faa2a110421be7e3, type: 3}
-      propertyPath: _flashColor.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4508970958358373231, guid: a38967939d8c2034faa2a110421be7e3, type: 3}
-      propertyPath: _flashColor.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4508970958358373231, guid: a38967939d8c2034faa2a110421be7e3, type: 3}
-      propertyPath: _flashColor.r
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6414431574850518634, guid: a38967939d8c2034faa2a110421be7e3, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 7903777609957261208, guid: a38967939d8c2034faa2a110421be7e3, type: 3}
-      propertyPath: m_TagString
-      value: HurtBox
       objectReference: {fileID: 0}
     - target: {fileID: 9002234525630750452, guid: a38967939d8c2034faa2a110421be7e3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2382,10 +2285,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7903777609957261208, guid: a38967939d8c2034faa2a110421be7e3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 458516708}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a38967939d8c2034faa2a110421be7e3, type: 3}
 --- !u!1001 &8329609381915065331
 PrefabInstance:

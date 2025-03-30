@@ -145,7 +145,6 @@ GameObject:
   - component: {fileID: 943752929776793393}
   - component: {fileID: 3731728760153089169}
   - component: {fileID: 7045909140611356671}
-  - component: {fileID: 1363505000256808593}
   m_Layer: 7
   m_Name: Melee HitBox
   m_TagString: EnemyHitBox
@@ -257,18 +256,7 @@ MonoBehaviour:
   damage: 1
   isSingleHit: 0
   damageInterval: 0.05
---- !u!114 &1363505000256808593
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1100399574739804233}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0527e3c46c047db45b63190c5e737f8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  canKnockBack: 1
 --- !u!1 &3907060556076682587
 GameObject:
   m_ObjectHideFlags: 0
@@ -689,6 +677,7 @@ GameObject:
   - component: {fileID: 2192406988010877781}
   - component: {fileID: 8860410582135010611}
   - component: {fileID: 6465723492130589234}
+  - component: {fileID: 8347545478210662566}
   m_Layer: 7
   m_Name: HurtBox
   m_TagString: HurtBox
@@ -761,7 +750,7 @@ MonoBehaviour:
   maxHealth: 300
   currentHealth: 0
   healthBar: {fileID: 0}
-  damageFlash: {fileID: 6465723492130589234}
+  canKnockBack: 0
 --- !u!114 &6465723492130589234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -774,8 +763,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e69696f5854d9a14e88910aaa745fa54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _flashColor: {r: 0.41960788, g: 0.82745105, b: 0.8705883, a: 1}
-  _flashTime: 0.25
+  _flashColor: {r: 0.77585316, g: 2.3009777, b: 2.4622889, a: 1}
+  _flashTime: 0.2
+--- !u!114 &8347545478210662566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8254224193988118333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4b6e4119489a604bad90f57fe2511be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knockBackTime: 0.4
+  hitDirectionForce: 6
+  constForce: 2
+  inputForce: 2
 --- !u!1 &8314830716072834578
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5324211850244477120}
   - component: {fileID: 8531082682377333929}
   - component: {fileID: 6639848611889735815}
+  - component: {fileID: 7211020639739023860}
   m_Layer: 0
   m_Name: Slash_Rising Right hitBox
   m_TagString: PlayerHitBox
@@ -111,3 +112,18 @@ MonoBehaviour:
   damage: 30
   isSingleHit: 1
   damageInterval: 0.05
+  canKnockBack: 0
+--- !u!114 &7211020639739023860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4875129141562925293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f69aa1a1d52c3b4499c0c86a83e4f2b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canHitStop: 0
+  duration: 0.01

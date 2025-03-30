@@ -411,7 +411,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+  - {fileID: 2100000, guid: 2d74ce783792a0847b89c16c8084b044, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -982,9 +982,10 @@ GameObject:
   - component: {fileID: 8919678680062311582}
   - component: {fileID: 4273067324192447790}
   - component: {fileID: 4508970958358373231}
+  - component: {fileID: 3610082920827706119}
   m_Layer: 6
   m_Name: HurtBox
-  m_TagString: Untagged
+  m_TagString: HurtBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1024,7 +1025,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1127,7 +1128,7 @@ MonoBehaviour:
   maxHealth: 300
   currentHealth: 0
   healthBar: {fileID: 0}
-  damageFlash: {fileID: 4508970958358373231}
+  canKnockBack: 0
 --- !u!114 &4508970958358373231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1142,3 +1143,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _flashColor: {r: 1, g: 1, b: 1, a: 1}
   _flashTime: 0.25
+--- !u!114 &3610082920827706119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7903777609957261208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4b6e4119489a604bad90f57fe2511be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knockBackTime: 0.2
+  hitDirectionForce: 3
+  constForce: 1
+  inputForce: 1

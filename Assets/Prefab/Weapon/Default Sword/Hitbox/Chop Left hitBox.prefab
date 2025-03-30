@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4404897898960393913}
   - component: {fileID: 8629963064708862103}
   - component: {fileID: 2817624934664257399}
+  - component: {fileID: 6869811584030975474}
   m_Layer: 0
   m_Name: Chop Left hitBox
   m_TagString: PlayerHitBox
@@ -98,3 +99,18 @@ MonoBehaviour:
   damage: 30
   isSingleHit: 1
   damageInterval: 0
+  canKnockBack: 0
+--- !u!114 &6869811584030975474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7756024830926679429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f69aa1a1d52c3b4499c0c86a83e4f2b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canHitStop: 0
+  duration: 0.1

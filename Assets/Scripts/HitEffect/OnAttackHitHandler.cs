@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AttackHitHandler : MonoBehaviour
+public class OnAttackHitHandler : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
