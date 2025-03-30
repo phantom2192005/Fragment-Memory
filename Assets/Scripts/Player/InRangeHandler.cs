@@ -5,6 +5,7 @@ using UnityEngine;
 public class InRangeHandler : MonoBehaviour
 {
     AttackRangeDetector attackRangeDetector;
+    ChasingBehavior chasingBehaviour;
     private void OnTriggerEnter2D(Collider2D trigger)
     {
         if (trigger.tag == "AttackRange")
@@ -13,6 +14,12 @@ public class InRangeHandler : MonoBehaviour
             if (attackRangeDetector == null ) { return; }
             attackRangeDetector.attackRange = trigger.name;
             attackRangeDetector.DetectRange();
+        }
+        if(trigger.gameObject.name == "RetreatRange")
+        {
+            chasingBehaviour = trigger.gameObject.GetComponentInParent<ChasingBehavior>();
+            if (chasingBehaviour == null ) {return;}
+            chasingBehaviour.isRetreating = true;
         }
 
     }
@@ -25,7 +32,7 @@ public class InRangeHandler : MonoBehaviour
             attackRangeDetector.attackRange = trigger.name;
             attackRangeDetector.DetectRange();
         }
-
+        
     }
     private void OnTriggerExit2D(Collider2D trigger)
     {
@@ -35,6 +42,12 @@ public class InRangeHandler : MonoBehaviour
             if (attackRangeDetector == null) { return; }
             attackRangeDetector.attackRange = trigger.name;
             attackRangeDetector.UnDetectRange();
+        }
+        if (trigger.gameObject.name == "RetreatRange")
+        {
+            chasingBehaviour = trigger.gameObject.GetComponentInParent<ChasingBehavior>();
+            if (chasingBehaviour == null) { return; }
+            chasingBehaviour.isRetreating = false;
         }
     }
 

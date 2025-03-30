@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4219910934424351955}
   - component: {fileID: 8887718596047545663}
   - component: {fileID: 7976596251292987886}
+  - component: {fileID: 660630410156135970}
   m_Layer: 0
   m_Name: Slash Right hitBox
   m_TagString: PlayerHitBox
@@ -119,3 +120,18 @@ MonoBehaviour:
   damage: 30
   isSingleHit: 1
   damageInterval: 0
+  canKnockBack: 1
+--- !u!114 &660630410156135970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4244902764857684967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f69aa1a1d52c3b4499c0c86a83e4f2b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canHitStop: 1
+  duration: 0.1

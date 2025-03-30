@@ -35,6 +35,7 @@ public class PatrolBehaviour : MonoBehaviour
     public void Patrol()
     {
         if (moveSpots.Length == 0) return;
+        
 
         baseEnemy.IsIdling = false; 
         transform.position = Vector2.MoveTowards(transform.position, moveSpots[randomSpot].position, patrolSpeed * Time.deltaTime);
@@ -42,7 +43,7 @@ public class PatrolBehaviour : MonoBehaviour
         {
             baseEnemy.animator.SetBool("IsRun", true);
         }
-        if (transform.position.x > moveSpots[randomSpot].position.x) // handle flip after out chasing
+        if (transform.position.x < moveSpots[randomSpot].position.x) // handle flip after out chasing
         {
             baseEnemy.FlipObject(moveSpots[randomSpot]);
         }

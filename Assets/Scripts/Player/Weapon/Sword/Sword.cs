@@ -49,6 +49,11 @@ public class Sword : Weapon
                 weaponSprite_animator.Play("Slash");
                 weaponSFX_animator.Play("Slash");
                 break;
+            case 3:
+                base_animator.Play("Slash_Rising_Base");
+                weaponSprite_animator.Play("Slash_Rising");
+                weaponSFX_animator.Play("Slash_Rising");
+                break;
         }
     }
 }

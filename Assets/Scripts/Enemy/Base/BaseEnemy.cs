@@ -3,7 +3,7 @@
 public class BaseEnemy : MonoBehaviour
 {
     [Header("State Management")]
-    public bool isChasing;
+    public bool isPlayerDetected;
     public bool isPatrolling = true;
     public bool isIdling;
 
@@ -12,12 +12,12 @@ public class BaseEnemy : MonoBehaviour
 
     [Header("Enemy Option")]
     public bool haveRun;
-    public bool IsChasing
+    public bool IsPlayerDetected
     {
-        get => isChasing;
+        get => isPlayerDetected;
         set
         {
-            isChasing = value;
+            isPlayerDetected = value;
             if (value) isPatrolling = false;
         }
     }
@@ -28,7 +28,7 @@ public class BaseEnemy : MonoBehaviour
         set
         {
             isPatrolling = value;
-            if (value) isChasing = false;
+            if (value) isPlayerDetected = false;
         }
     }
 
@@ -47,7 +47,7 @@ public class BaseEnemy : MonoBehaviour
             if (isAttacking) // Nếu đang attack, tắt các trạng thái khác
             {
                 isIdling = false;
-                isChasing = false;
+                //isPlayerDetected = false;
                 isPatrolling = false;
                 if (haveRun)
                 {
@@ -65,7 +65,7 @@ public class BaseEnemy : MonoBehaviour
             isDead = value;
             if (isDead)
             {
-                isChasing = false;
+                isPlayerDetected = false;
                 isPatrolling = false;
                 isIdling = false;
                 isAttacking = false;
@@ -98,9 +98,9 @@ public class BaseEnemy : MonoBehaviour
 
     void Update()
     {
-        if (IsDead || IsAttacking) return;
-        if(IsChasing)
-        {   
+        if (IsDead) return;
+        if(IsPlayerDetected)
+        {
             chase.ChasePlayer();
         }
         else if (isPatrolling)

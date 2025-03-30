@@ -22,7 +22,7 @@ public class AttackRangeDetector : MonoBehaviour
             baseEnemy.IsAttacking = true;
             
         }
-        if (attackRange == "Ranged Range")
+        if (attackRange == "Ranged Range" && inMeleeRange == false)
         {
             inRangedRange = true;
             baseEnemy.IsAttacking = true;
@@ -34,15 +34,13 @@ public class AttackRangeDetector : MonoBehaviour
         if (attackRange == "Melee Range")
         {
             inMeleeRange = false;
-            baseEnemy.IsAttacking = false;
-            baseEnemy.animator.SetBool("IsMeleeAttack", false);
+            //baseEnemy.IsAttacking = false;
+            //baseEnemy.animator.SetBool("IsMeleeAttack", false);
         }
         if (attackRange == "Ranged Range")
         {
             inRangedRange = false;
-            baseEnemy.IsAttacking = false;
-            
-
+            //baseEnemy.IsAttacking = false
         }
     }
 

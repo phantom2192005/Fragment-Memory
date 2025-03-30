@@ -1,34 +1,46 @@
 ﻿using UnityEngine;
+using UnityEngine.Rendering;
 
 public class DamageDealer : MonoBehaviour
 {
     [SerializeField] int damage;
     [SerializeField] bool isSingleHit;
-    [SerializeField] float damageInterval = 0.05f; // khoảng cách thời gian giưa các lần tinh hit take damage
+    [SerializeField] float damageInterval = 0.05f; // khoảng cách thời gian giữa các lần tính hit
+    [SerializeField] bool canKnockBack;
+
+    Health targetHealth;
+    HitStop hitStop;
 
     private float lastHitTime = 0f;
 
+    private void Start()
+    {
+        hitStop = GetComponent<HitStop>();
+    }
+
     private void DealDamage(Collider2D trigger)
     {
-        if (this.gameObject.CompareTag("EnemyHitBox") && trigger.CompareTag("HurtBox"))
+        Vector2 hitDirection = (trigger.transform.position - transform.position).normalized;
+        //Debug.Log(hitDirection);
+
+        if ((this.gameObject.CompareTag("EnemyHitBox") && trigger.tag == "HurtBox") ||
+            (this.gameObject.CompareTag("PlayerHitBox") && trigger.tag == "HurtBox"))
         {
-            float currentTime = Time.time;
-            if (!isSingleHit && currentTime - lastHitTime < damageInterval) return;
+            // Time.time return how long game have been run
+            float elapsedTime = Time.time - lastHitTime; // Thời gian trôi qua kể từ lần hit trước đó
+            if (!isSingleHit && elapsedTime < damageInterval) return;
 
-            lastHitTime = currentTime; // Cập nhật thời gian hit
+            lastHitTime = Time.time; // Cập nhật thời gian hit
 
-            Debug.Log("Hit Player");
-            trigger.GetComponentInParent<Health>().TakeDamage(damage);
-        }
-        else if (this.gameObject.CompareTag("PlayerHitBox") && trigger.CompareTag("HurtBox"))
-        {
-            float currentTime = Time.time;
-            if (!isSingleHit && currentTime - lastHitTime < damageInterval) return;
+            Debug.Log(this.gameObject.CompareTag("EnemyHitBox") ? "Hit Player" : "Hit Enemy");
 
-            lastHitTime = currentTime; // Cập nhật thời gian hit
-
-            Debug.Log("Hit Enemy");
-            trigger.GetComponentInParent<Health>().TakeDamage(damage);
+            targetHealth = trigger.GetComponent<Health>();
+            targetHealth.canKnockBack = canKnockBack;
+            targetHealth.TakeDamage(damage, hitDirection);
+            if (hitStop != null)
+            {
+                hitStop.Stop();
+            }
         }
     }
 

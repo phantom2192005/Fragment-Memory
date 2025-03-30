@@ -59,9 +59,13 @@ MonoBehaviour:
   - {fileID: 3316226639119941015, guid: 4dcaf17f75c3ae946ac8dd6bfa496207, type: 3}
   - {fileID: 4244902764857684967, guid: 2f8144e53338f8d4c9bc425971a2fd22, type: 3}
   - {fileID: 902688827077537547, guid: 6e2173e46f21e5a448b6a54967dcc604, type: 3}
-  cooldownTime: 0.5
+  - {fileID: 8607163514379602947, guid: b64c4b06eacd2d849b2fcbd5aef9b8cb, type: 3}
+  - {fileID: 4875129141562925293, guid: d44672a8a9bd3104a93735d4da23709b, type: 3}
+  - {fileID: 4875129141562925293, guid: 8f8ea5d9c7944d042b098ff5fa6942c4, type: 3}
+  - {fileID: 7539939902784722611, guid: 0d2dd19eebc28f849b0048f00b82617a, type: 3}
+  cooldownTime: 0.3
   comboTime: 2
-  maxComboCount: 2
+  maxComboCount: 3
 --- !u!1 &4990093895216431512
 GameObject:
   m_ObjectHideFlags: 0
@@ -136,15 +140,15 @@ SpriteRenderer:
   m_SortingLayerID: 1159639471
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 522461856, guid: f2e152a961e671d49ac2a7db38c7b2e1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 8, y: 7.375}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &5403594405337952659
@@ -346,7 +350,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2035271111
-  m_SortingLayer: 3
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

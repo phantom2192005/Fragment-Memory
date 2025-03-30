@@ -71,22 +71,22 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        InitializeComponents();
-        InitializeInputActions();
+        PrepareComponents();
+        PrepareInputActions();
         RegisterInputActions();
 
         // Set initial state
         ChangeState(new PlayerIdleState(this));
     }
 
-    void InitializeComponents()
+    void PrepareComponents()
     {
         animator = GetComponent<Animator>();
         coreCombat = GetComponentInChildren<CoreCombat>();
 
     }
 
-    void InitializeInputActions()
+    void PrepareInputActions()
     {
         walkAction = InputSystem.actions.FindAction("Walk");
         runAction = InputSystem.actions.FindAction("Run");
