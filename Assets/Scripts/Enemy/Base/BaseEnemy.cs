@@ -99,7 +99,7 @@ public class BaseEnemy : MonoBehaviour
     void Update()
     {
         if (IsDead) return;
-        if(IsPlayerDetected)
+        if(IsPlayerDetected && animator.GetBool("IsMeleeAttack") == false)
         {
             chase.ChasePlayer();
         }
