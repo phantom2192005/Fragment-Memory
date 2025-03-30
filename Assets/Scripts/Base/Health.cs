@@ -7,27 +7,45 @@ public class Health : MonoBehaviour
     Animator animator;
     public HealthBar healthBar;
 
+    private DamageFlash damageFlash;
+    private KnockBack KnockBack;
+    public bool canKnockBack;
+
     private void Start()
     {
         currentHealth = maxHealth;
-        animator = GetComponent<Animator>();
+        animator = GetComponentInParent<Animator>();
+        damageFlash = GetComponent<DamageFlash>();
+        KnockBack = GetComponent<KnockBack>();
+
     }
 
     private void Update()
     {
-        
+
     }
 
-    public void TakeDamage(int amount)
+    public void TakeDamage(int amount, Vector2 hitDirection)
     {
         currentHealth -= amount;
+        // call damage Flash
+        if (damageFlash != null)
+        {
+            damageFlash.CallDamageFlash();
+        }
+        // call knock back
         if (healthBar != null)
         {
             healthBar.SetValue(currentHealth);
+
         }
         if (currentHealth <= 0)
         {
             animator.Play("Death");
+        }
+        if (canKnockBack)
+        {
+            KnockBack.CallKnockback(hitDirection, Vector2.zero, Vector2.zero);
         }
     }
 

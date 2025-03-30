@@ -111,7 +111,7 @@ public class PlayerController : MonoBehaviour
     }
     void Update()
     {
-        Camera.main.transform.position = transform.position + new Vector3(0, 5, -10);
+        Camera.main.transform.position = transform.position + new Vector3(0, 0, -10);
         if (currentState is PlayerDeathState || currentState is PlayerAttackState)
         {
             return;

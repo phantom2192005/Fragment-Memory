@@ -27,7 +27,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8302901, y: 0.8302901, z: 0.83029}
+  m_LocalScale: {x: 0.92419595, y: 0.92419595, z: 0.9241959}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2670693363670776523}
@@ -145,6 +145,7 @@ GameObject:
   - component: {fileID: 943752929776793393}
   - component: {fileID: 3731728760153089169}
   - component: {fileID: 7045909140611356671}
+  - component: {fileID: 1363505000256808593}
   m_Layer: 7
   m_Name: Melee HitBox
   m_TagString: EnemyHitBox
@@ -256,6 +257,18 @@ MonoBehaviour:
   damage: 1
   isSingleHit: 0
   damageInterval: 0.05
+--- !u!114 &1363505000256808593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1100399574739804233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0527e3c46c047db45b63190c5e737f8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3907060556076682587
 GameObject:
   m_ObjectHideFlags: 0
@@ -475,7 +488,6 @@ GameObject:
   - component: {fileID: 4672432083255423961}
   - component: {fileID: 2948082220146203091}
   - component: {fileID: 2476360204725317333}
-  - component: {fileID: 546469779362204030}
   - component: {fileID: 3130551606878905660}
   - component: {fileID: 5345174304980987704}
   - component: {fileID: 6620863091621103343}
@@ -527,7 +539,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 2d74ce783792a0847b89c16c8084b044, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -548,7 +560,7 @@ SpriteRenderer:
   m_SortingLayerID: 1159639471
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: -8160572781164048822, guid: c678ff8da1c30d34f8719c175f01f8ea, type: 3}
+  m_Sprite: {fileID: 4381153683990909383, guid: c678ff8da1c30d34f8719c175f01f8ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -607,21 +619,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &546469779362204030
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6672182423651561498}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 928f40b651ba77d4eb441c18a98d5702, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 300
-  currentHealth: 0
-  healthBar: {fileID: 0}
 --- !u!114 &3130551606878905660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -676,6 +673,7 @@ MonoBehaviour:
   targetLayer:
     serializedVersion: 2
     m_Bits: 768
+  retreatDistance: 2
   isRetreating: 0
   PatrolPath: {fileID: 0}
   maxChaseDistance: 30
@@ -689,6 +687,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3370845803326007143}
   - component: {fileID: 2192406988010877781}
+  - component: {fileID: 8860410582135010611}
+  - component: {fileID: 6465723492130589234}
   m_Layer: 7
   m_Name: HurtBox
   m_TagString: HurtBox
@@ -746,6 +746,36 @@ CapsuleCollider2D:
   m_Offset: {x: 0.041090965, y: 0.61}
   m_Size: {x: 0.9584203, y: 1.550921}
   m_Direction: 0
+--- !u!114 &8860410582135010611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8254224193988118333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 928f40b651ba77d4eb441c18a98d5702, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 300
+  currentHealth: 0
+  healthBar: {fileID: 0}
+  damageFlash: {fileID: 6465723492130589234}
+--- !u!114 &6465723492130589234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8254224193988118333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e69696f5854d9a14e88910aaa745fa54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _flashColor: {r: 0.41960788, g: 0.82745105, b: 0.8705883, a: 1}
+  _flashTime: 0.25
 --- !u!1 &8314830716072834578
 GameObject:
   m_ObjectHideFlags: 0

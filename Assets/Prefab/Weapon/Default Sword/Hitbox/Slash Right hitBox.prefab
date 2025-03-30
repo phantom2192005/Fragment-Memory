@@ -119,3 +119,4 @@ MonoBehaviour:
   damage: 30
   isSingleHit: 1
   damageInterval: 0
+  canKnockBack: 1
