@@ -1,0 +1,116 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 696c881fbc9e27f4fb4bca949d28f76a, type: 3}
+  m_Name: Electrocutioner
+  m_EditorClassIdentifier: 
+  impactTime: 0.2
+  impactForce: 1
+  defaultVelocity: {x: -0.1, y: 0, z: 0}
+  impulseCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0.07191639
+      outSlope: 0.07191639
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.12311067
+      value: 1.0088537
+      inSlope: -0.014455583
+      outSlope: -0.014455583
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.21868613
+      value: 0.99921703
+      inSlope: -0.017514165
+      outSlope: -0.017514165
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.33354872
+      value: 1.0067749
+      inSlope: -0.005368244
+      outSlope: -0.005368244
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.46307266
+      value: 0.9968617
+      inSlope: 0.012320802
+      outSlope: 0.012320802
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.56908196
+      value: 1.0075874
+      inSlope: 0.0054396726
+      outSlope: 0.0054396726
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.68930453
+      value: 0.9967316
+      inSlope: 0.05300913
+      outSlope: 0.05300913
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.7426349
+      value: 1.0072012
+      inSlope: 0.08122697
+      outSlope: 0.08122697
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.86479324
+      value: 1.0030646
+      inSlope: -0.02826428
+      outSlope: -0.02826428
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: -0.022666266
+      outSlope: -0.022666266
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  listenerAmplitude: 1
+  listenerFrequecy: 1
+  listenerDuration: 1

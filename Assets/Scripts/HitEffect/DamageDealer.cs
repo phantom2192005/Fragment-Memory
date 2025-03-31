@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.Rendering;
+using Cinemachine;
 
 public class DamageDealer : MonoBehaviour
 {
@@ -7,15 +8,20 @@ public class DamageDealer : MonoBehaviour
     [SerializeField] bool isSingleHit;
     [SerializeField] float damageInterval = 0.05f; // khoảng cách thời gian giữa các lần tính hit
     [SerializeField] bool canKnockBack;
-
+    [SerializeField] bool canShakeCamera;
+    [SerializeField] ScreenShakeProfile shakeProfile;
     Health targetHealth;
     HitStop hitStop;
+    private CinemachineCollisionImpulseSource impulseSource;
+
+
 
     private float lastHitTime = 0f;
 
     private void Start()
     {
         hitStop = GetComponent<HitStop>();
+        impulseSource = GetComponent<CinemachineCollisionImpulseSource>();
     }
 
     private void DealDamage(Collider2D trigger)
@@ -37,6 +43,12 @@ public class DamageDealer : MonoBehaviour
             targetHealth = trigger.GetComponent<Health>();
             targetHealth.canKnockBack = canKnockBack;
             targetHealth.TakeDamage(damage, hitDirection);
+
+            if (impulseSource != null && canShakeCamera && shakeProfile != null)
+            {
+                //CameraShakeManager.instance.CameraShake(impulseSource);
+                CameraShakeManager.instance.ScreenShakeFromProfile(shakeProfile, impulseSource);
+            }
             if (hitStop != null)
             {
                 hitStop.Stop();

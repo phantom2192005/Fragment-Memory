@@ -146,6 +146,7 @@ MonoBehaviour:
   damage: 1
   isSingleHit: 0
   damageInterval: 0.05
+  canKnockBack: 0
 --- !u!1 &8251455273757848302
 GameObject:
   m_ObjectHideFlags: 0
@@ -201,7 +202,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
