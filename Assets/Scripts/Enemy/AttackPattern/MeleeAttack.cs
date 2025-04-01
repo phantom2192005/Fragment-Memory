@@ -23,7 +23,7 @@ public class MeleeAttack : MonoBehaviour, IAttackPattern
         {
             if (baseEnemy.animator.GetBool("IsRangedAttack") == false)
             {
-                Debug.Log("Melee Attack!");
+                //Debug.Log("Melee Attack!");
                 cooldownTimer = coolDownTime;
                 baseEnemy.SetAnimatorBoolParameter("IsMeleeAttack", true);
             }

@@ -16,10 +16,10 @@ public class AttackBehaviour : MonoBehaviour
 
     public void TryAttack()
     {
-        if (attackPattern != null && attackPattern.CanAttack())
+        if (attackPattern != null && attackPattern.CanAttack() && baseEnemy.IsPlayerDetected)
         {
-            baseEnemy.FlipObject(baseEnemy.GetTarget().transform);
-            baseEnemy.IsAttacking = true;
+            baseEnemy.FlipObject(baseEnemy.GetTarget().transform.position);
+            //baseEnemy.IsAttacking = true;
             //Debug.Log("Call Try Attack");
             if (baseEnemy.haveRun)
             {

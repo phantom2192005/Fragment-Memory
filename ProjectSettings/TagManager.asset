@@ -21,7 +21,7 @@ TagManager:
   - Player
   - Enemy
   - PlayerDetect
-  - Wall
+  - Obstacle
   - Ground
   - 
   - 

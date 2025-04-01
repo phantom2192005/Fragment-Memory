@@ -63,7 +63,7 @@ MonoBehaviour:
   - {fileID: 4875129141562925293, guid: d44672a8a9bd3104a93735d4da23709b, type: 3}
   - {fileID: 4875129141562925293, guid: 8f8ea5d9c7944d042b098ff5fa6942c4, type: 3}
   - {fileID: 7539939902784722611, guid: 0d2dd19eebc28f849b0048f00b82617a, type: 3}
-  cooldownTime: 0.3
+  cooldownTime: 0.5
   comboTime: 2
   maxComboCount: 3
 --- !u!1 &4990093895216431512

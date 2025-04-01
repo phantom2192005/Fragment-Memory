@@ -27,7 +27,7 @@ public class PatrolBehaviour : MonoBehaviour
         if (moveSpots.Length > 0)
         {
             randomSpot = Random.Range(0, moveSpots.Length);
-            baseEnemy.FlipObject(moveSpots[randomSpot]);
+            baseEnemy.FlipObject(moveSpots[randomSpot].position);
             
         }
     }
@@ -45,7 +45,7 @@ public class PatrolBehaviour : MonoBehaviour
         }
         if (transform.position.x < moveSpots[randomSpot].position.x) // handle flip after out chasing
         {
-            baseEnemy.FlipObject(moveSpots[randomSpot]);
+            baseEnemy.FlipObject(moveSpots[randomSpot].position);
         }
        
         if (Vector2.Distance(transform.position, moveSpots[randomSpot].position) < 0.2f)
@@ -55,7 +55,7 @@ public class PatrolBehaviour : MonoBehaviour
                
                 randomSpot = Random.Range(0, moveSpots.Length); 
                 waitTimer = waitTime;
-                baseEnemy.FlipObject(moveSpots[randomSpot]);
+                baseEnemy.FlipObject(moveSpots[randomSpot].position);
             }
             else
             {

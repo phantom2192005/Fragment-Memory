@@ -18,7 +18,6 @@ public class BaseEnemy : MonoBehaviour
         set
         {
             isPlayerDetected = value;
-            if (value) isPatrolling = false;
         }
     }
 
@@ -28,7 +27,6 @@ public class BaseEnemy : MonoBehaviour
         set
         {
             isPatrolling = value;
-            if (value) isPlayerDetected = false;
         }
     }
 
@@ -109,14 +107,24 @@ public class BaseEnemy : MonoBehaviour
         }
     }
 
-    public void FlipObject(Transform targetToFlip)
+    public void FlipObject(Vector3 targetPosition)
     {
-        if (targetToFlip == null) return;
+        if (targetPosition == null) return;
 
         Vector3 scale = transform.localScale;
-        scale.x = (targetToFlip.transform.position.x < transform.position.x) ? -Mathf.Abs(scale.x) : Mathf.Abs(scale.x);
+
+        if (targetPosition.x < transform.position.x)
+        {
+            scale.x = -Mathf.Abs(scale.x);
+        }
+        else
+        {
+            scale.x = Mathf.Abs(scale.x);
+        }
+
         transform.localScale = scale;
     }
+
 
     public void SetAnimatorBoolParameter(string name, bool value)
     {
@@ -137,6 +145,7 @@ public class BaseEnemy : MonoBehaviour
     {
         SetAnimatorBoolParameter(nameBoolAnimator, false);
         attack.SetAttackPattern(null);
+        IsAttacking = false;
     }
 
     public void FireProjectTile(string typeRangedAttack)
