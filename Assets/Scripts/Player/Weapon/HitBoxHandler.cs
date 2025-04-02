@@ -43,6 +43,15 @@ public class HitBoxHandler : MonoBehaviour
         }
     }
 
+    public void DestroyAllHitBoxs(Transform parent)
+    {
+        foreach (Transform hitBox in parent)
+        {
+            Destroy(hitBox.gameObject);
+        }
+    }
+
+
     public void EnableHitBox(string attackName)
     {
         if (player == null)

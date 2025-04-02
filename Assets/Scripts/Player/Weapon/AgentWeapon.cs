@@ -23,10 +23,10 @@ public class AgentWeapon : MonoBehaviour
 
         this.weapon = weaponItemSO;
         this.itemCurrentState = new List<ItemParameter>(itemState);
-        ModifyParameters();
+        //ModifyParameters();
     }
 
-    private void ModifyParameters()
+    private void ModifyParameters(List<ItemParameter> parametersToModify)
     {
         foreach (var parameter in parametersToModify)
         {

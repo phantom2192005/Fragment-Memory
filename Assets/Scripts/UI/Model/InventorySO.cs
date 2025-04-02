@@ -125,7 +125,7 @@ namespace Inventory.Model
 
         public void AddItem(InventoryItem item)
         {
-            AddItem(item.item, item.quantity);
+            AddItem(item.item, item.quantity,item.itemState);
         }
 
         public Dictionary<int, InventoryItem> GetCurrentInventoryState()
