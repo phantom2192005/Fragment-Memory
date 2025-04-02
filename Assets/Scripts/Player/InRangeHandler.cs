@@ -19,13 +19,19 @@ public class InRangeHandler : MonoBehaviour
         {
             chasingBehaviour = trigger.gameObject.GetComponentInParent<ChasingBehavior>();
             if (chasingBehaviour == null ) {return;}
-            //chasingBehaviour.isRetreating = true;
         }
 
     }
     private void OnTriggerStay2D(Collider2D trigger)
     {
-       
+        if (trigger.tag == "AttackRange")
+        {
+            attackRangeDetector = trigger.gameObject.GetComponentInParent<AttackRangeDetector>();
+            if (attackRangeDetector == null) { return; }
+            attackRangeDetector.attackRange = trigger.name;
+            attackRangeDetector.DetectRange();
+        }
+        
     }
     private void OnTriggerExit2D(Collider2D trigger)
     {
@@ -40,7 +46,6 @@ public class InRangeHandler : MonoBehaviour
         {
             chasingBehaviour = trigger.gameObject.GetComponentInParent<ChasingBehavior>();
             if (chasingBehaviour == null) { return; }
-            //chasingBehaviour.isRetreating = false;
         }
     }
 

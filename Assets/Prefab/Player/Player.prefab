@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 651871756477824411}
   - component: {fileID: 1492027726940324467}
-  - component: {fileID: 6331186585527419632}
   - component: {fileID: 3476577934646441634}
+  - component: {fileID: 3299574407062568623}
   m_Layer: 8
   m_Name: DetectBox
   m_TagString: Player
@@ -69,18 +69,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0.5}
   m_Size: {x: 0.9, y: 1.4}
   m_Direction: 0
---- !u!114 &6331186585527419632
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 637230320725631782}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d1ef495494337046b1779211419db40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &3476577934646441634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94,6 +82,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryData: {fileID: 11400000, guid: 89be2ec3b8153f047a51279a20c19b7b, type: 2}
+--- !u!114 &3299574407062568623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 637230320725631782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 832670bde970e514e968f3fbec1edd87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1109948150429992416
 GameObject:
   m_ObjectHideFlags: 0
@@ -163,7 +163,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 348715631680943543}
-  - component: {fileID: 6638535742659287752}
+  - component: {fileID: 1996342115532418783}
   m_Layer: 0
   m_Name: CoreCombat
   m_TagString: Untagged
@@ -187,7 +187,7 @@ Transform:
   - {fileID: 7918141751365988527}
   m_Father: {fileID: 9002234525630750452}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6638535742659287752
+--- !u!114 &1996342115532418783
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -196,7 +196,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6151124734838412494}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59a8ac705ef84c94282b5ef386c3ecfa, type: 3}
+  m_Script: {fileID: 11500000, guid: ee8c6e49b30d5564892c04865a2aeaf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   currentWeaponHandler: {fileID: 3933608200247573670}
@@ -370,7 +370,7 @@ GameObject:
   - component: {fileID: 4343762284200050763}
   - component: {fileID: 7440006766311493327}
   - component: {fileID: 5615076606982306306}
-  - component: {fileID: 8096398079940418980}
+  - component: {fileID: 5987066852295023638}
   - component: {fileID: 4383135667091322909}
   - component: {fileID: 4843613022476948704}
   m_Layer: 6
@@ -529,9 +529,9 @@ MonoBehaviour:
     m_ActionName: Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6414431574850518634}
+      - m_Target: {fileID: 5987066852295023638}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: Roll
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -596,7 +596,7 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &8096398079940418980
+--- !u!114 &5987066852295023638
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -605,7 +605,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6414431574850518634}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ce07f73f588bdc4f9763feff6bd207f, type: 3}
+  m_Script: {fileID: 11500000, guid: 4832f549358d27740a991222d80b0b32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   baseSpeed: 5
@@ -613,7 +613,7 @@ MonoBehaviour:
   rollSpeed: 10
   rollDuration: 0.5
   moveInput: {x: 0, y: 0}
-  coreCombat: {fileID: 6638535742659287752}
+  coreCombat: {fileID: 1996342115532418783}
   isAttacking: 0
 --- !u!114 &4383135667091322909
 MonoBehaviour:
