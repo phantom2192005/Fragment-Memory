@@ -15,7 +15,7 @@ namespace Inventory
 
         [SerializeField]
         private InventorySO inventoryData;
-
+        
         [SerializeField]
         private GameObject HurtBox;
 
@@ -35,9 +35,11 @@ namespace Inventory
         }
 
         private void PrepareInventoryData()
-        {
+        { 
+            initalItems = inventoryData.inventoryItems;
             inventoryData.Initialize();
             inventoryData.OnInventoryUpdated += UpdateInventoryUI;
+            
             foreach (InventoryItem item in initalItems)
             {
                 if (item.IsEmpty)

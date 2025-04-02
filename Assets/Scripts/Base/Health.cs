@@ -8,16 +8,12 @@ public class Health : MonoBehaviour
     public HealthBar healthBar;
 
     private DamageFlash damageFlash;
-    private KnockBack KnockBack;
-    public bool canKnockBack;
 
     private void Start()
     {
         currentHealth = maxHealth;
         animator = GetComponentInParent<Animator>();
         damageFlash = GetComponent<DamageFlash>();
-        KnockBack = GetComponent<KnockBack>();
-
     }
 
     private void Update()
@@ -25,7 +21,7 @@ public class Health : MonoBehaviour
 
     }
 
-    public void TakeDamage(int amount, Vector2 hitDirection)
+    public void TakeDamage(int amount)
     {
         currentHealth -= amount;
         // call damage Flash
@@ -42,10 +38,6 @@ public class Health : MonoBehaviour
         if (currentHealth <= 0)
         {
             animator.Play("Death");
-        }
-        if (canKnockBack)
-        {
-            KnockBack.CallKnockback(hitDirection, Vector2.zero, Vector2.zero);
         }
     }
 

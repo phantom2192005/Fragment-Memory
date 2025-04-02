@@ -140,7 +140,7 @@ public class BaseEnemy : MonoBehaviour
     {
         
     }
-
+    
     public void OnAnimationEnd(string nameBoolAnimator)
     {
         SetAnimatorBoolParameter(nameBoolAnimator, false);

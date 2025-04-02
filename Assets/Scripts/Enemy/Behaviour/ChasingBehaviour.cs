@@ -1,70 +1,78 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
 using UnityEngine;
 
 public class ChasingBehavior : MonoBehaviour
 {
     [Header("Chasing Settings")]
     public float chasingSpeed;
-    public float retreatSpeed;
-    public float retreatDistance;
+    public float minRetreatSpeed;
+    public float maxRetreatSpeed;
     public float maxChaseDistance;
 
+    [Header("Retreat Timing")]
+    public float minRetreatDelay = 1f;
+    public float maxRetreatDelay = 3f;
+
+    [Header("References")]
+    [SerializeField] private Transform PatrolSpot;
+    [SerializeField] private Collider2D retreatAreaCollider;
+    [SerializeField] private EnemyMovementAI enemyMovementAI;
+
     private BaseEnemy baseEnemy;
-    private Transform[] moveSpots;
-    private int randomSpot;
-
-    public GameObject PatrolPath;
     private TargetDetector targetDetector;
-    [SerializeField]
-    private EnemyMovementAI enemyMovementAI;
+    private GameObject player;
+    private Vector2 direction;
+    private float currentRetreatSpeed;
+    private bool isRetreating;
 
-    public Vector2 direction;
     private void Start()
     {
         baseEnemy = GetComponent<BaseEnemy>();
         targetDetector = GetComponentInChildren<TargetDetector>();
-
-        if (PatrolPath != null)
-        {
-            moveSpots = new Transform[PatrolPath.transform.childCount];
-            for (int i = 0; i < PatrolPath.transform.childCount; i++)
-            {
-                moveSpots[i] = PatrolPath.transform.GetChild(i);
-            }
-        }
+        currentRetreatSpeed = minRetreatSpeed;
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     void Update()
     {
-        if (targetDetector.isDetected)
+        if (targetDetector.isPlayerDetected)
         {
             baseEnemy.IsPlayerDetected = true;
-            baseEnemy.IsPatrolling = false;
+        }
+
+        if (isRetreating)
+        {
+            currentRetreatSpeed = Mathf.Clamp(currentRetreatSpeed + Time.deltaTime, minRetreatSpeed, maxRetreatSpeed);
         }
     }
 
     public void ChasePlayer()
     {
-        GameObject target = GameObject.FindGameObjectWithTag("Player");
-        if (target == null) return;
+        if (player == null) return;
 
-        float distanceToTarget = Vector2.Distance(transform.position, target.transform.position);
+        float distanceToReturn = Vector2.Distance(transform.position, PatrolSpot.position);
 
-        // Nếu mục tiêu quá xa, quay lại tuần tra
-        if (distanceToTarget >= maxChaseDistance || enemyMovementAI.contextData.currentTarget == null)
+        // Quay lại vị trí tuần tra nếu quá xa
+        if (distanceToReturn >= maxChaseDistance || enemyMovementAI.contextData.currentTarget == null)
         {
-            targetDetector.isDetected = false;
-            baseEnemy.IsPlayerDetected = false;
-            baseEnemy.isAttacking = false;
-            baseEnemy.IsPatrolling = true;
+            ResetChaseState();
             return;
         }
 
-         // Lấy hướng di chuyển
-        direction = enemyMovementAI.direction;
+        // Kiểm tra trong vùng retreat (dựa trên collider thay vì khoảng cách)
+        bool shouldRetreat = retreatAreaCollider != null && retreatAreaCollider.OverlapPoint(player.transform.position);
 
-        // Di chuyển bằng transform.position
-        transform.position += (Vector3)(direction * chasingSpeed * Time.deltaTime);
+        if (shouldRetreat)
+        {
+            StartRetreating();
+        }
+        else
+        {
+            StopRetreating();
+        }
+
+        float speed = isRetreating ? currentRetreatSpeed : chasingSpeed;
+        transform.position += (Vector3)(direction * speed * Time.deltaTime);
 
         if (baseEnemy.haveRun)
         {
@@ -72,4 +80,41 @@ public class ChasingBehavior : MonoBehaviour
         }
     }
 
+    private void StartRetreating()
+    {
+        direction = -enemyMovementAI.direction;
+        isRetreating = true;
+    }
+
+    private void StopRetreating()
+    {
+        direction = enemyMovementAI.direction;
+        isRetreating = false;
+        currentRetreatSpeed = minRetreatSpeed;
+    }
+
+    private void ResetChaseState()
+    {
+        targetDetector.isPlayerDetected = false;
+        baseEnemy.IsPlayerDetected = false;
+        baseEnemy.isAttacking = false;
+        baseEnemy.IsPatrolling = true;
+        StopRetreating();
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            StartRetreating();
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            StopRetreating();
+        }
+    }
 }

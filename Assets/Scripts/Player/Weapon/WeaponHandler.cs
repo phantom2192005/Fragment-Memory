@@ -4,6 +4,7 @@ public class WeaponHandler : MonoBehaviour
 {
     [SerializeField] private GameObject currentWeaponPrefab; // Đã lưu trữ animator của Base
     private Weapon currentWeapon;
+    [Header("Animators")]
     [SerializeField] private GameObject Base;
     [SerializeField] private GameObject WeaponSprite;
     [SerializeField] private GameObject WeaponSFX;

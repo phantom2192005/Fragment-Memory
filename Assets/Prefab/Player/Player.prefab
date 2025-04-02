@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 651871756477824411}
   - component: {fileID: 1492027726940324467}
-  - component: {fileID: 2297005532661987918}
+  - component: {fileID: 9015835573005364152}
   - component: {fileID: 3476577934646441634}
   m_Layer: 8
   m_Name: DetectBox
@@ -69,7 +69,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0.5}
   m_Size: {x: 0.9, y: 1.4}
   m_Direction: 0
---- !u!114 &2297005532661987918
+--- !u!114 &9015835573005364152
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -78,7 +78,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 637230320725631782}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 832670bde970e514e968f3fbec1edd87, type: 3}
+  m_Script: {fileID: 11500000, guid: 3d1ef495494337046b1779211419db40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &3476577934646441634
@@ -155,7 +155,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 348715631680943543}
-  - component: {fileID: 5002437217706727842}
+  - component: {fileID: 1087352041680445943}
   m_Layer: 0
   m_Name: CoreCombat
   m_TagString: Untagged
@@ -179,7 +179,7 @@ Transform:
   - {fileID: 7918141751365988527}
   m_Father: {fileID: 9002234525630750452}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5002437217706727842
+--- !u!114 &1087352041680445943
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -188,7 +188,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6151124734838412494}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee8c6e49b30d5564892c04865a2aeaf9, type: 3}
+  m_Script: {fileID: 11500000, guid: 59a8ac705ef84c94282b5ef386c3ecfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   currentWeaponHandler: {fileID: 3933608200247573670}
@@ -362,7 +362,7 @@ GameObject:
   - component: {fileID: 4343762284200050763}
   - component: {fileID: 7440006766311493327}
   - component: {fileID: 5615076606982306306}
-  - component: {fileID: 8636227681062337235}
+  - component: {fileID: 3000977272050864716}
   - component: {fileID: 4383135667091322909}
   - component: {fileID: 3280174957945021882}
   - component: {fileID: 4843613022476948704}
@@ -522,7 +522,7 @@ MonoBehaviour:
     m_ActionName: Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8636227681062337235}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: Roll
         m_Mode: 0
@@ -589,7 +589,7 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &8636227681062337235
+--- !u!114 &3000977272050864716
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -598,7 +598,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6414431574850518634}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4832f549358d27740a991222d80b0b32, type: 3}
+  m_Script: {fileID: 11500000, guid: 9ce07f73f588bdc4f9763feff6bd207f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   baseSpeed: 5
@@ -606,7 +606,7 @@ MonoBehaviour:
   rollSpeed: 10
   rollDuration: 0.5
   moveInput: {x: 0, y: 0}
-  coreCombat: {fileID: 5002437217706727842}
+  coreCombat: {fileID: 1087352041680445943}
   isAttacking: 0
 --- !u!114 &4383135667091322909
 MonoBehaviour:
@@ -623,10 +623,6 @@ MonoBehaviour:
   inventoryUI: {fileID: 0}
   inventoryData: {fileID: 11400000, guid: 89be2ec3b8153f047a51279a20c19b7b, type: 2}
   HurtBox: {fileID: 7903777609957261208}
-  initalItems:
-  - quantity: 4
-    item: {fileID: 11400000, guid: 88854241989c3a64a852f2330d293e5f, type: 2}
-    itemState: []
   dropClip: {fileID: 8300000, guid: 06f3183d3a08a4741ba87c6a4c45143d, type: 3}
   audioSource: {fileID: 4843613022476948704}
 --- !u!114 &3280174957945021882
@@ -839,7 +835,7 @@ Animator:
   m_GameObject: {fileID: 6905749783534926602}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9031ed3585cd68a4b905ba0be5d48ce6, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -982,7 +978,6 @@ GameObject:
   - component: {fileID: 8919678680062311582}
   - component: {fileID: 4273067324192447790}
   - component: {fileID: 4508970958358373231}
-  - component: {fileID: 3610082920827706119}
   m_Layer: 6
   m_Name: HurtBox
   m_TagString: HurtBox
@@ -1025,7 +1020,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1128,7 +1123,6 @@ MonoBehaviour:
   maxHealth: 300
   currentHealth: 0
   healthBar: {fileID: 0}
-  canKnockBack: 0
 --- !u!114 &4508970958358373231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1143,19 +1137,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _flashColor: {r: 1, g: 1, b: 1, a: 1}
   _flashTime: 0.25
---- !u!114 &3610082920827706119
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7903777609957261208}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4b6e4119489a604bad90f57fe2511be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  knockBackTime: 0.2
-  hitDirectionForce: 3
-  constForce: 1
-  inputForce: 1

@@ -7,8 +7,8 @@ using UnityEngine;
 public class CameraShakeManager : MonoBehaviour
 {
     public static CameraShakeManager instance;
+    public bool canShake = true;
 
-    [SerializeField] private float globalShakeForce = 1.0f;
     [SerializeField] CinemachineImpulseListener impulseListener;
     private CinemachineImpulseDefinition impulseDefinition;
 
@@ -24,20 +24,23 @@ public class CameraShakeManager : MonoBehaviour
             return;
         }
     }
-
-    public void CameraShake(CinemachineImpulseSource impulseSource)
+    private IEnumerator canShakeDelay()
     {
-        impulseSource.GenerateImpulseWithForce(globalShakeForce);
+        canShake = false;
+        yield return new WaitForSeconds(0.1f);
+        canShake = true;
     }
 
     public void ScreenShakeFromProfile(ScreenShakeProfile profile, CinemachineImpulseSource impulseSource)
     {
+        Debug.Log("camera shake Profile");
         //apply settings
         SetUpScreenShakeSettings(profile, impulseSource);
 
         //sreen shake
         impulseSource.GenerateImpulseWithForce(profile.impactForce);
-        
+        StartCoroutine(canShakeDelay());
+
     }
 
     private void SetUpScreenShakeSettings(ScreenShakeProfile profile, CinemachineImpulseSource impulseSource)

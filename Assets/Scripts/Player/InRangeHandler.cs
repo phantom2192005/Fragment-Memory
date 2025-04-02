@@ -25,7 +25,7 @@ public class InRangeHandler : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D trigger)
     {
-        
+       
     }
     private void OnTriggerExit2D(Collider2D trigger)
     {

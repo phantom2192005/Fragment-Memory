@@ -4,6 +4,7 @@ public class AttackBehaviour : MonoBehaviour
 {
     private IAttackPattern attackPattern;
     BaseEnemy baseEnemy;
+    public TargetDetector targetDetector;
 
     private void Start()
     {
@@ -16,7 +17,7 @@ public class AttackBehaviour : MonoBehaviour
 
     public void TryAttack()
     {
-        if (attackPattern != null && attackPattern.CanAttack() && baseEnemy.IsPlayerDetected)
+        if (attackPattern != null && attackPattern.CanAttack() && targetDetector.isPlayerDetected)
         {
             baseEnemy.FlipObject(baseEnemy.GetTarget().transform.position);
             //baseEnemy.IsAttacking = true;

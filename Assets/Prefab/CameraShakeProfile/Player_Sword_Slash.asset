@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 696c881fbc9e27f4fb4bca949d28f76a, type: 3}
-  m_Name: Electrocutioner
+  m_Name: Player_Sword_Slash
   m_EditorClassIdentifier: 
   impactTime: 0.2
   impactForce: 1
@@ -20,19 +20,19 @@ MonoBehaviour:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: -0.00390625
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
       time: 1
-      value: 0.8344042
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0
