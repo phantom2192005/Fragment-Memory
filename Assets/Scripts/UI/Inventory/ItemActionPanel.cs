@@ -1,8 +1,7 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 namespace Inventory.UI
 {
@@ -11,7 +10,7 @@ namespace Inventory.UI
         [SerializeField]
         private GameObject buttonPrefab;
 
-        public void AddButon(string name, Action onClickAction)
+        public void AddButton(string name, Action onClickAction)
         {
             GameObject button = Instantiate(buttonPrefab, transform);
             button.GetComponent<Button>().onClick.AddListener(() => onClickAction());
@@ -20,16 +19,16 @@ namespace Inventory.UI
 
         public void Toggle(bool val)
         {
-            if (val == true)
+            if (val)
                 RemoveOldButtons();
             gameObject.SetActive(val);
         }
 
         public void RemoveOldButtons()
         {
-            foreach (Transform transformChildObjects in transform)
+            foreach (Transform child in transform)
             {
-                Destroy(transformChildObjects.gameObject);
+                Destroy(child.gameObject);
             }
         }
     }

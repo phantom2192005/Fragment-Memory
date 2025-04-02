@@ -139,7 +139,7 @@ namespace Inventory.UI
 
         public void AddAction(string actionName, Action performAction)
         {
-            actionPanel.AddButon(actionName, performAction);
+            actionPanel.AddButton(actionName, performAction);
         }
         void DeselectAllItems()
         {
