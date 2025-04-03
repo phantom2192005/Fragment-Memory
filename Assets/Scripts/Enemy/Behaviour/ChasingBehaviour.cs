@@ -73,11 +73,6 @@ public class ChasingBehavior : MonoBehaviour
 
         float speed = isRetreating ? currentRetreatSpeed : chasingSpeed;
         transform.position += (Vector3)(direction * speed * Time.deltaTime);
-
-        if (baseEnemy.haveRun)
-        {
-            baseEnemy.animator.SetBool("IsRun", true);
-        }
     }
 
     private void StartRetreating()
@@ -95,8 +90,8 @@ public class ChasingBehavior : MonoBehaviour
 
     private void ResetChaseState()
     {
-        targetDetector.isPlayerDetected = false;
         baseEnemy.IsPlayerDetected = false;
+        targetDetector.isPlayerDetected = false;
         baseEnemy.isAttacking = false;
         baseEnemy.IsPatrolling = true;
         StopRetreating();

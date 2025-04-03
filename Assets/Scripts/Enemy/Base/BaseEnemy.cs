@@ -18,6 +18,7 @@ public class BaseEnemy : MonoBehaviour
         set
         {
             isPlayerDetected = value;
+            if (isPlayerDetected) { IsPatrolling = false;}
         }
     }
 

@@ -15,7 +15,8 @@ public class RangedAttack : MonoBehaviour, IAttackPattern
     void Start()
     {
         cooldownTimer = 0;
-        baseEnemy = GetComponentInParent<BaseEnemy>();
+        baseEnemy = GetComponentInParent<BaseEnemy>(); 
+        target = FindFirstObjectByType<PlayerController>().transform;
     }
 
     public bool CanAttack()

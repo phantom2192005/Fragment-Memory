@@ -15,23 +15,23 @@ public class TargetDetector : Detector
     [SerializeField]
     private bool showGizmos = false;
 
-    //gizmo parameters
+    // Gizmo parameters
     private List<Transform> colliders;
 
     public override void Detect(ContextData aiData)
     {
-        //Find out if player is near
+        // Tìm xem người chơi có ở gần không
         Collider2D playerCollider =
             Physics2D.OverlapCircle(transform.position, targetDetectionRange, playerLayerMask);
 
         if (playerCollider != null)
         {
-            //Check if you see the player
+            // Kiểm tra xem có nhìn thấy người chơi không
             Vector2 direction = (playerCollider.transform.position - transform.position).normalized;
             RaycastHit2D hit =
                 Physics2D.Raycast(transform.position, direction, targetDetectionRange, obstaclesLayerMask);
 
-            //Make sure that the collider we see is on the "Player" layer
+            // Đảm bảo collider chúng ta thấy thuộc layer "Player"
             if (hit.collider != null && (playerLayerMask & (1 << hit.collider.gameObject.layer)) != 0)
             {
                 // Vẽ nhiều đường song song để làm dày tia
@@ -45,16 +45,14 @@ public class TargetDetector : Detector
                 colliders = new List<Transform>() { playerCollider.transform };
                 isPlayerDetected = true;
             }
-
             else
             {
-                isPlayerDetected = false;
                 colliders = null;
             }
         }
         else
         {
-            //Enemy doesn't see the player
+            // Kẻ địch không nhìn thấy người chơi
             colliders = null;
         }
         aiData.targets = colliders;
@@ -62,13 +60,14 @@ public class TargetDetector : Detector
 
     private void OnDrawGizmosSelected()
     {
-        if (showGizmos == false)
+        if (!showGizmos)
             return;
 
         Gizmos.DrawWireSphere(transform.position, targetDetectionRange);
 
         if (colliders == null)
             return;
+
         Gizmos.color = Color.magenta;
         foreach (var item in colliders)
         {
