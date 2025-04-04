@@ -36,7 +36,7 @@ public class OnAttackHitHandler : MonoBehaviour
         {
             if (canKnockBack) 
             {
-                
+                Debug.Log("Knock Back");
                 hitDirection = trigger.transform.position - transform.position;
                 knockBack.SetKnockBack(trigger.GetComponentInParent<Rigidbody2D>());
                 knockBack.CallKnockback(hitDirection,Vector2.zero,Vector2.zero);

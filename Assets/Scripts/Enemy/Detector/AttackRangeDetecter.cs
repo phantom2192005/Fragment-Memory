@@ -1,31 +1,35 @@
-﻿using System.Diagnostics;
+﻿
 using UnityEngine;
+using System;
 
 public class AttackRangeDetector : MonoBehaviour
 {
+    public bool inAttackRange;
     public bool inMeleeRange;
     public bool inRangedRange;
     public string attackRange;
     public AttackBehaviour attackBehaviour;
-    BaseEnemy baseEnemy;
+    EnemeyController enemyController;
 
     private void Start()
     {
-        baseEnemy = GetComponentInParent<BaseEnemy>();
+        enemyController = GetComponentInParent<EnemeyController>();
     }
     public void DetectRange()
     {
         if (attackRange == "Melee Range")
         {
+            Debug.Log("In melee range");
             inMeleeRange = true;
             inRangedRange = false;
-            baseEnemy.IsAttacking = true;
-            
+            inAttackRange = true;
+            if (enemyController.haveRun) { enemyController.animator.SetBool("IsRun", false); }
         }
         if (attackRange == "Ranged Range" && inMeleeRange == false)
         {
             inRangedRange = true;
-            baseEnemy.IsAttacking = true;
+            inAttackRange = true;
+            if (enemyController.haveRun) { enemyController.animator.SetBool("IsRun", false); }
         }
     }
 
@@ -34,13 +38,14 @@ public class AttackRangeDetector : MonoBehaviour
         if (attackRange == "Melee Range")
         {
             inMeleeRange = false;
-            //baseEnemy.IsAttacking = false;
-            //baseEnemy.animator.SetBool("IsMeleeAttack", false);
+            inAttackRange = false;
+            if (enemyController.haveRun) { enemyController.animator.SetBool("IsRun", true); }
         }
         if (attackRange == "Ranged Range")
         {
             inRangedRange = false;
-            //baseEnemy.IsAttacking = false
+            inAttackRange = false;
+            if (enemyController.haveRun) { enemyController.animator.SetBool("IsRun", true); }
         }
     }
 

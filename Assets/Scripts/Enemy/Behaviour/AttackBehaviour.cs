@@ -3,25 +3,29 @@
 public class AttackBehaviour : MonoBehaviour
 {
     private IAttackPattern attackPattern;
-    BaseEnemy baseEnemy;
-    public TargetDetector targetDetector;
+    EnemeyController baseEnemy;
+    public EnemyMovementAI enemyMovementAI;
+
 
     private void Start()
     {
-        baseEnemy = GetComponentInParent<BaseEnemy>();
+        baseEnemy = GetComponentInParent<EnemeyController>();
     }
     public void SetAttackPattern(IAttackPattern newPattern)
     {
         attackPattern = newPattern;
     }
 
+    private void Update()
+    {
+        
+    }
+
     public void TryAttack()
     {
-        if (attackPattern != null && attackPattern.CanAttack() && targetDetector.isPlayerDetected)
+        if (attackPattern != null && attackPattern.CanAttack() && enemyMovementAI.contextData.currentTarget != null)
         {
             baseEnemy.FlipObject(baseEnemy.GetTarget().transform.position);
-            //baseEnemy.IsAttacking = true;
-            //Debug.Log("Call Try Attack");
             if (baseEnemy.haveRun)
             {
                 baseEnemy.animator.SetBool("IsRun", false);

@@ -398,6 +398,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetDetectionRange: 10
+  patrolSpot: {fileID: 0}
+  maxChaseDistance: 30
+  currentDistance: 0
   obstaclesLayerMask:
     serializedVersion: 2
     m_Bits: 768
@@ -417,7 +420,7 @@ GameObject:
   - component: {fileID: 3837944102908704565}
   - component: {fileID: 5566127285201354299}
   m_Layer: 7
-  m_Name: ContextSolver
+  m_Name: Context Solver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -497,7 +500,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ac55750bfa76a64eba563f936df990c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetDetector: {fileID: 5985220566325584895}
+  enemyMovementAI: {fileID: 5821419622526421084}
 --- !u!114 &1972836450497915418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -554,13 +557,13 @@ Transform:
   m_GameObject: {fileID: 4044114587116944241}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.9, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5087405677937895403}
   - {fileID: 4162421310748083708}
-  m_Father: {fileID: 4784410143432631334}
+  m_Father: {fileID: 932100296006786467}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4117909292532624837
 GameObject:
@@ -605,7 +608,7 @@ GameObject:
   - component: {fileID: 2817294041501661200}
   - component: {fileID: 546373032049215076}
   m_Layer: 7
-  m_Name: ObstacleAvoidance
+  m_Name: Obstacle Avoidance
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -690,112 +693,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   showGizmos: 1
---- !u!1 &5507444077125549203
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5170725311668190009}
-  - component: {fileID: 239029811569428789}
-  m_Layer: 0
-  m_Name: RetreatRange
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5170725311668190009
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5507444077125549203}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0564507, y: 1.0564507, z: 1.0564507}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 932100296006786467}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &239029811569428789
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5507444077125549203}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 2.3629558, y: 0.96147275}
-      - {x: 2.0283062, y: 0.98209965}
-      - {x: 1.7763522, y: 1.0129092}
-      - {x: 1.1621733, y: 1.0599366}
-      - {x: 0.7391002, y: 1.055302}
-      - {x: 0.2534926, y: 1.0476086}
-      - {x: -0.17479444, y: 1.0793139}
-      - {x: -0.5904255, y: 1.1073965}
-      - {x: -1.3577728, y: 1.0894727}
-      - {x: -1.6708465, y: 1.100643}
-      - {x: -2.1197963, y: 0.9885}
-      - {x: -2.4941392, y: 0.9544095}
-      - {x: -3.310397, y: 0.65173405}
-      - {x: -3.622762, y: 0.16604054}
-      - {x: -3.721236, y: -0.35821977}
-      - {x: -3.559144, y: -0.8154112}
-      - {x: -3.051118, y: -1.2219473}
-      - {x: -2.112584, y: -1.3003404}
-      - {x: -0.67162406, y: -1.3485335}
-      - {x: -0.019741476, y: -1.3060555}
-      - {x: 0.9996172, y: -1.3202568}
-      - {x: 2.720577, y: -1.1370966}
-      - {x: 3.5022905, y: -0.68438834}
-      - {x: 3.508063, y: -0.62297684}
-      - {x: 3.6911895, y: -0.31815618}
-      - {x: 3.6422575, y: 0.08465743}
-      - {x: 3.4151752, y: 0.40264118}
-      - {x: 3.1037261, y: 0.6297281}
-      - {x: 2.7415743, y: 0.87716836}
-  m_UseDelaunayMesh: 0
 --- !u!1 &5676571117360353114
 GameObject:
   m_ObjectHideFlags: 0
@@ -808,7 +705,7 @@ GameObject:
   - component: {fileID: 1898947105113219205}
   - component: {fileID: 5821419622526421084}
   m_Layer: 7
-  m_Name: SteeringBehaviours
+  m_Name: Steer Behaviours
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -827,7 +724,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3311702461743053671}
   - {fileID: 2817294041501661200}
   - {fileID: 5661507137366462382}
   - {fileID: 3837944102908704565}
@@ -881,7 +777,7 @@ GameObject:
   - component: {fileID: 5661507137366462382}
   - component: {fileID: 1371350817271000672}
   m_Layer: 7
-  m_Name: SeekBehaviour
+  m_Name: Seek Behaviour
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -914,9 +810,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92faaf2d6c9702f4983bde35258206cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseEnemy: {fileID: 3130551606878905660}
-  targetRechedThreshold: 1
+  enemyController: {fileID: 5806602146317475921}
+  targetRechedThreshold: 0.5
   showGizmo: 1
+  targetDetector: {fileID: 5985220566325584895}
   targetPositionCached: {x: 0, y: 0}
 --- !u!1 &6672182423651561498
 GameObject:
@@ -930,7 +827,7 @@ GameObject:
   - component: {fileID: 4672432083255423961}
   - component: {fileID: 2948082220146203091}
   - component: {fileID: 2476360204725317333}
-  - component: {fileID: 3130551606878905660}
+  - component: {fileID: 5806602146317475921}
   - component: {fileID: 5345174304980987704}
   - component: {fileID: 6620863091621103343}
   m_Layer: 7
@@ -956,9 +853,9 @@ Transform:
   - {fileID: 3370845803326007143}
   - {fileID: 7146407068383577105}
   - {fileID: 7140657618792370077}
-  - {fileID: 5170725311668190009}
-  - {fileID: 4784410143432631334}
+  - {fileID: 3311702461743053671}
   - {fileID: 2670693363670776523}
+  - {fileID: 4784410143432631334}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4672432083255423961
@@ -1021,7 +918,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6672182423651561498}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -1061,7 +958,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &3130551606878905660
+--- !u!114 &5806602146317475921
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1070,16 +967,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 6672182423651561498}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e022b1384f12d9b47a9dc90759b60391, type: 3}
+  m_Script: {fileID: 11500000, guid: c50b7946831e2194fb4ba79ce91d9878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPlayerDetected: 0
   isPatrolling: 1
   isIdling: 0
   isDead: 0
   isAttacking: 0
   haveRun: 0
+  attack: {fileID: 996004763808882490}
   animator: {fileID: 2476360204725317333}
+  targetDetecter: {fileID: 5985220566325584895}
+  attackRangeDetector: {fileID: 151525484188180609}
 --- !u!114 &5345174304980987704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1108,13 +1007,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chasingSpeed: 3
-  minRetreatSpeed: 1
-  maxRetreatSpeed: 3
-  maxChaseDistance: 30
-  minRetreatDelay: 3
-  maxRetreatDelay: 4
-  PatrolSpot: {fileID: 0}
-  retreatAreaCollider: {fileID: 239029811569428789}
   enemyMovementAI: {fileID: 5821419622526421084}
 --- !u!1 &8254224193988118333
 GameObject:
@@ -1242,7 +1134,7 @@ GameObject:
   - component: {fileID: 2670693363670776523}
   - component: {fileID: 151525484188180609}
   m_Layer: 6
-  m_Name: AttackRangeDetector
+  m_Name: Attack Range Detector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1256,7 +1148,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8314830716072834578}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1277,6 +1169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ffb89403d068d40a693c894999b24b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inAttackRange: 0
   inMeleeRange: 0
   inRangedRange: 0
   attackRange: 

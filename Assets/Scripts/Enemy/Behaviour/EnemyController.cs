@@ -1,85 +1,25 @@
-﻿using UnityEngine;
+using UnityEngine;
 
-public class BaseEnemy : MonoBehaviour
+public class EnemeyController : MonoBehaviour
 {
     [Header("State Management")]
-    public bool isPlayerDetected;
     public bool isPatrolling = true;
     public bool isIdling;
-
     public bool isDead;
     public bool isAttacking;
 
     [Header("Enemy Option")]
     public bool haveRun;
-    public bool IsPlayerDetected
-    {
-        get => isPlayerDetected;
-        set
-        {
-            isPlayerDetected = value;
-            if (isPlayerDetected) { IsPatrolling = false;}
-        }
-    }
-
-    public bool IsPatrolling
-    {
-        get => isPatrolling;
-        set
-        {
-            isPatrolling = value;
-        }
-    }
-
-    public bool IsIdling
-    {
-        get => isIdling;
-        set => isIdling = value;
-    }
-
-    public bool IsAttacking
-    {
-        get => isAttacking;
-        set
-        {
-            isAttacking = value;
-            if (isAttacking) // Nếu đang attack, tắt các trạng thái khác
-            {
-                isIdling = false;
-                //isPlayerDetected = false;
-                isPatrolling = false;
-                if (haveRun)
-                {
-                    animator.SetBool("IsRun", false);
-                }
-            }
-        }
-    }
-
-    public bool IsDead
-    {
-        get => isDead;
-        set
-        {
-            isDead = value;
-            if (isDead)
-            {
-                isPlayerDetected = false;
-                isPatrolling = false;
-                isIdling = false;
-                isAttacking = false;
-            }
-        }
-    }
-
 
 
     [Header("References")]
     private PatrolBehaviour patrol;
     private ChasingBehavior chase;
-    private AttackBehaviour attack;
+    public AttackBehaviour attack;
     private GameObject target;
     public Animator animator;
+    public TargetDetector targetDetecter;
+    public AttackRangeDetector attackRangeDetector;
 
     void Awake()
     {
@@ -88,6 +28,7 @@ public class BaseEnemy : MonoBehaviour
         attack = GetComponentInChildren<AttackBehaviour>();
         target = GameObject.FindGameObjectWithTag("Player");
         animator = GetComponent<Animator>();
+        attackRangeDetector = GetComponentInChildren<AttackRangeDetector>();
     }
 
     public GameObject GetTarget()
@@ -97,12 +38,16 @@ public class BaseEnemy : MonoBehaviour
 
     void Update()
     {
-        if (IsDead) return;
-        if(IsPlayerDetected && animator.GetBool("IsMeleeAttack") == false)
+        if (isDead) return;
+        if (targetDetecter.isPlayerDetected && attackRangeDetector.inAttackRange == false && isAttacking == false)
         {
             chase.ChasePlayer();
         }
-        else if (isPatrolling)
+        else if (targetDetecter.isPlayerDetected == false)
+        {
+            isPatrolling = true;
+        }
+        if (isPatrolling)
         {
             patrol.Patrol();
         }
@@ -134,19 +79,20 @@ public class BaseEnemy : MonoBehaviour
 
     public void HandlerAfterDeath()
     {
-        IsDead = true;
+        isDead = true;
     }
 
     public void OnAnimationEnter()
     {
-        
+        isAttacking = true;
+        if (haveRun) { animator.SetBool("IsRun", false); }
     }
-    
+
     public void OnAnimationEnd(string nameBoolAnimator)
     {
         SetAnimatorBoolParameter(nameBoolAnimator, false);
         attack.SetAttackPattern(null);
-        IsAttacking = false;
+        isAttacking = false;
     }
 
     public void FireProjectTile(string typeRangedAttack)

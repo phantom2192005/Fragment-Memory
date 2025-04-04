@@ -27,6 +27,8 @@ public class PlayerController : MonoBehaviour
     private InputAction walkAction;
     private InputAction runAction;
     private InputAction attackAction;
+    private InputAction rollAction;
+
 
     private bool isRunning;
     public bool isAttacking;
@@ -91,13 +93,15 @@ public class PlayerController : MonoBehaviour
         walkAction = InputSystem.actions.FindAction("Walk");
         runAction = InputSystem.actions.FindAction("Run");
         attackAction = InputSystem.actions.FindAction("Attack");
-
+        rollAction = InputSystem.actions.FindAction("Roll");
     }
+
     void RegisterInputActions()
     {
         runAction.performed += ctx => ToggleRunning(true);
         runAction.canceled += ctx => ToggleRunning(false);
         attackAction.performed += ctx => Attack();
+        rollAction.performed += Roll; // Đăng ký Roll
     }
 
     void Attack()

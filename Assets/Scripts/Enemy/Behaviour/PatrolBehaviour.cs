@@ -8,11 +8,11 @@ public class PatrolBehaviour : MonoBehaviour
     private Transform[] moveSpots;
     private int randomSpot;
     public GameObject Path;
-    private BaseEnemy baseEnemy;
+    private EnemeyController baseEnemy;
 
     void Start()
     {
-        baseEnemy = GetComponent<BaseEnemy>();
+        baseEnemy = GetComponent<EnemeyController>();
         waitTimer = waitTime;
 
         if (Path != null)
@@ -35,7 +35,7 @@ public class PatrolBehaviour : MonoBehaviour
     {
         if (moveSpots.Length == 0) return;
 
-        baseEnemy.IsIdling = false;
+        baseEnemy.isIdling = false;
 
         // Calculate the direction to the current random spot
         Vector2 direction = (moveSpots[randomSpot].position - transform.position).normalized;
@@ -68,7 +68,7 @@ public class PatrolBehaviour : MonoBehaviour
                 {
                     baseEnemy.animator.SetBool("IsRun", false);
                 }
-                baseEnemy.IsIdling = true;
+                baseEnemy.isIdling = true;
                 waitTimer -= Time.deltaTime; // Decrease the wait timer
             }
         }

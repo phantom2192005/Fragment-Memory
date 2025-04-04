@@ -4,12 +4,12 @@ public class MeleeAttack : MonoBehaviour, IAttackPattern
 {
     [SerializeField] private float coolDownTime = 2f;
     public float cooldownTimer;
-    BaseEnemy baseEnemy;
+    EnemeyController baseEnemy;
 
     void Start()
     {
         cooldownTimer = 0;
-        baseEnemy = GetComponentInParent<BaseEnemy>();
+        baseEnemy = GetComponentInParent<EnemeyController>();
     }
 
     public bool CanAttack()
@@ -21,12 +21,9 @@ public class MeleeAttack : MonoBehaviour, IAttackPattern
     {
         if (CanAttack())
         {
-            if (baseEnemy.animator.GetBool("IsRangedAttack") == false)
-            {
-                //Debug.Log("Melee Attack!");
-                cooldownTimer = coolDownTime;
-                baseEnemy.SetAnimatorBoolParameter("IsMeleeAttack", true);
-            }
+            Debug.Log("Excute Attack");
+            cooldownTimer = coolDownTime;
+            baseEnemy.SetAnimatorBoolParameter("IsMeleeAttack", true);
         }
     }
 

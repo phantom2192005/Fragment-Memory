@@ -6,7 +6,7 @@ using UnityEngine;
 public class SeekBehaviour : SteeringBehaviour
 {
     [SerializeField]
-    private BaseEnemy baseEnemy;
+    private EnemeyController enemyController;
 
     [SerializeField]
     private float targetRechedThreshold = 0.5f;
@@ -16,9 +16,18 @@ public class SeekBehaviour : SteeringBehaviour
 
     bool reachedLastTarget = true;
 
+    [SerializeField]
+    private TargetDetector targetDetector;
+
     // Gizmo parameters
     public Vector2 targetPositionCached;
     private float[] interestsTemp;
+
+    private void Awake()
+    {
+        if(enemyController == null)
+        enemyController = GetComponentInParent<EnemeyController>();
+    }
 
     public override (float[] danger, float[] interest) GetSteering(float[] danger, float[] interest, ContextData contextData)
     {
@@ -48,14 +57,16 @@ public class SeekBehaviour : SteeringBehaviour
         {
             reachedLastTarget = true;
             contextData.currentTarget = null;
+            targetDetector.isPlayerDetected = false;
+
             return (danger, interest);
         }
 
         // Nếu chưa đến mục tiêu, xác định hướng đi
         Vector2 directionToTarget = (targetPositionCached - (Vector2)transform.position);
-        if (targetPositionCached != null)
+        if (targetPositionCached != null && targetDetector.isPlayerDetected)
         {
-            baseEnemy.FlipObject(targetPositionCached);
+            enemyController.FlipObject(targetPositionCached);
         }
 
         for (int i = 0; i < interest.Length; i++)
