@@ -40,7 +40,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 1.6
+        time: 1.55
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -52,7 +52,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Enabled
-    path: HitBox/Melee HitBox
+    path: HitBox/HitBox_Stomp
     classID: 60
     script: {fileID: 0}
     flags: 0
@@ -150,7 +150,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 1031938459
+      path: 85130277
       attribute: 3305885265
       script: {fileID: 0}
       typeID: 60
@@ -251,7 +251,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 1.6
+        time: 1.55
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -263,7 +263,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Enabled
-    path: HitBox/Melee HitBox
+    path: HitBox/HitBox_Stomp
     classID: 60
     script: {fileID: 0}
     flags: 0

@@ -8,7 +8,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float baseSpeed = 5f;
     [SerializeField] private float runSpeed = 6.0f;
     [SerializeField] private float rollSpeed = 10.0f;
-    [SerializeField] private float rollDuration = 0.5f; // Thời gian lăn
+    [SerializeField] private float rollDuration = 0.5f;
+    public Stamina stamina;
 
     // Public getter methods
     public float GetBaseSpeed() => baseSpeed;
@@ -85,6 +86,7 @@ public class PlayerController : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         coreCombat = GetComponentInChildren<CoreCombat>();
+        stamina = GetComponentInChildren<Stamina>();
 
     }
 
@@ -163,7 +165,7 @@ public class PlayerController : MonoBehaviour
 
     public void Roll(InputAction.CallbackContext context)
     {
-        if (context.performed && !(currentState is PlayerRollState) && isAttacking == false)
+        if (context.performed && !(currentState is PlayerRollState) && isAttacking == false && stamina.GetCurrentStamia() >= 20)
         {
             ChangeState(new PlayerRollState(this));
         }

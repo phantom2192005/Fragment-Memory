@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7988024955119540883}
   - component: {fileID: 7838287546271518219}
   m_Layer: 7
-  m_Name: Ranged Attack Collider
+  m_Name: HitBox
   m_TagString: EnemyHitBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -146,7 +146,6 @@ MonoBehaviour:
   damage: 1
   isSingleHit: 0
   damageInterval: 0.05
-  canKnockBack: 0
 --- !u!1 &8251455273757848302
 GameObject:
   m_ObjectHideFlags: 0
@@ -223,7 +222,7 @@ SpriteRenderer:
   m_SortingLayerID: 2035271111
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: 9094337470159170996, guid: 40a14986a98b5ce48a95409f1957350c, type: 3}
+  m_Sprite: {fileID: -1523955401, guid: 40a14986a98b5ce48a95409f1957350c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -233,7 +232,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!95 &7536807771116308995
 Animator:
   serializedVersion: 5

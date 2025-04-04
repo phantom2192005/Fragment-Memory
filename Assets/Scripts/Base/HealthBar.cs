@@ -18,6 +18,15 @@ public class HealthBar : MonoBehaviour
     private void Start()
     {
         //  x = left, w = top, y = bottom , z = right
+        GameObject player = GameObject.Find("Player");
+        if (player != null)
+        {
+            _health = player.GetComponentInChildren<Health>();
+        }
+        else
+        {
+            Debug.LogWarning("Player not found!");
+        }
         _maxRightMask = _barRect.rect.width  - _mask.padding.x - _mask.padding.z;
         _initialRightMask = _mask.padding.z;
     }

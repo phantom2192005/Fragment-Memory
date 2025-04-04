@@ -39,7 +39,7 @@ public class EnemeyController : MonoBehaviour
     void Update()
     {
         if (isDead) return;
-        if(targetDetecter.isPlayerDetected == true)
+        if (targetDetecter.isPlayerDetected == true)
         {
             isPatrolling = false;
         }
@@ -99,11 +99,10 @@ public class EnemeyController : MonoBehaviour
         isAttacking = false;
     }
 
-    public void FireProjectTile(string typeRangedAttack)
+    public void FireProjectTile()
     {
-        if (typeRangedAttack == "RangedAttack")
-        {
-            GetComponentInChildren<RangedAttack>().FireProjectile();
-        }
+
+        GetComponentInChildren<RangedAttack>().FireProjectile();
+
     }
 }

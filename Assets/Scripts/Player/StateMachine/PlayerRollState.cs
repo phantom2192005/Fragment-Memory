@@ -25,6 +25,7 @@ public class PlayerRollState : IPlayerState
 
         
         player.PlayAnimation("Roll");
+        player.stamina.ModifyStamia(-20.0f);
     }
 
     public void Update()
