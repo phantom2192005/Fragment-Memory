@@ -8,20 +8,20 @@ public class RangedAttack : MonoBehaviour, IAttackPattern
     [SerializeField] private GameObject projectilePrefab;
     private Vector3 firePoint;
     [SerializeField] private Transform target;
-    EnemeyController baseEnemy;
+    EnemeyController enemyController;
 
     public float cooldownTimer;
 
     void Start()
     {
         cooldownTimer = 0;
-        baseEnemy = GetComponentInParent<EnemeyController>(); 
+        enemyController = GetComponentInParent<EnemeyController>(); 
         target = FindFirstObjectByType<PlayerController>().transform;
     }
 
     public bool CanAttack()
     {
-        return cooldownTimer <= 0;
+        return cooldownTimer <= 0 && enemyController.targetDetecter.isPlayerDetected;
     }
 
     public void ExecuteAttack()
@@ -29,7 +29,7 @@ public class RangedAttack : MonoBehaviour, IAttackPattern
         if (CanAttack())
         {
                 cooldownTimer = coolDownTime;
-                baseEnemy.SetAnimatorBoolParameter("IsRangedAttack", true);
+                enemyController.SetAnimatorBoolParameter("IsRangedAttack", true);
         }
     }
 

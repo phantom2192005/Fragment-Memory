@@ -409,6 +409,8 @@ MonoBehaviour:
     m_Bits: 256
   isPlayerDetected: 0
   showGizmos: 1
+  canDetect: 1
+  detectionCooldown: 3
 --- !u!1 &3892871654157207349
 GameObject:
   m_ObjectHideFlags: 0
@@ -1020,7 +1022,6 @@ GameObject:
   - component: {fileID: 2192406988010877781}
   - component: {fileID: 8860410582135010611}
   - component: {fileID: 6465723492130589234}
-  - component: {fileID: 8347545478210662566}
   m_Layer: 7
   m_Name: HurtBox
   m_TagString: HurtBox
@@ -1107,22 +1108,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _flashColor: {r: 0.77585316, g: 2.3009777, b: 2.4622889, a: 1}
   _flashTime: 0.2
---- !u!114 &8347545478210662566
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8254224193988118333}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4b6e4119489a604bad90f57fe2511be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  knockBackTime: 0.4
-  hitDirectionForce: 20
-  constForce: 2
-  inputForce: 2
 --- !u!1 &8314830716072834578
 GameObject:
   m_ObjectHideFlags: 0

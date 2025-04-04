@@ -862,6 +862,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coolDownTime: 2
+  meleeAttackAnimationParameters:
+  - Slash_1
+  - Slash_2
   cooldownTimer: 0
 --- !u!1 &7416734107679402154
 GameObject:
@@ -968,6 +971,8 @@ MonoBehaviour:
     m_Bits: 256
   isPlayerDetected: 0
   showGizmos: 1
+  canDetect: 1
+  detectionCooldown: 3
 --- !u!1 &8595343022949797719
 GameObject:
   m_ObjectHideFlags: 0

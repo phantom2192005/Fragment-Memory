@@ -38,7 +38,6 @@ Transform:
   - {fileID: 8177753276954960644}
   - {fileID: 1642689923360815153}
   - {fileID: 515382658523742407}
-  - {fileID: 8437105800138543881}
   - {fileID: 4320954227345644135}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -62,7 +61,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 2d74ce783792a0847b89c16c8084b044, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -158,7 +157,7 @@ MonoBehaviour:
   isIdling: 0
   isDead: 0
   isAttacking: 0
-  haveRun: 0
+  haveRun: 1
   attack: {fileID: 626429156613047586}
   animator: {fileID: 7864783830555215474}
   targetDetecter: {fileID: 6246374719599481448}
@@ -376,13 +375,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2868941153660117066}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5624682855366554806}
-  m_Father: {fileID: 4940137547231061241}
+  m_Father: {fileID: 515382658523742407}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2801251906925298722
 MonoBehaviour:
@@ -457,6 +456,8 @@ MonoBehaviour:
     m_Bits: 256
   isPlayerDetected: 0
   showGizmos: 1
+  canDetect: 1
+  detectionCooldown: 3
 --- !u!1 &4406793596056842230
 GameObject:
   m_ObjectHideFlags: 0
@@ -561,6 +562,7 @@ Transform:
   m_Children:
   - {fileID: 3175070040049107548}
   - {fileID: 412341708316051988}
+  - {fileID: 8437105800138543881}
   m_Father: {fileID: 4940137547231061241}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4710216704060811718
@@ -787,7 +789,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.10516274, y: 0.39}
@@ -820,5 +822,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e69696f5854d9a14e88910aaa745fa54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _flashColor: {r: 0.10224175, g: 0.09084173, b: 0.1470273, a: 1}
+  _flashColor: {r: 1, g: 1, b: 1, a: 1}
   _flashTime: 0.25

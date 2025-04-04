@@ -1,29 +1,39 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class MeleeAttack : MonoBehaviour, IAttackPattern
 {
     [SerializeField] private float coolDownTime = 2f;
+    [SerializeField] private string[] meleeAttackAnimationParameters; // Danh sách tên tham số animator
+
     public float cooldownTimer;
-    EnemeyController baseEnemy;
+    private EnemeyController enemyController;
 
     void Start()
     {
         cooldownTimer = 0;
-        baseEnemy = GetComponentInParent<EnemeyController>();
+        enemyController = GetComponentInParent<EnemeyController>();
     }
 
     public bool CanAttack()
     {
-        return cooldownTimer <= 0;
+        return cooldownTimer <= 0 && enemyController.targetDetecter.isPlayerDetected;
     }
 
     public void ExecuteAttack()
     {
         if (CanAttack())
         {
-            Debug.Log("Excute Attack");
             cooldownTimer = coolDownTime;
-            baseEnemy.SetAnimatorBoolParameter("IsMeleeAttack", true);
+
+            // Chọn random 1 animation
+            if (meleeAttackAnimationParameters.Length > 0)
+            {
+                int index = Random.Range(0, meleeAttackAnimationParameters.Length);
+                string selectedAnim = meleeAttackAnimationParameters[index];
+
+                Debug.Log($"Execute Melee Attack: {selectedAnim}");
+                enemyController.SetAnimatorBoolParameter(selectedAnim, true);
+            }
         }
     }
 

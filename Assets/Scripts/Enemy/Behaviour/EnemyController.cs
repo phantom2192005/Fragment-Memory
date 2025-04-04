@@ -39,6 +39,10 @@ public class EnemeyController : MonoBehaviour
     void Update()
     {
         if (isDead) return;
+        if(targetDetecter.isPlayerDetected == true)
+        {
+            isPatrolling = false;
+        }
         if (targetDetecter.isPlayerDetected && attackRangeDetector.inAttackRange == false && isAttacking == false)
         {
             chase.ChasePlayer();
