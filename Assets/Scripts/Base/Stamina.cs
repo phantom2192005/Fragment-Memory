@@ -5,13 +5,16 @@ using UnityEngine;
 public class Stamina : MonoBehaviour
 {
     [SerializeField]
-    private float MaxStamina;
+    public float MaxStamina;
 
     [SerializeField]
     private float currentStamina;
 
     [SerializeField]
     private float staminaRegenRate;
+
+    [SerializeField]
+    private StaminaBar staminaBar;
 
 
     private void Start()
@@ -22,6 +25,7 @@ public class Stamina : MonoBehaviour
     {
         if(currentStamina <= 0) { return;}
         currentStamina += value;
+        staminaBar.SetValue(currentStamina);
 
     }
     public float GetCurrentStamia()
@@ -34,6 +38,7 @@ public class Stamina : MonoBehaviour
         if (currentStamina < MaxStamina)
         {
             currentStamina += staminaRegenRate * Time.deltaTime;
+            staminaBar.SetValue(currentStamina);
             if (currentStamina > MaxStamina)
             {
                 currentStamina = MaxStamina;
