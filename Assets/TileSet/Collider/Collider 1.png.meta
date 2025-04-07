@@ -1,0 +1,420 @@
+fileFormatVersion: 2
+guid: 2b7367815695b5c4c802fbfbbd6e4f7c
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Collider 1_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 67
+        width: 16
+        height: 23
+      alignment: 9
+      pivot: {x: 0, y: 0.3475}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 6, y: 10.5}
+        - {x: -8, y: 3.5}
+        - {x: -8, y: -11.5}
+        - {x: -4, y: -9.5}
+        - {x: 8, y: -3.5}
+        - {x: 8, y: 11.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a9d408970743304e8d3c5062714fe3c
+      internalID: -1424006104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Collider 1_1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 67
+        width: 16
+        height: 23
+      alignment: 9
+      pivot: {x: 1, y: 0.3475}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 11.5}
+        - {x: -8, y: -4.5}
+        - {x: 6, y: -11.5}
+        - {x: 8, y: -11.5}
+        - {x: 8, y: 4.5}
+        - {x: -6, y: 11.5}
+      physicsShape:
+      - - {x: -8, y: 11.5}
+        - {x: -8, y: -3.5}
+        - {x: 6, y: -10.5}
+        - {x: 8, y: -11.5}
+        - {x: 8, y: 3.5}
+        - {x: -6, y: 10.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9989fb416e6cd48468c371e5dff37b4e
+      internalID: 1256761392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Collider 1_2
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 67
+        width: 2
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4690e71f49b3c342928e034414c5b3d
+      internalID: 1086626719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Collider 1_3
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 67
+        width: 16
+        height: 9
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 8, y: 4.5}
+        - {x: -8, y: -3.5}
+        - {x: -8, y: -4.5}
+        - {x: -8, y: -4.5}
+        - {x: 8, y: 3.5}
+        - {x: 8, y: 4.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fe8491d4b4a23d4fb81105fa9e48aa3
+      internalID: 1323889724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Collider 1_4
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 75
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fc5572e21035e04a8ec3f1530f86cf0
+      internalID: -1218263424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Collider 1_5
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 75
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39eacee1f136906409b8386aa6306ba8
+      internalID: 631951634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Collider 1_6
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 35
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d744934246d7bd54982ce629244f1e0f
+      internalID: -1500785134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Collider 1_7
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 42
+        width: 32
+        height: 9
+      alignment: 9
+      pivot: {x: 0.5, y: 0.11}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 0, y: 4.5}
+        - {x: -16, y: -3.5}
+        - {x: -16, y: -4.5}
+        - {x: 0, y: 3.5}
+        - {x: 2, y: 2.5}
+        - {x: 16, y: -4.5}
+        - {x: 16, y: -3.5}
+        - {x: 0, y: 4.5}
+      - - {x: 2, y: 2.5}
+        - {x: 2, y: 2.5}
+        - {x: 2, y: 2.5}
+        - {x: 2, y: 2.5}
+      tessellationDetail: 0.18
+      bones: []
+      spriteID: c3cf572b5307c20459625fded480f9c4
+      internalID: -1172292739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Collider 1_8
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 35
+        width: 32
+        height: 9
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4efb380f684c95341a7c4c41cb3a676a
+      internalID: 1298781171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Collider 1_9
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 35
+        width: 16
+        height: 24
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5374d4fa83aed5245842cd804be0b9ac
+      internalID: 790791940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Collider 1_10
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 35
+        width: 16
+        height: 24
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c249a8d2c60bfb74fbde067fa3f08aea
+      internalID: -749814951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Collider 1_11
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 67
+        width: 16
+        height: 9
+      alignment: 9
+      pivot: {x: 0, y: 0.11}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 4.5}
+        - {x: -8, y: 3.5}
+        - {x: 8, y: -4.5}
+        - {x: 8, y: -4.5}
+        - {x: 8, y: -3.5}
+        - {x: -4, y: 2.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: e88930183e56a4842b285138936a7b80
+      internalID: -1899969342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Collider 1_0: -1424006104
+      Collider 1_1: 1256761392
+      Collider 1_10: -749814951
+      Collider 1_11: -1899969342
+      Collider 1_2: 1086626719
+      Collider 1_3: 1323889724
+      Collider 1_4: -1218263424
+      Collider 1_5: 631951634
+      Collider 1_6: -1500785134
+      Collider 1_7: -1172292739
+      Collider 1_8: 1298781171
+      Collider 1_9: 790791940
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
