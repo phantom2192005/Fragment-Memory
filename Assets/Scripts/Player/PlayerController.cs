@@ -9,7 +9,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float runSpeed = 6.0f;
     [SerializeField] private float rollSpeed = 10.0f;
     [SerializeField] private float rollDuration = 0.5f;
+    public GameObject HurtBox;
     public Stamina stamina;
+    public Health health;
+    public GameObject DetectBox;
 
     // Public getter methods
     public float GetBaseSpeed() => baseSpeed;
@@ -80,14 +83,17 @@ public class PlayerController : MonoBehaviour
 
         // Set initial state
         ChangeState(new PlayerIdleState(this));
+        
     }
 
     void PrepareComponents()
     {
+        DetectBox = transform.Find("DetectBox")?.gameObject;
+        HurtBox = transform.Find("HurtBox")?.gameObject;
+        stamina = HurtBox.GetComponent<Stamina>();
+        health = HurtBox.GetComponent<Health>();
         animator = GetComponent<Animator>();
         coreCombat = GetComponentInChildren<CoreCombat>();
-        stamina = GetComponentInChildren<Stamina>();
-
     }
 
     void PrepareInputActions()
@@ -117,6 +123,10 @@ public class PlayerController : MonoBehaviour
     }
     void Update()
     {
+        if(health.currentHealth <= 0)
+        {
+            HandleAfterDeath();
+        }
         if (currentState is PlayerDeathState || currentState is PlayerAttackState)
         {
             return;
@@ -138,6 +148,7 @@ public class PlayerController : MonoBehaviour
     {
         if (currentState != null)
         {
+            //Debug.Log("Exit is call");
             currentState.Exit();
         }
         currentState = newState;
@@ -200,8 +211,11 @@ public class PlayerController : MonoBehaviour
         animator.Play(animationName);
     }
 
-    private void IsDead()
+    private void HandleAfterDeath()
     {
+        HurtBox.GetComponent<Collider2D>().enabled = false;
+        HurtBox.GetComponent<DamageFlash>().enabled = false;
+        DetectBox.SetActive(false);
         ChangeState(new PlayerDeathState(this));
     }
 }

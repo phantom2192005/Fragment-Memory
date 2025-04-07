@@ -16,6 +16,10 @@ public class UIMenuManager : MonoBehaviour
     {
         InGameMenu.SetActive(false);
     }
+    private void Start()
+    {
+        InGameMenu.SetActive(false);
+    }
     void Update()
     {
         if (Input.GetKeyUp(KeyCode.Escape))

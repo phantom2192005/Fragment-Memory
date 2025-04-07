@@ -12,7 +12,7 @@ public class Health : MonoBehaviour
     private void Start()
     {
         currentHealth = maxHealth;
-        animator = GetComponentInParent<Animator>();
+        animator = GetComponent<Animator>();
         damageFlash = GetComponent<DamageFlash>();
     }
 
@@ -21,9 +21,13 @@ public class Health : MonoBehaviour
 
     }
 
-    public void TakeDamage(int amount)
+    public void ModifyHealth(int amount)
     {
-        currentHealth -= amount;
+        if (amount > 0 && animator != null) 
+        {
+            animator.Play("Heal_VFX");
+        }
+        currentHealth += amount;
         // call damage Flash
         if (damageFlash != null)
         {
@@ -34,20 +38,6 @@ public class Health : MonoBehaviour
         {
             healthBar.SetValue(currentHealth);
 
-        }
-        if (currentHealth <= 0)
-        {
-            animator.Play("Death");
-        }
-    }
-
-    public void Heal(int amount)
-    {
-        currentHealth += amount;
-        if (healthBar != null)
-        {
-            healthBar.SetValue(currentHealth);
-            animator.Play("Heal_VFX");
         }
     }
 }

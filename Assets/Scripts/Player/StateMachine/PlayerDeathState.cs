@@ -11,9 +11,7 @@ public class PlayerDeathState : IPlayerState
 
     public void Enter()
     {
-        //Debug.Log("Enter Death State");
         player.PlayAnimation("Death");
-      
     }
 
     public void Update() 

@@ -21,11 +21,13 @@ public class PlayerRollState : IPlayerState
 
         float inputX = player.GetAnimator().GetFloat("InputX");
         float inputY = player.GetAnimator().GetFloat("InputY");
-        rollDirection = new Vector2(inputX,inputY);
+        rollDirection = new Vector2(inputX, inputY);
 
-        
+
         player.PlayAnimation("Roll");
         player.stamina.ModifyStamia(-20.0f);
+        player.HurtBox.GetComponent<Collider2D>().enabled = false;
+
     }
 
     public void Update()
@@ -37,12 +39,13 @@ public class PlayerRollState : IPlayerState
         }
         else
         {
+
             player.ChangeState(new PlayerIdleState(player));
         }
     }
 
-    public void Exit() 
+    public void Exit()
     {
-        
+        player.HurtBox.GetComponent<Collider2D>().enabled = true;
     }
 }

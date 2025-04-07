@@ -1,4 +1,4 @@
-using Inventory.Model;
+﻿using Inventory.Model;
 using Inventory.UI;
 using System;
 using System.Collections;
@@ -26,6 +26,9 @@ namespace Inventory
 
         [SerializeField]
         private AudioSource audioSource;
+
+        [SerializeField]
+        private GameObject DropItemPrefab;
 
 
         private void Start()
@@ -71,24 +74,46 @@ namespace Inventory
         {
             InventoryItem inventoryItem = inventoryData.GetItemAt(itemIndex);
             if (inventoryItem.IsEmpty)
-            {
                 return;
-            }
+
             IItemAction itemAction = inventoryItem.item as IItemAction;
             if (itemAction != null)
             {
                 inventoryUI.ShowItemAction(itemIndex);
-                inventoryUI.AddAction(itemAction.ActionName, () => PerformAction(itemIndex));
+
+                // Chuyển hành động vào UI
+                inventoryUI.AddAction(
+                    itemAction.ActionName,
+                    () => Debug.Log("Pointer Down"), // có thể bật hiệu ứng tại đây
+                    () => Debug.Log("Pointer Up"),   // có thể tắt hiệu ứng tại đây
+                    () => PerformAction(itemIndex)   // hành động chính
+                );
             }
+
             IDestroyableItem destroyableItem = inventoryItem.item as IDestroyableItem;
             if (destroyableItem != null)
             {
-                inventoryUI.AddAction("Drop", () => DropItem(itemIndex, inventoryItem.quantity));
+                inventoryUI.AddAction(
+                    "Drop",
+                    () => Debug.Log("Pointer Down Drop"),
+                    () => Debug.Log("Pointer Up Drop"),
+                    () => DropItem(itemIndex, inventoryItem.quantity)
+                );
             }
         }
 
+
         private void DropItem(int itemIndex, int quantity)
         {
+            InventoryItem inventoryItem = inventoryData.GetItemAt(itemIndex);
+            Item itemWorldSpace = DropItemPrefab.GetComponent<Item>();
+
+            itemWorldSpace.itemState = inventoryItem.itemState;
+            itemWorldSpace.Quantity = inventoryItem.quantity;
+            itemWorldSpace.InventoryItem = inventoryItem.item;
+            
+
+            Instantiate(DropItemPrefab,transform.position + new Vector3(4,0,0), Quaternion.identity);
             inventoryData.RemoveItem(itemIndex, quantity);
             inventoryUI.ResetSelection();
             audioSource.PlayOneShot(dropClip);
@@ -112,6 +137,10 @@ namespace Inventory
                 itemAction.PerformAction(HurtBox, inventoryItem.itemState);
                 audioSource.PlayOneShot(itemAction.actionSFX);
                 if (inventoryData.GetItemAt(itemIndex).IsEmpty)
+                {
+                    inventoryUI.ResetSelection();
+                }
+                if(inventoryData.GetItemAt(itemIndex).item is EquippableItemSO)
                 {
                     inventoryUI.ResetSelection();
                 }
@@ -164,6 +193,7 @@ namespace Inventory
 
         private void Update()
         {
+            /*
             if (Input.GetKeyUp(KeyCode.I))
             {
                 if (inventoryUI.isActiveAndEnabled == false)
@@ -180,7 +210,7 @@ namespace Inventory
                 {
                     inventoryUI.Hide();
                 }
-            }
+            }*/
         }
     }
 }

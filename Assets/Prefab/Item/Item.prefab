@@ -134,10 +134,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f9a3d6f490b5914baafb7e430bac554, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <InventoryItem>k__BackingField: {fileID: 11400000, guid: da8e9bfecc43dee4d863162d665ef0ea, type: 2}
+  <InventoryItem>k__BackingField: {fileID: 0}
   <Quantity>k__BackingField: 1
+  itemState: []
   audioSource: {fileID: 3936077991438373323}
   duration: 1
+  targetAbsorb: {fileID: 0}
+  AbsorbSpeed: 2
+  canAbsorbAll: 0
 --- !u!82 &3936077991438373323
 AudioSource:
   m_ObjectHideFlags: 0

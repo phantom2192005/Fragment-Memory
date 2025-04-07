@@ -34,7 +34,7 @@ public class ChasingBehavior : MonoBehaviour
 
     private void MoveTowardsPlayer()
     {
-        Debug.Log("Chase");
+        //Debug.Log("Chase");
         Vector2 direction = enemyMovementAI.direction;
         transform.position += (Vector3)(direction * chasingSpeed * Time.deltaTime);
     }

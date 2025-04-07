@@ -11,6 +11,7 @@ TagManager:
   - Bandit_Dagger
   - OneHit
   - Bandit_Archer
+  - PlayerDetect
   layers:
   - Default
   - TransparentFX

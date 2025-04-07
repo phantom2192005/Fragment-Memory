@@ -179,6 +179,16 @@ namespace Inventory.Model
             };
         }
 
+        public InventoryItem ChangeItemState(List<ItemParameter> itemStates)
+        {
+            return new InventoryItem
+            {
+                item = this.item,
+                quantity = this.quantity,
+                itemState = itemStates,
+            };
+        }
+
         public static InventoryItem GetEmptyItem()
             => new InventoryItem
             {

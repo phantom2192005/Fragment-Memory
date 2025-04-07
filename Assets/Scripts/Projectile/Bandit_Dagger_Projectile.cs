@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using TreeEditor;
 using UnityEngine;
 public class Bandit_Dagger_Projectile : BaseProjectile
 {

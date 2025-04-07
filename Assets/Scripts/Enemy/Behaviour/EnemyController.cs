@@ -20,6 +20,8 @@ public class EnemeyController : MonoBehaviour
     public Animator animator;
     public TargetDetector targetDetecter;
     public AttackRangeDetector attackRangeDetector;
+    public GameObject HurtBox;
+    public Health health;
 
     void Awake()
     {
@@ -29,7 +31,10 @@ public class EnemeyController : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("Player");
         animator = GetComponent<Animator>();
         attackRangeDetector = GetComponentInChildren<AttackRangeDetector>();
+        HurtBox = transform.Find("HurtBox")?.gameObject;
+        health = HurtBox.GetComponent<Health>();
     }
+
 
     public GameObject GetTarget()
     {
@@ -38,6 +43,10 @@ public class EnemeyController : MonoBehaviour
 
     void Update()
     {
+        if (health.currentHealth <=0 )
+        {
+            HandlerAfterDeath();
+        }
         if (isDead) return;
         if (targetDetecter.isPlayerDetected == true)
         {
@@ -59,7 +68,7 @@ public class EnemeyController : MonoBehaviour
 
     public void FlipObject(Vector3 targetPosition)
     {
-        if (targetPosition == null) return;
+        if (targetPosition == null || isDead) return;
 
         Vector3 scale = transform.localScale;
 
@@ -84,6 +93,9 @@ public class EnemeyController : MonoBehaviour
     public void HandlerAfterDeath()
     {
         isDead = true;
+        animator.Play("Death");
+        HurtBox.GetComponent<Collider2D>().enabled = false;
+        HurtBox.GetComponent<DamageFlash>().enabled = false;
     }
 
     public void OnAnimationEnter()

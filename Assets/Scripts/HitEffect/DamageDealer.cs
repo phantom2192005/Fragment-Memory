@@ -27,7 +27,7 @@ public class DamageDealer : MonoBehaviour
             lastHitTime = Time.time;
 
             targetHealth = trigger.GetComponent<Health>();
-            targetHealth.TakeDamage(damage);
+            targetHealth.ModifyHealth(damage);
         }
     }
 

@@ -14,6 +14,8 @@ namespace Inventory.UI
         private TMP_Text title;
         [SerializeField]
         private TMP_Text description;
+        private int currentPage = 1;
+
 
 
         public void Awake()
@@ -28,13 +30,35 @@ namespace Inventory.UI
             description.text = "";
         }
 
-        public void SetDescription(Sprite sprite, string itemName,
-            string itemDescription)
+        public void SetDescription(Sprite sprite, string itemName, string itemDescription)
         {
             itemImage.gameObject.SetActive(true);
             itemImage.sprite = sprite;
             title.text = itemName;
             description.text = itemDescription;
+
+            currentPage = 1;
+            description.pageToDisplay = currentPage;
         }
+
+
+        public void TurnNextPageDescription()
+        {
+            if (currentPage < description.textInfo.pageCount)
+            {
+                currentPage++;
+                description.pageToDisplay = currentPage;
+            }
+        }
+
+        public void TurnPreviousPageDescription()
+        {
+            if (currentPage > 1)
+            {
+                currentPage--;
+                description.pageToDisplay = currentPage;
+            }
+        }
+
     }
 }
