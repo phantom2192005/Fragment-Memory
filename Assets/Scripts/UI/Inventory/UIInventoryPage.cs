@@ -34,7 +34,7 @@ namespace Inventory.UI
 
         public void Awake()
         {
-            Hide();
+            //Hide();
             mouseFollower.Toggle(false);
             itemDescription.ResetDescription();
         }
@@ -50,7 +50,7 @@ namespace Inventory.UI
                 uiItem.OnItemBeginDrag += HandleBeginDrag;
                 uiItem.OnItemDroppedOn += HandleSwap;
                 uiItem.OnItemEndDrag += HandleEndDrag;
-                uiItem.OnRightMouseBtnClick += HandleShowItemActions;
+                uiItem.OnLeftMouseBtnClick += HandleShowItemActions;
             }
         }
         internal void UpdateDescription(int itemIndex, Sprite itemImage, string name, string description)
@@ -137,10 +137,11 @@ namespace Inventory.UI
            // actionPanel.transform.position = listOfUIItems[itemIndex].transform.position; 
         }
 
-        public void AddAction(string actionName, Action performAction)
+        public void AddAction(string actionName, Action onPointerDown, Action onPointerUp, Action performAction)
         {
-            actionPanel.AddButon(actionName, performAction);
+            actionPanel.AddButton(actionName, onPointerDown, onPointerUp, performAction);
         }
+
         void DeselectAllItems()
         {
             foreach (UIInventoryItem item in listOfUIItems)

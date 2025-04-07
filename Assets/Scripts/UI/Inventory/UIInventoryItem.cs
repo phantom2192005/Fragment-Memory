@@ -13,6 +13,7 @@ namespace Inventory.UI
     {
         [SerializeField]
         private Image itemImage;
+
         [SerializeField]
         private TMP_Text quantityTxt;
 
@@ -21,7 +22,7 @@ namespace Inventory.UI
 
         public event Action<UIInventoryItem> OnItemClicked,
             OnItemDroppedOn, OnItemBeginDrag, OnItemEndDrag
-            , OnRightMouseBtnClick;
+            , OnLeftMouseBtnClick;
 
         private bool empty = true;
 
@@ -57,13 +58,11 @@ namespace Inventory.UI
 
         public void OnPointerClick(PointerEventData pointerEventData)
         {
-            if (pointerEventData.button == PointerEventData.InputButton.Right)
-            {
-                OnRightMouseBtnClick?.Invoke(this);
-            }
-            else
-            {
+            if (pointerEventData.button == PointerEventData.InputButton.Left)
+            { 
                 OnItemClicked?.Invoke(this);
+                OnLeftMouseBtnClick?.Invoke(this);
+               
             }
         }
 

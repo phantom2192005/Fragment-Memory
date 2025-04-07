@@ -6,10 +6,13 @@ using UnityEngine;
 public class Item : MonoBehaviour
 {
     [field: SerializeField]
-    public ItemSO InventoryItem { get; private set; }
+    public ItemSO InventoryItem { get; set; }
 
     [field: SerializeField]
     public int Quantity { get; set; } = 1;
+
+    [field: SerializeField]
+    public List<ItemParameter> itemState;
 
     [SerializeField]
     private AudioSource audioSource;
@@ -17,9 +20,32 @@ public class Item : MonoBehaviour
     [SerializeField]
     private float duration = 0.3f;
 
+    [SerializeField]
+    private Transform targetAbsorb;
+
+    [SerializeField]
+    private float AbsorbSpeed = 2.0f;
+
+    public bool canAbsorbAll;
+
+
     private void Start()
     {
+        //Debug.Log("Start item is call");
         GetComponent<SpriteRenderer>().sprite = InventoryItem.ItemImage;
+        if (itemState == null)
+        {
+            PrepareItemState(InventoryItem.DefaultParametersList);
+        }
+    }
+
+    public void PrepareItemState(List<ItemParameter> itemStates)
+    {
+        itemState = new List<ItemParameter>();
+        foreach (var itemParameter in itemStates)
+        {
+            itemState.Add(itemParameter);
+        }
     }
 
     public void DestroyItem()
@@ -43,5 +69,25 @@ public class Item : MonoBehaviour
             yield return null;
         }
         Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter2D(Collider2D triggger)
+    {
+        if (triggger.tag == "PlayerDetect")
+        {
+            targetAbsorb = triggger.transform;
+        }
+    }
+
+    private void Update()
+    {
+        if (targetAbsorb != null && canAbsorbAll)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, targetAbsorb.position, AbsorbSpeed * Time.deltaTime);
+            if (transform.position == targetAbsorb.transform.position)
+            {
+                Destroy(gameObject);
+            }
+        }
     }
 }

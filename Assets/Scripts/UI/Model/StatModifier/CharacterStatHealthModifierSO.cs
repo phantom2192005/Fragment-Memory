@@ -11,7 +11,7 @@ public class CharacterStatHealthModifierSO : CharacterStatModifierSO
         Health health = character.GetComponent<Health>();
         if (health != null) 
         {
-            health.Heal((int)val);
+            health.ModifyHealth((int)val);
         }
     }
 }

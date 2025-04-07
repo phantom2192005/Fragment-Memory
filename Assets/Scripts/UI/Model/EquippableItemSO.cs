@@ -9,17 +9,24 @@ namespace Inventory.Model
     {
         public string ActionName => "Equip";
 
+        public string EquipmentCategory;
+
+        public GameObject Weapon;
+
         [field: SerializeField]
         public AudioClip actionSFX { get; private set; }
 
         public bool PerformAction(GameObject character, List<ItemParameter> itemState = null)
         {
-            AgentWeapon weaponSystem = character.GetComponentInParent<AgentWeapon>();
-            if (weaponSystem != null)
+            WeaponHandler weaponHandler = FindFirstObjectByType<WeaponHandler>();
+            if (weaponHandler != null)
             {
-                weaponSystem.SetWeapon(this, itemState == null ?
-                    DefaultParametersList : itemState);
+                weaponHandler.EquipWeapon(Weapon, this, itemState == null ? DefaultParametersList : itemState);
                 return true;
+            }
+            else
+            {
+                Debug.Log("WeaponHandler is null");
             }
             return false;
         }

@@ -1,12 +1,15 @@
-﻿using UnityEngine;
+﻿using Inventory.Model;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class WeaponHandler : MonoBehaviour
 {
-    [SerializeField] private GameObject currentWeaponPrefab; // Đã lưu trữ animator của Base
+    [SerializeField] private GameObject currentWeaponPrefab;
     private Weapon currentWeapon;
+    [Header("Animators")]
     [SerializeField] private GameObject Base;
     [SerializeField] private GameObject WeaponSprite;
-    [SerializeField] private GameObject WeaponSFX;
+    [SerializeField] private GameObject WeaponVFX;
     [SerializeField] private GameObject HitBox;
 
     private SpriteRenderer weaponSprite_spriteRenderer;
@@ -15,12 +18,25 @@ public class WeaponHandler : MonoBehaviour
     private Animator weaponSprite_Animator;
     private Animator weaponVFX_Animator;
 
+    [SerializeField]
+    private EquippableItemSO weapon;
+
+    [SerializeField]
+    private InventorySO inventoryData;
+
+    [SerializeField]
+    private List<ItemParameter> parametersToModify, itemCurrentState;
 
 
 
     private PlayerController player;
 
     void Start()
+    {
+        PrepareAnimators();
+    }
+
+    void PrepareAnimators()
     {
         weaponSprite_spriteRenderer = WeaponSprite.GetComponent<SpriteRenderer>();
         player = FindFirstObjectByType<PlayerController>();
@@ -33,11 +49,12 @@ public class WeaponHandler : MonoBehaviour
         //set up Animator
         base_Animator = Base != null ? Base.GetComponent<Animator>() : null;
         weaponSprite_Animator = WeaponSprite != null ? WeaponSprite.GetComponent<Animator>() : null;
-        weaponVFX_Animator = WeaponSFX != null ? WeaponSFX.GetComponent<Animator>() : null;
+        weaponVFX_Animator = WeaponVFX != null ? WeaponVFX.GetComponent<Animator>() : null;
 
         // set up hitBox
-        WeaponSFX.GetComponent<HitBoxHandler>().hitBoxPrefabs = currentWeapon.hitBoxes;
-        WeaponSFX.GetComponent<HitBoxHandler>().InitializeHitBoxes(HitBox.transform);
+        WeaponVFX.GetComponent<HitBoxHandler>().hitBoxPrefabs = currentWeapon.hitBoxes;
+        WeaponVFX.GetComponent<HitBoxHandler>().DestroyAllHitBoxs(HitBox.transform);
+        WeaponVFX.GetComponent<HitBoxHandler>().InitializeHitBoxes(HitBox.transform);
 
 
         currentWeaponPrefab.GetComponent<Weapon>().AttachAnimator();
@@ -142,21 +159,36 @@ public class WeaponHandler : MonoBehaviour
         }
     }
 
-    public void EquipWeapon(Weapon newWeapon)
+    public void EquipWeapon(GameObject newWeapon, EquippableItemSO weaponItemSO, List<ItemParameter> itemState)
     {
-        currentWeapon = newWeapon;
-        weaponSprite_Animator = newWeapon.GetComponent<Animator>();
+        Debug.Log("Equip weapon");
 
-        // Gán animator của vũ khí mới vào Base
-        if (base_Animator != null && weaponSprite_Animator != null)
+        if (weapon != null)
         {
-            base_Animator.runtimeAnimatorController = weaponSprite_Animator.runtimeAnimatorController;
-        }
-        else
-        {
-            Debug.LogWarning("Vũ khí mới không có Animator hoặc Base không có Animator!");
+            inventoryData.AddItem(weapon, 1, itemCurrentState);
         }
 
-        Debug.Log("Đã trang bị vũ khí mới: " + newWeapon.name);
+        this.weapon = weaponItemSO;
+        this.itemCurrentState = itemState;
+
+        currentWeaponPrefab = newWeapon;
+        PrepareAnimators();
+        ModifyParameters(parametersToModify);
+    }
+    private void ModifyParameters(List<ItemParameter> parametersToModify)
+    {
+        foreach (var parameter in parametersToModify)
+        {
+            if (itemCurrentState.Contains(parameter))
+            {
+                int index = itemCurrentState.IndexOf(parameter);
+                float newValue = itemCurrentState[index].value + parameter.value;
+                itemCurrentState[index] = new ItemParameter
+                {
+                    itemParameter = parameter.itemParameter,
+                    value = newValue
+                };
+            }
+        }
     }
 }

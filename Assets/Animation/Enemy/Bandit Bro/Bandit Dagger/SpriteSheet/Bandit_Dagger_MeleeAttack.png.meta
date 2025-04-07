@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dagger_Bandit_MeleeAttack_0
+      name: Bandit_Dagger_MeleeAttack_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f19562d48a2b8147b39c230b25e1f8a
-      internalID: 562758108
+      spriteID: 3500819f561d5da4d8742dcdefd69949
+      internalID: -1815580539
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dagger_Bandit_MeleeAttack_1
+      name: Bandit_Dagger_MeleeAttack_1
       rect:
         serializedVersion: 2
         x: 192
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d557db78675293641b09af3ecb96912f
-      internalID: 1294858806
+      spriteID: 4cbd9b465fd39384b8784738647b6286
+      internalID: -519443704
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dagger_Bandit_MeleeAttack_2
+      name: Bandit_Dagger_MeleeAttack_2
       rect:
         serializedVersion: 2
         x: 384
@@ -166,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5afcafd23f89e724ca199a26a97d2849
-      internalID: -582521068
+      spriteID: d8f55b8560f21d547a13fc4aeab3dfc9
+      internalID: 196893786
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dagger_Bandit_MeleeAttack_3
+      name: Bandit_Dagger_MeleeAttack_3
       rect:
         serializedVersion: 2
         x: 576
@@ -187,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a00c1d5fd8a90c4d9ccd486c87b9efb
-      internalID: 966445939
+      spriteID: 15929f96a6ed1f143af7e11e439bb78e
+      internalID: -1817583172
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dagger_Bandit_MeleeAttack_4
+      name: Bandit_Dagger_MeleeAttack_4
       rect:
         serializedVersion: 2
         x: 768
@@ -208,14 +208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4388255df563d24688b9b52f32a8b4e
-      internalID: 18631973
+      spriteID: 395e8ba21efc9cc46953128fe7f01c68
+      internalID: -800362
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dagger_Bandit_MeleeAttack_5
+      name: Bandit_Dagger_MeleeAttack_5
       rect:
         serializedVersion: 2
         x: 960
@@ -229,14 +229,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95b8f9d2f8f806b44be167adfe919fbf
-      internalID: -182295087
+      spriteID: 22ef9d8dda19ee745bab675d20d741a2
+      internalID: -519902332
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dagger_Bandit_MeleeAttack_6
+      name: Bandit_Dagger_MeleeAttack_6
       rect:
         serializedVersion: 2
         x: 1152
@@ -250,8 +250,134 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a1300a05dd9f51f4daacc54ec5c990c5
-      internalID: 1739512778
+      spriteID: 2363ea9efb3d34444bc7066a227a5591
+      internalID: 1469918051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bandit_Dagger_MeleeAttack_7
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 0
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5928923274c09db4ca8e06ca484075ed
+      internalID: 1723761102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bandit_Dagger_MeleeAttack_8
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea9f87467116ebb48bfe04a71f48382c
+      internalID: -456384512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bandit_Dagger_MeleeAttack_9
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 0
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec8b79024e9129d4b9f9efb2d794d34d
+      internalID: 726768064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bandit_Dagger_MeleeAttack_10
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0be84771c915c8e48b3a8a36dbaccbd8
+      internalID: -2006243767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bandit_Dagger_MeleeAttack_11
+      rect:
+        serializedVersion: 2
+        x: 2112
+        y: 0
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb7afe8b399c53b4ea439c169b09ea29
+      internalID: 1337471251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bandit_Dagger_MeleeAttack_12
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 0
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f080bde835ebafd4ba915ed4f6e8a7ef
+      internalID: 133203152
       vertices: []
       indices: 
       edges: []
@@ -267,13 +393,19 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Dagger_Bandit_MeleeAttack_0: 562758108
-      Dagger_Bandit_MeleeAttack_1: 1294858806
-      Dagger_Bandit_MeleeAttack_2: -582521068
-      Dagger_Bandit_MeleeAttack_3: 966445939
-      Dagger_Bandit_MeleeAttack_4: 18631973
-      Dagger_Bandit_MeleeAttack_5: -182295087
-      Dagger_Bandit_MeleeAttack_6: 1739512778
+      Bandit_Dagger_MeleeAttack_0: -1815580539
+      Bandit_Dagger_MeleeAttack_1: -519443704
+      Bandit_Dagger_MeleeAttack_10: -2006243767
+      Bandit_Dagger_MeleeAttack_11: 1337471251
+      Bandit_Dagger_MeleeAttack_12: 133203152
+      Bandit_Dagger_MeleeAttack_2: 196893786
+      Bandit_Dagger_MeleeAttack_3: -1817583172
+      Bandit_Dagger_MeleeAttack_4: -800362
+      Bandit_Dagger_MeleeAttack_5: -519902332
+      Bandit_Dagger_MeleeAttack_6: 1469918051
+      Bandit_Dagger_MeleeAttack_7: 1723761102
+      Bandit_Dagger_MeleeAttack_8: -456384512
+      Bandit_Dagger_MeleeAttack_9: 726768064
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

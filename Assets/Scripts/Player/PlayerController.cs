@@ -8,7 +8,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float baseSpeed = 5f;
     [SerializeField] private float runSpeed = 6.0f;
     [SerializeField] private float rollSpeed = 10.0f;
-    [SerializeField] private float rollDuration = 0.5f; // Thời gian lăn
+    [SerializeField] private float rollDuration = 0.5f;
+    public GameObject HurtBox;
+    public Stamina stamina;
+    public Health health;
+    public GameObject DetectBox;
 
     // Public getter methods
     public float GetBaseSpeed() => baseSpeed;
@@ -27,6 +31,8 @@ public class PlayerController : MonoBehaviour
     private InputAction walkAction;
     private InputAction runAction;
     private InputAction attackAction;
+    private InputAction rollAction;
+
 
     private bool isRunning;
     public bool isAttacking;
@@ -77,13 +83,17 @@ public class PlayerController : MonoBehaviour
 
         // Set initial state
         ChangeState(new PlayerIdleState(this));
+        
     }
 
     void PrepareComponents()
     {
+        DetectBox = transform.Find("DetectBox")?.gameObject;
+        HurtBox = transform.Find("HurtBox")?.gameObject;
+        stamina = HurtBox.GetComponent<Stamina>();
+        health = HurtBox.GetComponent<Health>();
         animator = GetComponent<Animator>();
         coreCombat = GetComponentInChildren<CoreCombat>();
-
     }
 
     void PrepareInputActions()
@@ -91,13 +101,15 @@ public class PlayerController : MonoBehaviour
         walkAction = InputSystem.actions.FindAction("Walk");
         runAction = InputSystem.actions.FindAction("Run");
         attackAction = InputSystem.actions.FindAction("Attack");
-
+        rollAction = InputSystem.actions.FindAction("Roll");
     }
+
     void RegisterInputActions()
     {
         runAction.performed += ctx => ToggleRunning(true);
         runAction.canceled += ctx => ToggleRunning(false);
         attackAction.performed += ctx => Attack();
+        rollAction.performed += Roll; // Đăng ký Roll
     }
 
     void Attack()
@@ -111,6 +123,10 @@ public class PlayerController : MonoBehaviour
     }
     void Update()
     {
+        if(health.currentHealth <= 0)
+        {
+            HandleAfterDeath();
+        }
         if (currentState is PlayerDeathState || currentState is PlayerAttackState)
         {
             return;
@@ -132,6 +148,7 @@ public class PlayerController : MonoBehaviour
     {
         if (currentState != null)
         {
+            //Debug.Log("Exit is call");
             currentState.Exit();
         }
         currentState = newState;
@@ -159,7 +176,7 @@ public class PlayerController : MonoBehaviour
 
     public void Roll(InputAction.CallbackContext context)
     {
-        if (context.performed && !(currentState is PlayerRollState) && isAttacking == false)
+        if (context.performed && !(currentState is PlayerRollState) && isAttacking == false && stamina.GetCurrentStamia() >= 20)
         {
             ChangeState(new PlayerRollState(this));
         }
@@ -194,8 +211,11 @@ public class PlayerController : MonoBehaviour
         animator.Play(animationName);
     }
 
-    private void IsDead()
+    private void HandleAfterDeath()
     {
+        HurtBox.GetComponent<Collider2D>().enabled = false;
+        HurtBox.GetComponent<DamageFlash>().enabled = false;
+        DetectBox.SetActive(false);
         ChangeState(new PlayerDeathState(this));
     }
 }

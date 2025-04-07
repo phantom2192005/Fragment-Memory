@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 651871756477824411}
   - component: {fileID: 1492027726940324467}
-  - component: {fileID: 2297005532661987918}
   - component: {fileID: 3476577934646441634}
+  - component: {fileID: 3299574407062568623}
   m_Layer: 8
   m_Name: DetectBox
   m_TagString: Player
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 637230320725631782}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.04, y: 0.52, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -66,21 +66,9 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.5}
+  m_Offset: {x: 0, y: 0.04}
   m_Size: {x: 0.9, y: 1.4}
   m_Direction: 0
---- !u!114 &2297005532661987918
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 637230320725631782}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 832670bde970e514e968f3fbec1edd87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &3476577934646441634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94,6 +82,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryData: {fileID: 11400000, guid: 89be2ec3b8153f047a51279a20c19b7b, type: 2}
+--- !u!114 &3299574407062568623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 637230320725631782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 832670bde970e514e968f3fbec1edd87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1109948150429992416
 GameObject:
   m_ObjectHideFlags: 0
@@ -144,8 +144,16 @@ MonoBehaviour:
   currentWeaponPrefab: {fileID: 4188511327366954959, guid: 381504000aa8e24409afb11f3b22d6be, type: 3}
   Base: {fileID: 6905749783534926602}
   WeaponSprite: {fileID: 6998727705373087363}
-  WeaponSFX: {fileID: 6267988207155586072}
+  WeaponVFX: {fileID: 6267988207155586072}
   HitBox: {fileID: 6152050211411437995}
+  weapon: {fileID: 11400000, guid: 797a3743ba4965f46a18525f0b243806, type: 2}
+  inventoryData: {fileID: 11400000, guid: 89be2ec3b8153f047a51279a20c19b7b, type: 2}
+  parametersToModify:
+  - itemParameter: {fileID: 11400000, guid: 347eebb0ce5d5bd478722d4cd4a9ed44, type: 2}
+    value: -10
+  itemCurrentState:
+  - itemParameter: {fileID: 11400000, guid: 347eebb0ce5d5bd478722d4cd4a9ed44, type: 2}
+    value: 100
 --- !u!1 &6151124734838412494
 GameObject:
   m_ObjectHideFlags: 0
@@ -155,7 +163,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 348715631680943543}
-  - component: {fileID: 5002437217706727842}
+  - component: {fileID: 1996342115532418783}
   m_Layer: 0
   m_Name: CoreCombat
   m_TagString: Untagged
@@ -179,7 +187,7 @@ Transform:
   - {fileID: 7918141751365988527}
   m_Father: {fileID: 9002234525630750452}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5002437217706727842
+--- !u!114 &1996342115532418783
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -362,9 +370,8 @@ GameObject:
   - component: {fileID: 4343762284200050763}
   - component: {fileID: 7440006766311493327}
   - component: {fileID: 5615076606982306306}
-  - component: {fileID: 8636227681062337235}
+  - component: {fileID: 5987066852295023638}
   - component: {fileID: 4383135667091322909}
-  - component: {fileID: 3280174957945021882}
   - component: {fileID: 4843613022476948704}
   m_Layer: 6
   m_Name: Player
@@ -382,7 +389,7 @@ Transform:
   m_GameObject: {fileID: 6414431574850518634}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.04, y: 7.24, z: 0}
+  m_LocalPosition: {x: -27.5, y: 101.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -521,19 +528,7 @@ MonoBehaviour:
     m_ActionId: c023b821-e051-4c25-a946-00ab3e109be3
     m_ActionName: Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8636227681062337235}
-        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-        m_MethodName: Roll
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 9a6928f7-67a7-4728-9369-27d4806de688
     m_ActionName: Player/Roll[/Keyboard/k]
   - m_PersistentCalls:
@@ -589,7 +584,7 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &8636227681062337235
+--- !u!114 &5987066852295023638
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -605,8 +600,9 @@ MonoBehaviour:
   runSpeed: 6
   rollSpeed: 10
   rollDuration: 0.5
+  stamina: {fileID: 0}
   moveInput: {x: 0, y: 0}
-  coreCombat: {fileID: 5002437217706727842}
+  coreCombat: {fileID: 1996342115532418783}
   isAttacking: 0
 --- !u!114 &4383135667091322909
 MonoBehaviour:
@@ -623,30 +619,9 @@ MonoBehaviour:
   inventoryUI: {fileID: 0}
   inventoryData: {fileID: 11400000, guid: 89be2ec3b8153f047a51279a20c19b7b, type: 2}
   HurtBox: {fileID: 7903777609957261208}
-  initalItems:
-  - quantity: 4
-    item: {fileID: 11400000, guid: 88854241989c3a64a852f2330d293e5f, type: 2}
-    itemState: []
+  initalItems: []
   dropClip: {fileID: 8300000, guid: 06f3183d3a08a4741ba87c6a4c45143d, type: 3}
   audioSource: {fileID: 4843613022476948704}
---- !u!114 &3280174957945021882
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6414431574850518634}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1ca2fa3a4d2e0c408a432d9b6e47ccf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weapon: {fileID: 0}
-  inventoryData: {fileID: 11400000, guid: 89be2ec3b8153f047a51279a20c19b7b, type: 2}
-  parametersToModify:
-  - itemParameter: {fileID: 11400000, guid: 347eebb0ce5d5bd478722d4cd4a9ed44, type: 2}
-    value: -10
-  itemCurrentState: []
 --- !u!82 &4843613022476948704
 AudioSource:
   m_ObjectHideFlags: 0
@@ -839,7 +814,7 @@ Animator:
   m_GameObject: {fileID: 6905749783534926602}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9031ed3585cd68a4b905ba0be5d48ce6, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -982,7 +957,7 @@ GameObject:
   - component: {fileID: 8919678680062311582}
   - component: {fileID: 4273067324192447790}
   - component: {fileID: 4508970958358373231}
-  - component: {fileID: 3610082920827706119}
+  - component: {fileID: 821079810363405373}
   m_Layer: 6
   m_Name: HurtBox
   m_TagString: HurtBox
@@ -1128,7 +1103,6 @@ MonoBehaviour:
   maxHealth: 300
   currentHealth: 0
   healthBar: {fileID: 0}
-  canKnockBack: 0
 --- !u!114 &4508970958358373231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1143,7 +1117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _flashColor: {r: 1, g: 1, b: 1, a: 1}
   _flashTime: 0.25
---- !u!114 &3610082920827706119
+--- !u!114 &821079810363405373
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1152,10 +1126,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 7903777609957261208}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4b6e4119489a604bad90f57fe2511be, type: 3}
+  m_Script: {fileID: 11500000, guid: fb453826436e6b44c8634f95a6707271, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knockBackTime: 0.2
-  hitDirectionForce: 3
-  constForce: 1
-  inputForce: 1
+  MaxStamina: 100
+  currentStamina: 0
+  staminaRegenRate: 5

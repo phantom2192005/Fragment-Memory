@@ -10,7 +10,7 @@ namespace Inventory.Model
     public class InventorySO : ScriptableObject
     {
         [SerializeField]
-        private List<InventoryItem> inventoryItems;
+        public List<InventoryItem> inventoryItems;
 
         [field: SerializeField]
         public int Size { get; private set; } = 10;
@@ -54,7 +54,7 @@ namespace Inventory.Model
             {
                 item = item,
                 quantity = quantity,
-                itemState = new List<ItemParameter>(itemState == null? item.DefaultParametersList : itemState)
+                itemState = new List<ItemParameter>(itemState == null ? item.DefaultParametersList : itemState)
             };
 
             for (int i = 0; i < inventoryItems.Count; i++)
@@ -125,7 +125,7 @@ namespace Inventory.Model
 
         public void AddItem(InventoryItem item)
         {
-            AddItem(item.item, item.quantity);
+            AddItem(item.item, item.quantity,item.itemState);
         }
 
         public Dictionary<int, InventoryItem> GetCurrentInventoryState()
@@ -176,6 +176,16 @@ namespace Inventory.Model
                 item = this.item,
                 quantity = newQuantity,
                 itemState = new List<ItemParameter>(this.itemState)
+            };
+        }
+
+        public InventoryItem ChangeItemState(List<ItemParameter> itemStates)
+        {
+            return new InventoryItem
+            {
+                item = this.item,
+                quantity = this.quantity,
+                itemState = itemStates,
             };
         }
 

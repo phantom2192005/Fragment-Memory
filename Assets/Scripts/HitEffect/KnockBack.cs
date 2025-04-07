@@ -19,7 +19,11 @@ public class KnockBack : MonoBehaviour
 
     private void Start()
     {
-        rb = GetComponentInParent<Rigidbody2D>();
+        
+    }
+    public void SetKnockBack(Rigidbody2D target_rb)
+    {
+        rb = target_rb;
     }
     public IEnumerator KnockBackAction(Vector2 hitDirection, Vector2 constantForceDirection, Vector2 inputDirection)
     {

@@ -11,7 +11,7 @@ public class HitStop : MonoBehaviour
     {
         if (canHitStop)
         {
-            Debug.Log("HitStop is called");
+            //Debug.Log("HitStop is called");
 
             if (hitStopCoroutine != null)
             {
