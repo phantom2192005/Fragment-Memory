@@ -149,7 +149,7 @@ Transform:
   m_GameObject: {fileID: 857068593336320741}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.079, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -354,6 +354,8 @@ MonoBehaviour:
   animator: {fileID: 4583535696899013442}
   targetDetecter: {fileID: 2743494260594517807}
   attackRangeDetector: {fileID: 4259257148921105036}
+  HurtBox: {fileID: 0}
+  health: {fileID: 0}
 --- !u!114 &3826078799068651120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -590,7 +592,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c4a506365dce1d47ba038ff7622ada7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 20
+  damage: -20
   isSingleHit: 1
   damageInterval: 0.05
 --- !u!1 &3334400828047227532
@@ -913,7 +915,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c4a506365dce1d47ba038ff7622ada7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 20
+  damage: -20
   isSingleHit: 1
   damageInterval: 0.05
 --- !u!1 &8516995895450910540
@@ -1080,7 +1082,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c4a506365dce1d47ba038ff7622ada7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 20
+  damage: -20
   isSingleHit: 1
   damageInterval: 0.05
 --- !u!1 &9110725147464732763
@@ -1130,7 +1132,7 @@ MonoBehaviour:
   detectionRadius: 1
   layerMask:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 640
   showGizmos: 1
 --- !u!1 &9187800003059624567
 GameObject:

@@ -1,17 +1,20 @@
+ï»¿using System.Collections;
 using UnityEngine;
 
 public class RangedAttack : MonoBehaviour, IAttackPattern
 {
+    [SerializeField] private float delayTimeFire = 0.0f;
     [SerializeField] private float coolDownTime = 3f;
     [SerializeField] private Vector2 velocity;
+    [SerializeField] private Vector2 OffSetDistance;
     [SerializeField] private GameObject projectilePrefab;
-    [SerializeField] private string[] rangedAttackAnimationParameters; // Danh sách animation
+    [SerializeField] private string[] rangedAttackAnimationParameters;
 
-    private Vector3 firePoint;
+    private Vector3 spawnPoint;
+    [SerializeField] Vector3 cachedtargetPoint;
     private Transform target;
     private EnemeyController enemyController;
-
-    public float cooldownTimer;
+    private float cooldownTimer;
 
     void Start()
     {
@@ -45,9 +48,18 @@ public class RangedAttack : MonoBehaviour, IAttackPattern
     public void FireProjectile()
     {
         if (target == null) return;
+        StartCoroutine(DelayedFire());
+    }
 
-        firePoint = projectilePrefab.GetComponent<BaseProjectile>().CalculateSpawnPoint(Camera.main, enemyController.transform, target.transform);
-        GameObject projectile = Instantiate(projectilePrefab, firePoint, Quaternion.identity);
+    private IEnumerator DelayedFire()
+    {
+        spawnPoint = projectilePrefab.GetComponent<BaseProjectile>()
+                    .CalculateSpawnPoint(Camera.main, enemyController.transform.position, target.position);
+        cachedtargetPoint = target.position;
+        yield return new WaitForSeconds(delayTimeFire);
+
+        GameObject projectile = Instantiate(projectilePrefab, spawnPoint + (Vector3)OffSetDistance, Quaternion.identity);
+        projectile.GetComponent<BaseProjectile>().hitPosition = cachedtargetPoint;
         projectile.GetComponent<BaseProjectile>().bulletVelocity = velocity;
     }
 

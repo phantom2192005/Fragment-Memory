@@ -156,7 +156,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2032244755597305336}
   - component: {fileID: 8260765718387618286}
-  - component: {fileID: 7536807771116308995}
+  - component: {fileID: 6422394548502396024}
   - component: {fileID: 5428083754913270670}
   m_Layer: 7
   m_Name: Electrocutioner_Projectile
@@ -233,7 +233,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
---- !u!95 &7536807771116308995
+--- !u!95 &6422394548502396024
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -268,3 +268,52 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitPosition: {x: 0, y: 0, z: 0}
   bulletVelocity: {x: 0, y: -25}
+  shadowPrefab: {fileID: 3377192304480342843, guid: d5941f5f5b2d1de4f8badca01b4142df, type: 3}
+  scaleCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 2
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  alphaCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

@@ -162,6 +162,8 @@ MonoBehaviour:
   animator: {fileID: 7864783830555215474}
   targetDetecter: {fileID: 6246374719599481448}
   attackRangeDetector: {fileID: 2801251906925298722}
+  HurtBox: {fileID: 0}
+  health: {fileID: 0}
 --- !u!114 &6230115008582755332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -345,11 +347,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c3f057a24a7d98449178dd0e806f324, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  delayTimeFire: 0.5
   coolDownTime: 3
-  velocity: {x: 0, y: -25}
+  velocity: {x: 0, y: -20}
+  OffSetDistance: {x: 0, y: 20}
   projectilePrefab: {fileID: 8703726872347469226, guid: 2e6ddcfa855ff2149858b4f15cae5fe8, type: 3}
-  target: {fileID: 0}
-  cooldownTimer: 0
+  rangedAttackAnimationParameters:
+  - Air_Strike
+  cachedtargetPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &2868941153660117066
 GameObject:
   m_ObjectHideFlags: 0

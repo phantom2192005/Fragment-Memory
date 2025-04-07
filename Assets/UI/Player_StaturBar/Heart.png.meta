@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 422de1df53a34d340a32ab339156c241
+guid: 3e03e8340260f2d4bad3dfed562106f1
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 10_0
+      name: Heart_0
       rect:
         serializedVersion: 2
-        x: 8
+        x: 5
         y: 9
-        width: 16
-        height: 16
+        width: 21
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f4838057e6d9d748930fb1e3f52c170
-      internalID: -901444439
+      spriteID: 6782fd82e8afab5419bcccea42a24d4c
+      internalID: 1676164873
       vertices: []
       indices: 
       edges: []
@@ -141,7 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      10_0: -901444439
+      Heart_0: 1676164873
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

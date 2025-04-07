@@ -17,10 +17,11 @@ public class Bandit_Dagger_Projectile : BaseProjectile
     {
         base.DestroyProjectile();
     }
-    public override Vector3 CalculateSpawnPoint(Camera mainCamera, Transform firingPoint, Transform targetTransform)
+    public override Vector3 CalculateSpawnPoint(Camera mainCamera, Vector3 firingPointPosition, Vector3 targetPosition)
     {
+
         // Lật hướng nếu cần
-        if (targetTransform.position.x < firingPoint.position.x)
+        if (targetPosition.x < firingPointPosition.x)
         {
             transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
         }
@@ -28,9 +29,7 @@ public class Bandit_Dagger_Projectile : BaseProjectile
         {
             transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
         }
-
-        // Trả về vị trí bắn (của firingPoint)
-        return firingPoint.position;
+        return firingPointPosition;
     }
 
 }
