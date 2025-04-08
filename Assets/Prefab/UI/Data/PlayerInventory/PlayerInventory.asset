@@ -18,10 +18,31 @@ MonoBehaviour:
     itemState:
     - itemParameter: {fileID: 11400000, guid: 347eebb0ce5d5bd478722d4cd4a9ed44, type: 2}
       value: 100
+  - quantity: 96
+    item: {fileID: 11400000, guid: 88854241989c3a64a852f2330d293e5f, type: 2}
+    itemState: []
+  - quantity: 0
+    item: {fileID: 0}
+    itemState: []
   - quantity: 0
     item: {fileID: 0}
     itemState: []
   - quantity: 0
     item: {fileID: 0}
     itemState: []
-  <Size>k__BackingField: 3
+  - quantity: 0
+    item: {fileID: 0}
+    itemState: []
+  - quantity: 0
+    item: {fileID: 0}
+    itemState: []
+  - quantity: 0
+    item: {fileID: 0}
+    itemState: []
+  - quantity: 0
+    item: {fileID: 0}
+    itemState: []
+  - quantity: 0
+    item: {fileID: 0}
+    itemState: []
+  <Size>k__BackingField: 20

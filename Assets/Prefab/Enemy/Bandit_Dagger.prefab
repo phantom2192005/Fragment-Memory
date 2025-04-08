@@ -395,6 +395,8 @@ MonoBehaviour:
   animator: {fileID: 8502545105675352083}
   targetDetecter: {fileID: 8111947277629907762}
   attackRangeDetector: {fileID: 0}
+  HurtBox: {fileID: 0}
+  health: {fileID: 0}
 --- !u!114 &4527763170693601161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -536,7 +538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c4a506365dce1d47ba038ff7622ada7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 20
+  damage: -20
   isSingleHit: 1
   damageInterval: 0
 --- !u!1 &2448395962874522097
@@ -947,12 +949,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c3f057a24a7d98449178dd0e806f324, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  delayTimeFire: 0
   coolDownTime: 1
   velocity: {x: 0, y: 0}
+  OffSetDistance: {x: 0, y: 0}
   projectilePrefab: {fileID: 488499540168588219, guid: bc99dfff444ffb245a12ca3c68ce8059, type: 3}
   rangedAttackAnimationParameters:
   - BatFang
-  cooldownTimer: 0
+  cachedtargetPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &7416734107679402154
 GameObject:
   m_ObjectHideFlags: 0
@@ -1178,6 +1182,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c4a506365dce1d47ba038ff7622ada7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 20
+  damage: -20
   isSingleHit: 1
   damageInterval: 0

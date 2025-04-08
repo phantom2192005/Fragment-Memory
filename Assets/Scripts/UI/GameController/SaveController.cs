@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using TMPro;
+using Inventory.Model;
 
 public class SaveController : MonoBehaviour
 {
