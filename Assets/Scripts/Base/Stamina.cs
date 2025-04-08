@@ -21,7 +21,7 @@ public class Stamina : MonoBehaviour
     {
         currentStamina = MaxStamina;
     }
-    public void ModifyStamia(float value)
+    public void ModifyStamina(float value)
     {
         if(currentStamina <= 0) { return;}
         currentStamina += value;
