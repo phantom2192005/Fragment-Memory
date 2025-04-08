@@ -1170,6 +1170,7 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 3471807426236280669, guid: 94c400891910b384299ee5e1732d1795, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1186,6 +1187,8 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+=======
+>>>>>>> parent of d1cb04b (Projectile Shadow)
     - target: {fileID: 3497422452439599781, guid: 94c400891910b384299ee5e1732d1795, type: 3}
       propertyPath: actionPanel
       value: 
@@ -1194,6 +1197,7 @@ PrefabInstance:
       propertyPath: mouseFollower
       value: 
       objectReference: {fileID: 1343196737}
+<<<<<<< HEAD
     - target: {fileID: 5224610431913740378, guid: 94c400891910b384299ee5e1732d1795, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1218,6 +1222,8 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+=======
+>>>>>>> parent of d1cb04b (Projectile Shadow)
     - target: {fileID: 5444956398703093020, guid: 94c400891910b384299ee5e1732d1795, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1357,6 +1363,7 @@ PrefabInstance:
     - target: {fileID: 8730732136001895399, guid: 94c400891910b384299ee5e1732d1795, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+<<<<<<< HEAD
       objectReference: {fileID: 0}
     - target: {fileID: 8918728184173199376, guid: 94c400891910b384299ee5e1732d1795, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1381,6 +1388,8 @@ PrefabInstance:
     - target: {fileID: 8918728184173199376, guid: 94c400891910b384299ee5e1732d1795, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+=======
+>>>>>>> parent of d1cb04b (Projectile Shadow)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2095,10 +2104,14 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalPosition: {x: -426.24072, y: 7.676399, z: -10}
 =======
   m_LocalPosition: {x: -426.34073, y: 9.976395, z: -10}
 >>>>>>> parent of ed0b86c (Revert ".")
+=======
+  m_LocalPosition: {x: -426.24072, y: 7.676399, z: -10}
+>>>>>>> parent of d1cb04b (Projectile Shadow)
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2846,7 +2859,11 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4273067324192447790, guid: a38967939d8c2034faa2a110421be7e3, type: 3}
   m_PrefabInstance: {fileID: 1364750410}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1364750412}
+=======
+  m_GameObject: {fileID: 0}
+>>>>>>> parent of d1cb04b (Projectile Shadow)
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 928f40b651ba77d4eb441c18a98d5702, type: 3}
@@ -3340,10 +3357,14 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalPosition: {x: -429.8, y: 106.9, z: -10}
 =======
   m_LocalPosition: {x: -429.9, y: 109.2, z: -10}
 >>>>>>> parent of ed0b86c (Revert ".")
+=======
+  m_LocalPosition: {x: -429.8, y: 106.9, z: -10}
+>>>>>>> parent of d1cb04b (Projectile Shadow)
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4811,11 +4832,15 @@ PrefabInstance:
     - target: {fileID: 1860945408373422679, guid: 7fe769a96ba0d704b945b67e8c14d230, type: 3}
       propertyPath: m_LocalPosition.x
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of d1cb04b (Projectile Shadow)
       value: -412.1
       objectReference: {fileID: 0}
     - target: {fileID: 1860945408373422679, guid: 7fe769a96ba0d704b945b67e8c14d230, type: 3}
       propertyPath: m_LocalPosition.y
       value: 116.5
+<<<<<<< HEAD
 =======
       value: -425.81
       objectReference: {fileID: 0}
@@ -4823,6 +4848,8 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 110.32
 >>>>>>> parent of ed0b86c (Revert ".")
+=======
+>>>>>>> parent of d1cb04b (Projectile Shadow)
       objectReference: {fileID: 0}
     - target: {fileID: 1860945408373422679, guid: 7fe769a96ba0d704b945b67e8c14d230, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5166,6 +5193,7 @@ CanvasRenderer:
   m_GameObject: {fileID: 800320581}
   m_CullTransparentMesh: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 --- !u!1 &803757086
 GameObject:
@@ -5336,6 +5364,8 @@ CanvasRenderer:
   m_GameObject: {fileID: 847070101}
   m_CullTransparentMesh: 1
 >>>>>>> parent of ed0b86c (Revert ".")
+=======
+>>>>>>> parent of d1cb04b (Projectile Shadow)
 --- !u!1 &858245100
 GameObject:
   m_ObjectHideFlags: 0
@@ -5656,10 +5686,14 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalPosition: {x: -426.24072, y: 7.676399, z: -10}
 =======
   m_LocalPosition: {x: -426.34073, y: 9.976395, z: -10}
 >>>>>>> parent of ed0b86c (Revert ".")
+=======
+  m_LocalPosition: {x: -426.24072, y: 7.676399, z: -10}
+>>>>>>> parent of d1cb04b (Projectile Shadow)
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6319,6 +6353,9 @@ RectTransform:
   m_SizeDelta: {x: 256, y: 128}
   m_Pivot: {x: 0, y: 1}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of d1cb04b (Projectile Shadow)
 --- !u!1001 &1061558358
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6408,6 +6445,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34af063a63360e54dad3de6bccba6d90, type: 3}
+<<<<<<< HEAD
 =======
 --- !u!4 &1072190771 stripped
 Transform:
@@ -6415,6 +6453,8 @@ Transform:
   m_PrefabInstance: {fileID: 2754254714088248121}
   m_PrefabAsset: {fileID: 0}
 >>>>>>> parent of ed0b86c (Revert ".")
+=======
+>>>>>>> parent of d1cb04b (Projectile Shadow)
 --- !u!1 &1075651580
 GameObject:
   m_ObjectHideFlags: 0
@@ -7566,11 +7606,15 @@ PrefabInstance:
     - target: {fileID: 932100296006786467, guid: 4952472f328ba4b41b4c728ce963692d, type: 3}
       propertyPath: m_LocalPosition.x
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of d1cb04b (Projectile Shadow)
       value: -412.41
       objectReference: {fileID: 0}
     - target: {fileID: 932100296006786467, guid: 4952472f328ba4b41b4c728ce963692d, type: 3}
       propertyPath: m_LocalPosition.y
       value: 115.58
+<<<<<<< HEAD
 =======
       value: -422.46
       objectReference: {fileID: 0}
@@ -7578,6 +7622,8 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 110.01
 >>>>>>> parent of ed0b86c (Revert ".")
+=======
+>>>>>>> parent of d1cb04b (Projectile Shadow)
       objectReference: {fileID: 0}
     - target: {fileID: 932100296006786467, guid: 4952472f328ba4b41b4c728ce963692d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9149,10 +9195,13 @@ PrefabInstance:
       value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 4383135667091322909, guid: a38967939d8c2034faa2a110421be7e3, type: 3}
+<<<<<<< HEAD
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4383135667091322909, guid: a38967939d8c2034faa2a110421be7e3, type: 3}
+=======
+>>>>>>> parent of d1cb04b (Projectile Shadow)
       propertyPath: inventoryUI
       value: 
       objectReference: {fileID: 566696069}
@@ -9167,11 +9216,15 @@ PrefabInstance:
     - target: {fileID: 9002234525630750452, guid: a38967939d8c2034faa2a110421be7e3, type: 3}
       propertyPath: m_LocalPosition.x
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of d1cb04b (Projectile Shadow)
       value: -429.8
       objectReference: {fileID: 0}
     - target: {fileID: 9002234525630750452, guid: a38967939d8c2034faa2a110421be7e3, type: 3}
       propertyPath: m_LocalPosition.y
       value: 106.9
+<<<<<<< HEAD
 =======
       value: -429.9
       objectReference: {fileID: 0}
@@ -9179,6 +9232,8 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 109.2
 >>>>>>> parent of ed0b86c (Revert ".")
+=======
+>>>>>>> parent of d1cb04b (Projectile Shadow)
       objectReference: {fileID: 0}
     - target: {fileID: 9002234525630750452, guid: a38967939d8c2034faa2a110421be7e3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9637,7 +9692,11 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 821079810363405373, guid: a38967939d8c2034faa2a110421be7e3, type: 3}
   m_PrefabInstance: {fileID: 1364750410}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1364750412}
+=======
+  m_GameObject: {fileID: 0}
+>>>>>>> parent of d1cb04b (Projectile Shadow)
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb453826436e6b44c8634f95a6707271, type: 3}
@@ -11205,10 +11264,14 @@ RectTransform:
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &1761941600
 =======
 --- !u!1 &1760583792
 >>>>>>> parent of ed0b86c (Revert ".")
+=======
+--- !u!1 &1761941600
+>>>>>>> parent of d1cb04b (Projectile Shadow)
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11217,6 +11280,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of d1cb04b (Projectile Shadow)
   - component: {fileID: 1761941601}
   - component: {fileID: 1761941604}
   - component: {fileID: 1761941603}
@@ -11230,6 +11296,7 @@ GameObject:
   m_IsActive: 1
 --- !u!224 &1761941601
 RectTransform:
+<<<<<<< HEAD
 =======
   - component: {fileID: 1760583793}
   m_Layer: 0
@@ -11242,11 +11309,16 @@ RectTransform:
 --- !u!4 &1760583793
 Transform:
 >>>>>>> parent of ed0b86c (Revert ".")
+=======
+>>>>>>> parent of d1cb04b (Projectile Shadow)
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of d1cb04b (Projectile Shadow)
   m_GameObject: {fileID: 1761941600}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -11377,6 +11449,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1761941600}
   m_CullTransparentMesh: 1
+<<<<<<< HEAD
 =======
   m_GameObject: {fileID: 1760583792}
   serializedVersion: 2
@@ -11388,6 +11461,8 @@ CanvasRenderer:
   m_Father: {fileID: 637894685}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 >>>>>>> parent of ed0b86c (Revert ".")
+=======
+>>>>>>> parent of d1cb04b (Projectile Shadow)
 --- !u!1 &1767216513
 GameObject:
   m_ObjectHideFlags: 0
@@ -13429,10 +13504,13 @@ GameObject:
   m_Component:
   - component: {fileID: 2085961635}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   - component: {fileID: 2085961636}
   - component: {fileID: 2085961637}
 >>>>>>> parent of ed0b86c (Revert ".")
+=======
+>>>>>>> parent of d1cb04b (Projectile Shadow)
   - component: {fileID: 2085961634}
   - component: {fileID: 2085961636}
   m_Layer: 0
@@ -13486,18 +13564,56 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2085961636
+--- !u!1 &2098378827
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2098378828}
+  - component: {fileID: 2098378830}
+  - component: {fileID: 2098378829}
+  m_Layer: 5
+  m_Name: Heart
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2098378828
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2098378827}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 745252370}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.000030518, y: 0}
+  m_SizeDelta: {x: 256, y: 128}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2098378829
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2085961633}
+  m_GameObject: {fileID: 2098378827}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89d3899540bcf6441ae86ded7cc025d0, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   inventoryUI: {fileID: 566696069}
 <<<<<<< HEAD
   inventoryData: {fileID: 11400000, guid: 89be2ec3b8153f047a51279a20c19b7b, type: 2}
@@ -13565,6 +13681,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+=======
+>>>>>>> parent of d1cb04b (Projectile Shadow)
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
@@ -13591,6 +13709,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2098378827}
   m_CullTransparentMesh: 1
+<<<<<<< HEAD
 =======
   m_GameObject: {fileID: 2085961633}
   m_Enabled: 1
@@ -13607,6 +13726,8 @@ CanvasRenderer:
   - {fileID: 11400000, guid: 435643b97e7c6d84d9a590929048872a, type: 2}
   - {fileID: 11400000, guid: 26edcad51c13e33458e3d4d6d5e49ee2, type: 2}
 >>>>>>> parent of ed0b86c (Revert ".")
+=======
+>>>>>>> parent of d1cb04b (Projectile Shadow)
 --- !u!1 &2123818954
 GameObject:
   m_ObjectHideFlags: 0
@@ -14226,7 +14347,11 @@ SceneRoots:
   - {fileID: 312276287}
   - {fileID: 1324635601}
 <<<<<<< HEAD
+<<<<<<< HEAD
   - {fileID: 1406271871}
 =======
   - {fileID: 803757087}
 >>>>>>> parent of ed0b86c (Revert ".")
+=======
+  - {fileID: 1406271871}
+>>>>>>> parent of d1cb04b (Projectile Shadow)
