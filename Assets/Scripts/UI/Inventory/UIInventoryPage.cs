@@ -19,7 +19,7 @@ namespace Inventory.UI
         [SerializeField]
         private MouseFollower mouseFollower;
 
-        public List<UIInventoryItem> listOfUIItems = new List<UIInventoryItem>();
+        List<UIInventoryItem> listOfUIItems = new List<UIInventoryItem>();
 
         private int currentlyDraggedItemIndex = -1;
 
@@ -40,7 +40,6 @@ namespace Inventory.UI
         }
         public void InitializeIventoryUI(int inventorySize)
         {
-            if (listOfUIItems.Count > 0) { return; }
             for (int i = 0; i < inventorySize; i++)
             {
                 UIInventoryItem uiItem = Instantiate(itemPrefab, Vector3.zero, Quaternion.identity);
@@ -86,10 +85,7 @@ namespace Inventory.UI
         private void HandleSwap(UIInventoryItem inventoryItemUI)
         {
             int index = listOfUIItems.IndexOf(inventoryItemUI);
-            if (currentlyDraggedItemIndex == -1) 
-            {
-                return;
-            }
+            if (currentlyDraggedItemIndex == -1) {return;}
                 
             OnSwapItems?.Invoke(currentlyDraggedItemIndex, index);
             HandleItemSelection(inventoryItemUI);
@@ -170,14 +166,5 @@ namespace Inventory.UI
                 item.Deselect();
             }
         }
-        public void ClearAllItems()
-        {
-            foreach (var item in listOfUIItems)
-            {
-                Destroy(item.gameObject);
-            }
-            listOfUIItems.Clear();
-        }
-
     }
 }

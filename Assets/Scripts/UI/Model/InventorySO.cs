@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,22 +13,18 @@ namespace Inventory.Model
         public List<InventoryItem> inventoryItems;
 
         [field: SerializeField]
-        public int Size { get; set; } = 10;
+        public int Size { get; private set; } = 10;
 
         public event Action<Dictionary<int, InventoryItem>> OnInventoryUpdated;
 
         public void Initialize()
         {
-            if (inventoryItems == null || inventoryItems.Count != Size)
+            inventoryItems = new List<InventoryItem>();
+            for (int i = 0; i < Size; i++)
             {
-                inventoryItems = new List<InventoryItem>();
-                for (int i = 0; i < Size; i++)
-                {
-                    inventoryItems.Add(InventoryItem.GetEmptyItem());
-                }
+                inventoryItems.Add(InventoryItem.GetEmptyItem());
             }
         }
-
 
         public int AddItem(ItemSO item, int quantity, List<ItemParameter> itemState = null)
         {
@@ -159,7 +155,7 @@ namespace Inventory.Model
             InformAboutChange();
         }
 
-        public void InformAboutChange()
+        private void InformAboutChange()
         {
             OnInventoryUpdated?.Invoke(GetCurrentInventoryState());
         }

@@ -6,7 +6,7 @@ using System;
 namespace Inventory.Model
 {
     [CreateAssetMenu]
-    public class ConsumableItemSO : ItemSO, IDestroyableItem, IItemAction
+    public class EdibleItemSO : ItemSO, IDestroyableItem, IItemAction
     {
         [SerializeField]
         private List<ModifierData> modifierDatas = new List<ModifierData>();
