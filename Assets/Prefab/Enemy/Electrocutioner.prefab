@@ -149,7 +149,7 @@ GameObject:
   - component: {fileID: 8428291004446317851}
   - component: {fileID: 1458702865475486619}
   m_Layer: 7
-  m_Name: HitBox_Stomp
+  m_Name: Melee HitBox
   m_TagString: EnemyHitBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -316,7 +316,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c4a506365dce1d47ba038ff7622ada7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: -1
+  damage: 1
   isSingleHit: 0
   damageInterval: 0.05
 --- !u!114 &8428291004446317851
@@ -516,8 +516,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coolDownTime: 3
-  meleeAttackAnimationParameters:
-  - Stomp
   cooldownTimer: 0
 --- !u!114 &1062276779604143352
 MonoBehaviour:
@@ -531,14 +529,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c3f057a24a7d98449178dd0e806f324, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delayTimeFire: 0.5
   coolDownTime: 2
   velocity: {x: 0, y: -25}
-  OffSetDistance: {x: 0, y: 10}
   projectilePrefab: {fileID: 8251455273757848302, guid: f8d2f6eab59e98844a51bbc8d39206a1, type: 3}
-  rangedAttackAnimationParameters:
-  - Air_Strike
-  cachedtargetPoint: {x: 0, y: 0, z: 0}
+  target: {fileID: 0}
+  cooldownTimer: 0
 --- !u!1 &4044114587116944241
 GameObject:
   m_ObjectHideFlags: 0
@@ -986,8 +981,6 @@ MonoBehaviour:
   animator: {fileID: 2476360204725317333}
   targetDetecter: {fileID: 5985220566325584895}
   attackRangeDetector: {fileID: 151525484188180609}
-  HurtBox: {fileID: 0}
-  health: {fileID: 0}
 --- !u!114 &5345174304980987704
 MonoBehaviour:
   m_ObjectHideFlags: 0

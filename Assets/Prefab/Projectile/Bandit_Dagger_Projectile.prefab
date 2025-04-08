@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 15.49, y: 119.4, z: 0.02769177}
-  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3560596854194887697}
@@ -122,19 +122,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitPosition: {x: 0, y: 0, z: 0}
   bulletVelocity: {x: 0, y: 0}
-  shadowPrefab: {fileID: 0}
-  scaleCurve:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  alphaCurve:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1 &8822163000450692668
 GameObject:
   m_ObjectHideFlags: 0
