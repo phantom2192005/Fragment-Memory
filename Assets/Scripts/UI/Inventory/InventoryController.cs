@@ -30,25 +30,32 @@ namespace Inventory
         [SerializeField]
         private GameObject DropItemPrefab;
 
+        [SerializeField]
+        private InventorySaver inventorySaver;
+
 
         private void Start()
+        {
+            
+        }
+        public void PrepareAfterLoad()
         {
             PrepareUI();
             PrepareInventoryData();
         }
-
         private void PrepareInventoryData()
-        { 
-            initalItems = inventoryData.inventoryItems;
-            inventoryData.Initialize();
-            inventoryData.OnInventoryUpdated += UpdateInventoryUI;
+        {
             
-            foreach (InventoryItem item in initalItems)
+            inventoryData.OnInventoryUpdated += UpdateInventoryUI;
+
+            for (int i = 0; i < inventoryData.inventoryItems.Count; i++)
             {
+                InventoryItem item = inventoryData.inventoryItems[i];
                 if (item.IsEmpty)
                     continue;
                 inventoryData.AddItem(item);
             }
+
         }
 
         private void UpdateInventoryUI(Dictionary<int, InventoryItem> inventoryState)

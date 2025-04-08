@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ffe2ac8ccaba594f8afcbd8844dfa81, type: 3}
+  m_Name: MaxStaminaFlask
+  m_EditorClassIdentifier: 
+  <IsStackable>k__BackingField: 1
+  <MaxStackSize>k__BackingField: 99
+  <Name>k__BackingField: Max Stamina Flask
+  <Description>k__BackingField: Upgrade Max Stamina
+  <ItemImage>k__BackingField: {fileID: 1209499885564213642, guid: bff1e93a93c3f7b4eba0cf013c52962a, type: 3}
+  <DefaultParametersList>k__BackingField: []
+  modifierDatas:
+  - statModifier: {fileID: 11400000, guid: 81c2ffff25188aa4b8c915f200f3faae, type: 2}
+    value: 50
+  <actionSFX>k__BackingField: {fileID: 8300000, guid: 06f3183d3a08a4741ba87c6a4c45143d, type: 3}

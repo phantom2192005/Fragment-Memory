@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &8796300423978066297
+--- !u!1001 &6416496775032967286
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -9,28 +9,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1911179388066009669, guid: 9f0fe440fb776a94ba833a96b062a583, type: 3}
-      propertyPath: duration
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1911179388066009669, guid: 9f0fe440fb776a94ba833a96b062a583, type: 3}
-      propertyPath: AbsorbSpeed
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1911179388066009669, guid: 9f0fe440fb776a94ba833a96b062a583, type: 3}
-      propertyPath: <Quantity>k__BackingField
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1911179388066009669, guid: 9f0fe440fb776a94ba833a96b062a583, type: 3}
       propertyPath: <InventoryItem>k__BackingField
       value: 
-      objectReference: {fileID: 11400000, guid: 88854241989c3a64a852f2330d293e5f, type: 2}
+      objectReference: {fileID: 11400000, guid: 26edcad51c13e33458e3d4d6d5e49ee2, type: 2}
     - target: {fileID: 2516252026542351187, guid: 9f0fe440fb776a94ba833a96b062a583, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.7718468
+      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 2516252026542351187, guid: 9f0fe440fb776a94ba833a96b062a583, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5944195
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 2516252026542351187, guid: 9f0fe440fb776a94ba833a96b062a583, type: 3}
       propertyPath: m_LocalPosition.z
@@ -65,24 +53,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3548370783859527541, guid: 9f0fe440fb776a94ba833a96b062a583, type: 3}
-      propertyPath: m_SortingLayer
-      value: 2
+      propertyPath: m_Size.x
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 3548370783859527541, guid: 9f0fe440fb776a94ba833a96b062a583, type: 3}
-      propertyPath: m_SortingOrder
-      value: -1
+      propertyPath: m_Size.y
+      value: 0.90625
       objectReference: {fileID: 0}
     - target: {fileID: 3548370783859527541, guid: 9f0fe440fb776a94ba833a96b062a583, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 1159639471
-      objectReference: {fileID: 0}
-    - target: {fileID: 5508552689253972836, guid: 9f0fe440fb776a94ba833a96b062a583, type: 3}
-      propertyPath: m_Icon
+      propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+      objectReference: {fileID: 1257087182, guid: a6673dc9c71c19144a4b74f529a9acf9, type: 3}
+    - target: {fileID: 3548370783859527541, guid: 9f0fe440fb776a94ba833a96b062a583, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5508552689253972836, guid: 9f0fe440fb776a94ba833a96b062a583, type: 3}
       propertyPath: m_Name
-      value: Apple Variant
+      value: MaxStaminaFlask Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

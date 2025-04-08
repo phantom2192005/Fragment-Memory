@@ -25,7 +25,7 @@ public class PlayerRollState : IPlayerState
 
 
         player.PlayAnimation("Roll");
-        player.stamina.ModifyStamia(-20.0f);
+        player.stamina.ModifyStamina(-20.0f);
         player.HurtBox.GetComponent<Collider2D>().enabled = false;
 
     }
