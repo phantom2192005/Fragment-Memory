@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -166,5 +166,14 @@ namespace Inventory.UI
                 item.Deselect();
             }
         }
+        public void ClearAllItems()
+        {
+            foreach (var item in listOfUIItems)
+            {
+                Destroy(item.gameObject); // Xoá game object khỏi scene
+            }
+            listOfUIItems.Clear(); // Xóa khỏi danh sách
+        }
+
     }
 }

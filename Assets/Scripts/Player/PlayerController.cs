@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Playables;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -19,8 +20,7 @@ public class PlayerController : MonoBehaviour
     public float GetRunSpeed() => runSpeed;
     public float GetRollSpeed() => rollSpeed;
     public float GetRollDuration() => rollDuration;
-
-
+    
     private Animator animator;
 
     public Vector2 moveInput;
@@ -69,7 +69,6 @@ public class PlayerController : MonoBehaviour
     }
 
 
-
     public IPlayerState GetCurrentState()
     {
         return currentState;
@@ -114,7 +113,7 @@ public class PlayerController : MonoBehaviour
 
     void Attack()
     {
-        if (coreCombat != null && coreCombat.isCooldown == false)
+        if (coreCombat != null && coreCombat.isCooldown == false && coreCombat.currentWeaponHandler.GetWeapon() != null)
         {
             //Debug.Log("There is core combat");
             ChangeState(new PlayerAttackState(this));
@@ -123,7 +122,7 @@ public class PlayerController : MonoBehaviour
     }
     void Update()
     {
-        if(health.currentHealth <= 0)
+        if (health.currentHealth <= 0)
         {
             HandleAfterDeath();
         }

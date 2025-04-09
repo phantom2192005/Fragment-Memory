@@ -13,7 +13,7 @@ namespace Inventory.Model
         public List<InventoryItem> inventoryItems;
 
         [field: SerializeField]
-        public int Size { get; private set; } = 10;
+        public int Size { get; set; } = 10;
 
         public event Action<Dictionary<int, InventoryItem>> OnInventoryUpdated;
 
@@ -155,7 +155,7 @@ namespace Inventory.Model
             InformAboutChange();
         }
 
-        private void InformAboutChange()
+        public void InformAboutChange()
         {
             OnInventoryUpdated?.Invoke(GetCurrentInventoryState());
         }

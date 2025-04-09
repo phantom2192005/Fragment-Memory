@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3299574407062568623}
   m_Layer: 8
   m_Name: DetectBox
-  m_TagString: Player
+  m_TagString: PlayerDetect
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -141,19 +141,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3d5d8978e434584dbbacf21f2f032fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentWeaponPrefab: {fileID: 4188511327366954959, guid: 381504000aa8e24409afb11f3b22d6be, type: 3}
+  currentWeaponPrefab: {fileID: 6829801753368240330, guid: 9c6b999526083834fa82da1b4cf6fb5c, type: 3}
   Base: {fileID: 6905749783534926602}
   WeaponSprite: {fileID: 6998727705373087363}
   WeaponVFX: {fileID: 6267988207155586072}
   HitBox: {fileID: 6152050211411437995}
-  weapon: {fileID: 11400000, guid: 797a3743ba4965f46a18525f0b243806, type: 2}
+  weapon: {fileID: 0}
   inventoryData: {fileID: 11400000, guid: 89be2ec3b8153f047a51279a20c19b7b, type: 2}
-  parametersToModify:
-  - itemParameter: {fileID: 11400000, guid: 347eebb0ce5d5bd478722d4cd4a9ed44, type: 2}
-    value: -10
-  itemCurrentState:
-  - itemParameter: {fileID: 11400000, guid: 347eebb0ce5d5bd478722d4cd4a9ed44, type: 2}
-    value: 100
+  parametersToModify: []
+  itemCurrentState: []
 --- !u!1 &6151124734838412494
 GameObject:
   m_ObjectHideFlags: 0
@@ -262,7 +258,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6267988207155586072}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -371,8 +367,8 @@ GameObject:
   - component: {fileID: 7440006766311493327}
   - component: {fileID: 5615076606982306306}
   - component: {fileID: 5987066852295023638}
-  - component: {fileID: 4383135667091322909}
   - component: {fileID: 4843613022476948704}
+  - component: {fileID: 3958313286820687078}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -600,28 +596,13 @@ MonoBehaviour:
   runSpeed: 6
   rollSpeed: 10
   rollDuration: 0.5
+  HurtBox: {fileID: 0}
   stamina: {fileID: 0}
+  health: {fileID: 0}
+  DetectBox: {fileID: 0}
   moveInput: {x: 0, y: 0}
   coreCombat: {fileID: 1996342115532418783}
   isAttacking: 0
---- !u!114 &4383135667091322909
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6414431574850518634}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89d3899540bcf6441ae86ded7cc025d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryUI: {fileID: 0}
-  inventoryData: {fileID: 11400000, guid: 89be2ec3b8153f047a51279a20c19b7b, type: 2}
-  HurtBox: {fileID: 7903777609957261208}
-  initalItems: []
-  dropClip: {fileID: 8300000, guid: 06f3183d3a08a4741ba87c6a4c45143d, type: 3}
-  audioSource: {fileID: 4843613022476948704}
 --- !u!82 &4843613022476948704
 AudioSource:
   m_ObjectHideFlags: 0
@@ -718,6 +699,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3958313286820687078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6414431574850518634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe0cc887723f81c43adf3840f92ed867, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ArrowPrefab: {fileID: 7096999806934610499, guid: 532b68e4f4795954bbf06b5a6d650d7b, type: 3}
+  ArrowGFX: {fileID: 2081512938538513736, guid: 532b68e4f4795954bbf06b5a6d650d7b, type: 3}
+  BowPowerSlider: {fileID: 0}
+  Bow: {fileID: 0}
+  BowPower: 20
+  MaxBowCharge: 3
 --- !u!1 &6905749783534926602
 GameObject:
   m_ObjectHideFlags: 0
@@ -863,7 +862,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6998727705373087363}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1100,7 +1099,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 928f40b651ba77d4eb441c18a98d5702, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 300
+  maxHealth: 400
   currentHealth: 0
   healthBar: {fileID: 0}
 --- !u!114 &4508970958358373231
@@ -1132,3 +1131,4 @@ MonoBehaviour:
   MaxStamina: 100
   currentStamina: 0
   staminaRegenRate: 5
+  staminaBar: {fileID: 0}

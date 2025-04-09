@@ -33,6 +33,7 @@ public class WeaponHandler : MonoBehaviour
 
     void Start()
     {
+        if(currentWeaponPrefab == null) { return; }
         PrepareAnimators();
     }
 
@@ -83,6 +84,7 @@ public class WeaponHandler : MonoBehaviour
 
     private void Update()
     {
+        if (currentWeaponPrefab == null) { return; }
         if (weaponSprite_Animator == null)
         {
             Debug.Log("WeaponSprite_Animator is null");
