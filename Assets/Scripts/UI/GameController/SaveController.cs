@@ -22,6 +22,8 @@ public class SaveController : MonoBehaviour
     private string currentFileNameInput;
     [SerializeField]
     private int currentSlot_index;
+    [SerializeField]
+    private InventorySaver inventorySaver;
 
     private string saveFileSOPath => Path.Combine(Application.persistentDataPath, "saveFileSO.json");
 
@@ -75,6 +77,7 @@ public class SaveController : MonoBehaviour
         PressedIcon[currentSlot_index].enabled = true;
         PressedBorder[currentSlot_index].enabled = true;
         currentFileNameInput = Path.GetFileNameWithoutExtension(saveFileSO.saveLocations[currentSlot_index]);
+        inventorySaver.inventoryData_index = currentSlot_index;
     }
 
     public void ReadFileNameInput(string input)
@@ -103,6 +106,7 @@ public class SaveController : MonoBehaviour
 
         File.WriteAllText(newSaveLocation, JsonUtility.ToJson(saveData));
         SaveSaveFileSO();  // Lưu SaveFileSO vào file JSON sau khi lưu game
+        inventorySaver.SaveInventory();
 
         LoadExsitFileName();
     }
@@ -149,6 +153,8 @@ public class SaveController : MonoBehaviour
                     saveFileSO.lastFileName = currentFileNameInput;
                 }
             }
+            inventorySaver.inventoryData_index = currentSlot_index;
+            inventorySaver.LoadInventory();
         }
         else
         {
@@ -171,6 +177,7 @@ public class SaveController : MonoBehaviour
                     currentFileNameInput = Path.GetFileNameWithoutExtension(saveFileSO.saveLocations[i]);
                     PressedIcon[currentSlot_index].enabled = true;
                     PressedBorder[currentSlot_index].enabled = true;
+                    inventorySaver.inventoryData_index = currentSlot_index;
                 }
             }
         }

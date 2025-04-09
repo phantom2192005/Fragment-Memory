@@ -11,10 +11,10 @@ namespace Inventory
     public class InventoryController : MonoBehaviour
     {
         [SerializeField]
-        private UIInventoryPage inventoryUI;
+        public UIInventoryPage inventoryUI;
 
         [SerializeField]
-        private InventorySO inventoryData;
+        public InventorySO inventorySO;
         
         [SerializeField]
         private GameObject HurtBox;
@@ -33,22 +33,19 @@ namespace Inventory
 
         private void Start()
         {
+            PrepareInventory();
+        }
+
+        public void PrepareInventory()
+        {
             PrepareUI();
             PrepareInventoryData();
         }
 
-        private void PrepareInventoryData()
+        public void PrepareInventoryData()
         { 
-            initalItems = inventoryData.inventoryItems;
-            inventoryData.Initialize();
-            inventoryData.OnInventoryUpdated += UpdateInventoryUI;
-            
-            foreach (InventoryItem item in initalItems)
-            {
-                if (item.IsEmpty)
-                    continue;
-                inventoryData.AddItem(item);
-            }
+            inventorySO.Initialize();
+            inventorySO.OnInventoryUpdated += UpdateInventoryUI;
         }
 
         private void UpdateInventoryUI(Dictionary<int, InventoryItem> inventoryState)
@@ -61,9 +58,9 @@ namespace Inventory
 
         }
 
-        private void PrepareUI()
+        public void PrepareUI()
         {
-            inventoryUI.InitializeIventoryUI(inventoryData.Size);
+            inventoryUI.InitializeIventoryUI(inventorySO.Size);
             inventoryUI.OnDescriptionRequested += HandleDescriptionRequest;
             inventoryUI.OnSwapItems += HandleSwapItems;
             inventoryUI.OnStartDragging += HandleDragging;
@@ -72,7 +69,7 @@ namespace Inventory
 
         private void HandleItemActionRequest(int itemIndex)
         {
-            InventoryItem inventoryItem = inventoryData.GetItemAt(itemIndex);
+            InventoryItem inventoryItem = inventorySO.GetItemAt(itemIndex);
             if (inventoryItem.IsEmpty)
                 return;
 
@@ -105,7 +102,7 @@ namespace Inventory
 
         private void DropItem(int itemIndex, int quantity)
         {
-            InventoryItem inventoryItem = inventoryData.GetItemAt(itemIndex);
+            InventoryItem inventoryItem = inventorySO.GetItemAt(itemIndex);
             Item itemWorldSpace = DropItemPrefab.GetComponent<Item>();
 
             itemWorldSpace.itemState = inventoryItem.itemState;
@@ -114,14 +111,14 @@ namespace Inventory
             
 
             Instantiate(DropItemPrefab,transform.position + new Vector3(4,0,0), Quaternion.identity);
-            inventoryData.RemoveItem(itemIndex, quantity);
+            inventorySO.RemoveItem(itemIndex, quantity);
             inventoryUI.ResetSelection();
             audioSource.PlayOneShot(dropClip);
         }
 
         public void PerformAction(int itemIndex)
         {
-            InventoryItem inventoryItem = inventoryData.GetItemAt(itemIndex);
+            InventoryItem inventoryItem = inventorySO.GetItemAt(itemIndex);
             if (inventoryItem.IsEmpty)
             {
                 return;
@@ -129,18 +126,18 @@ namespace Inventory
             IDestroyableItem destroyableItem = inventoryItem.item as IDestroyableItem;
             if (destroyableItem != null)
             {
-                inventoryData.RemoveItem(itemIndex, 1);
+                inventorySO.RemoveItem(itemIndex, 1);
             }
             IItemAction itemAction = inventoryItem.item as IItemAction;
             if (itemAction != null)
             {
                 itemAction.PerformAction(HurtBox, inventoryItem.itemState);
                 audioSource.PlayOneShot(itemAction.actionSFX);
-                if (inventoryData.GetItemAt(itemIndex).IsEmpty)
+                if (inventorySO.GetItemAt(itemIndex).IsEmpty)
                 {
                     inventoryUI.ResetSelection();
                 }
-                if(inventoryData.GetItemAt(itemIndex).item is EquippableItemSO)
+                if(inventorySO.GetItemAt(itemIndex).item is EquippableItemSO)
                 {
                     inventoryUI.ResetSelection();
                 }
@@ -149,7 +146,7 @@ namespace Inventory
 
         private void HandleDragging(int itemIndex)
         {
-            InventoryItem inventoryItem = inventoryData.GetItemAt(itemIndex);
+            InventoryItem inventoryItem = inventorySO.GetItemAt(itemIndex);
             if (inventoryItem.IsEmpty)
             {
                 return;
@@ -159,12 +156,12 @@ namespace Inventory
 
         private void HandleSwapItems(int itemIndex_1, int itemIndex_2)
         {
-            inventoryData.SwapItems(itemIndex_1, itemIndex_2);
+            inventorySO.SwapItems(itemIndex_1, itemIndex_2);
         }
 
         private void HandleDescriptionRequest(int itemIndex)
         {
-            InventoryItem inventoryItem = inventoryData.GetItemAt(itemIndex);
+            InventoryItem inventoryItem = inventorySO.GetItemAt(itemIndex);
             if (inventoryItem.IsEmpty)
             {
                 inventoryUI.ResetSelection();
@@ -212,5 +209,11 @@ namespace Inventory
                 }
             }*/
         }
+
+        internal UIInventoryPage GetUIInventoryPage()
+        {
+            return inventoryUI;
+        }
+
     }
 }

@@ -296,7 +296,7 @@ BlendTree:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Chop
+  m_Name: Slash_Rising
   m_Childs:
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: 46ee64a1567622c42a63d0ecfcf1cacc, type: 2}

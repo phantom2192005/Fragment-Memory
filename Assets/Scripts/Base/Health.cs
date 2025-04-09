@@ -29,7 +29,7 @@ public class Health : MonoBehaviour
         }
         currentHealth += amount;
         // call damage Flash
-        if (damageFlash != null)
+        if (damageFlash != null && amount<0)
         {
             damageFlash.CallDamageFlash();
         }
