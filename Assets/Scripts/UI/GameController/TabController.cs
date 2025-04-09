@@ -5,6 +5,7 @@ using UnityEngine;
 public class TabController : MonoBehaviour
 {
     public GameObject[] pages;
+    public GameObject actionButton;
 
     private void Start()
     {
@@ -19,6 +20,9 @@ public class TabController : MonoBehaviour
         {
             pages[1].SetActive(true);
         }
+
+        // Gọi thử hàm xóa con
+        DeleteAllActionButton();
     }
 
     public void ActivateTab(int tab_index)
@@ -33,6 +37,26 @@ public class TabController : MonoBehaviour
         if (tab_index >= 0 && tab_index < pages.Length)
         {
             pages[tab_index].SetActive(true);
+            DeleteAllActionButton();
+        }
+    }
+
+    // Hàm xóa tất cả object con trực tiếp của actionButton
+    public void DeleteAllActionButton()
+    {
+        if (actionButton == null) return;
+
+        // Tạo danh sách tạm để tránh lỗi khi xóa trong lúc lặp
+        List<Transform> children = new List<Transform>();
+        foreach (Transform child in actionButton.transform)
+        {
+            children.Add(child);
+        }
+
+        // Xóa từng object con
+        foreach (Transform child in children)
+        {
+            Destroy(child.gameObject);
         }
     }
 }
