@@ -53,7 +53,7 @@ public class TargetDetector : Detector
 
             if (hit.collider != null && (playerLayerMask & (1 << hit.collider.gameObject.layer)) != 0)
             {
-                float thickness = 0.1f;
+                float thickness = 0.05f;
                 Vector2 perp = Vector2.Perpendicular(direction).normalized * thickness;
 
                 Debug.DrawLine(transform.position - (Vector3)perp, transform.position + (Vector3)direction * targetDetectionRange - (Vector3)perp, Color.magenta);
