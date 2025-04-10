@@ -316,8 +316,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c4a506365dce1d47ba038ff7622ada7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: -1
-  isSingleHit: 0
+  damage: -10
+  isSingleHit: 1
   damageInterval: 0.05
 --- !u!114 &8428291004446317851
 MonoBehaviour:
@@ -843,7 +843,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &932100296006786467
 Transform:
   m_ObjectHideFlags: 0
