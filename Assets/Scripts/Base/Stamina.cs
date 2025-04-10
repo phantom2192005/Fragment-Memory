@@ -5,7 +5,7 @@ using UnityEngine;
 public class Stamina : MonoBehaviour
 {
     [SerializeField]
-    public int maxStamina;
+    public float maxStamina;
 
     [SerializeField]
     private float currentStamina;

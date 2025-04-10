@@ -1,4 +1,4 @@
-using Inventory.Model;
+﻿using Inventory.Model;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -28,15 +28,24 @@ public class Item : MonoBehaviour
 
     public bool canAbsorbAll;
 
+    // New variables for floating
+    [SerializeField]
+    private float floatAmplitude = 0.5f; // How high the item floats
+    [SerializeField]
+    private float floatFrequency = 2.0f; // Speed of the floating
+
+    private float initialY; // Store the initial Y position
 
     private void Start()
     {
-        //Debug.Log("Start item is call");
         GetComponent<SpriteRenderer>().sprite = InventoryItem.ItemImage;
         if (itemState == null)
         {
             PrepareItemState(InventoryItem.DefaultParametersList);
         }
+
+        // Store the initial Y position
+        initialY = transform.position.y;
     }
 
     public void PrepareItemState(List<ItemParameter> itemStates)
@@ -52,7 +61,6 @@ public class Item : MonoBehaviour
     {
         GetComponent<Collider2D>().enabled = false;
         StartCoroutine(AnimateItemPickup());
-
     }
 
     private IEnumerator AnimateItemPickup()
@@ -81,6 +89,10 @@ public class Item : MonoBehaviour
 
     private void Update()
     {
+        // Floating effect based on the initial Y position
+        float newY = initialY + Mathf.Sin(Time.time * floatFrequency) * floatAmplitude;
+        transform.position = new Vector3(transform.position.x, newY, transform.position.z);
+
         if (targetAbsorb != null && canAbsorbAll)
         {
             transform.position = Vector2.MoveTowards(transform.position, targetAbsorb.position, AbsorbSpeed * Time.deltaTime);
