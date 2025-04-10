@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 651871756477824411}
   - component: {fileID: 1492027726940324467}
   - component: {fileID: 3476577934646441634}
-  - component: {fileID: 3299574407062568623}
   m_Layer: 8
   m_Name: DetectBox
   m_TagString: PlayerDetect
@@ -28,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 637230320725631782}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.04, y: 0.52, z: 0}
+  m_LocalPosition: {x: 0, y: 0.015, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -66,9 +65,9 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.04}
-  m_Size: {x: 0.9, y: 1.4}
-  m_Direction: 0
+  m_Offset: {x: 0.0013777814, y: -0.01}
+  m_Size: {x: 0.35760942, y: 0.0980287}
+  m_Direction: 1
 --- !u!114 &3476577934646441634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82,18 +81,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryData: {fileID: 11400000, guid: 89be2ec3b8153f047a51279a20c19b7b, type: 2}
---- !u!114 &3299574407062568623
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 637230320725631782}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 832670bde970e514e968f3fbec1edd87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1109948150429992416
 GameObject:
   m_ObjectHideFlags: 0
@@ -141,7 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3d5d8978e434584dbbacf21f2f032fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentWeaponPrefab: {fileID: 6829801753368240330, guid: 9c6b999526083834fa82da1b4cf6fb5c, type: 3}
+  currentWeaponPrefab: {fileID: 4188511327366954959, guid: 381504000aa8e24409afb11f3b22d6be, type: 3}
   Base: {fileID: 6905749783534926602}
   WeaponSprite: {fileID: 6998727705373087363}
   WeaponVFX: {fileID: 6267988207155586072}
@@ -258,7 +245,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6267988207155586072}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -304,9 +291,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 2035271111
-  m_SortingLayer: 5
-  m_SortingOrder: 0
+  m_SortingLayerID: 1159639471
+  m_SortingLayer: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -317,7 +304,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!95 &7918572145243219810
 Animator:
   serializedVersion: 5
@@ -368,7 +355,6 @@ GameObject:
   - component: {fileID: 5615076606982306306}
   - component: {fileID: 5987066852295023638}
   - component: {fileID: 4843613022476948704}
-  - component: {fileID: 3958313286820687078}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -434,7 +420,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1159639471
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: -1704802898, guid: 81369e07ec4ee8e4fb72ba513c3cabb5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -592,9 +578,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4832f549358d27740a991222d80b0b32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSpeed: 5
-  runSpeed: 6
-  rollSpeed: 10
+  baseSpeed: 2
+  runSpeed: 3
+  rollSpeed: 4
   rollDuration: 0.5
   HurtBox: {fileID: 0}
   stamina: {fileID: 0}
@@ -699,24 +685,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &3958313286820687078
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6414431574850518634}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe0cc887723f81c43adf3840f92ed867, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ArrowPrefab: {fileID: 7096999806934610499, guid: 532b68e4f4795954bbf06b5a6d650d7b, type: 3}
-  ArrowGFX: {fileID: 2081512938538513736, guid: 532b68e4f4795954bbf06b5a6d650d7b, type: 3}
-  BowPowerSlider: {fileID: 0}
-  Bow: {fileID: 0}
-  BowPower: 20
-  MaxBowCharge: 3
 --- !u!1 &6905749783534926602
 GameObject:
   m_ObjectHideFlags: 0
@@ -791,7 +759,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1159639471
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -802,7 +770,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!95 &1068104167243320901
 Animator:
   serializedVersion: 5
@@ -862,7 +830,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6998727705373087363}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -909,18 +877,18 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1159639471
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 12, y: 7.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!95 &5842692480897699477
 Animator:
   serializedVersion: 5
@@ -957,6 +925,7 @@ GameObject:
   - component: {fileID: 4273067324192447790}
   - component: {fileID: 4508970958358373231}
   - component: {fileID: 821079810363405373}
+  - component: {fileID: 6484079265647158704}
   m_Layer: 6
   m_Name: HurtBox
   m_TagString: HurtBox
@@ -1084,8 +1053,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.5}
-  m_Size: {x: 0.9, y: 1.4}
+  m_Offset: {x: 0.0013777912, y: 0.28360367}
+  m_Size: {x: 0.3576094, y: 0.58182526}
   m_Direction: 0
 --- !u!114 &4273067324192447790
 MonoBehaviour:
@@ -1128,7 +1097,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb453826436e6b44c8634f95a6707271, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxStamina: 100
+  maxStamina: 0
   currentStamina: 0
   staminaRegenRate: 5
   staminaBar: {fileID: 0}
+--- !u!114 &6484079265647158704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7903777609957261208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 832670bde970e514e968f3fbec1edd87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

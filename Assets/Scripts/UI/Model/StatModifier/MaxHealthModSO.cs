@@ -10,10 +10,10 @@ public class MaxHealthModSO : CharacterStatModifierSO
         Health health = target.GetComponent<Health>();
         if (health != null)
         {
-            int newMaxHealth = (int)val;
-            int delta = newMaxHealth - health.maxHealth;
+            int newMaxHealth = health.maxHealth + (int)val;
+            int delta = newMaxHealth - health.currentHealth;
             health.maxHealth = newMaxHealth;
-            health.ModifyHealth(delta); // tăng lượng máu hiện tại tương ứng nếu muốn
+            health.ModifyHealth(delta);
         }
     }
 }

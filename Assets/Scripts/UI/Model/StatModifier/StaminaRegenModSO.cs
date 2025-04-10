@@ -8,7 +8,7 @@ public class StaminaRegenModSO : CharacterStatModifierSO
         Stamina stamina = target.GetComponent<Stamina>();
         if (stamina != null)
         {
-            stamina.ModifyStamina((int)val); // Bạn có typo ở đây nè!
+            stamina.ModifyStamina(val); // Bạn có typo ở đây nè!
         }
     }
 }

@@ -10,10 +10,10 @@ public class MaxStaminaModSO : CharacterStatModifierSO
         Stamina stamina = target.GetComponent<Stamina>();
         if (stamina != null)
         {
-            int newMaxStamina = (int)val;
-            int delta = newMaxStamina - stamina.maxStamina;
+            float newMaxStamina = stamina.maxStamina +  val;
+            float delta = newMaxStamina - stamina.GetCurrentStamia();
             stamina.maxStamina = newMaxStamina;
-            stamina.ModifyStamina(delta); // có thể thay bằng stamina.currentStamina = stamina.maxStamina; nếu muốn hồi đầy
+            stamina.ModifyStamina(delta);
         }
     }
 }
