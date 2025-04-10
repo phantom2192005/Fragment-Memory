@@ -67,8 +67,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: ba238fcbe177f2f45bbd413d1f8f6430, type: 3}
   - {fileID: 8300000, guid: 679ccfa790c40ed42ac4839356688a03, type: 3}
   - {fileID: 8300000, guid: 9dc85ad0b90d45d408748bc6c389af20, type: 3}
-  cooldownTime: 0.5
-  comboTime: 2
+  cooldownTime: 0.45
+  comboTime: 1
   maxComboCount: 3
 --- !u!1 &4990093895216431512
 GameObject:

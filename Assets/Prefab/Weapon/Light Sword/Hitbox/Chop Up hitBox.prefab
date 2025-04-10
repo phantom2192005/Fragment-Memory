@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 7789461214853500672}
   - component: {fileID: 6126420390088153442}
   - component: {fileID: 1630235112241770862}
+  - component: {fileID: 3671299126285223527}
+  - component: {fileID: 8144389588642282056}
+  - component: {fileID: -916368819212164692}
   m_Layer: 0
   m_Name: Chop Up hitBox
   m_TagString: PlayerHitBox
@@ -95,6 +98,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c4a506365dce1d47ba038ff7622ada7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: -30
+  damage: -20
   isSingleHit: 1
   damageInterval: 0
+--- !u!114 &3671299126285223527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1797586497502430404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03abe23079aeb62498501918069d9308, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canKnockBack: 1
+  hitDirection: {x: 0, y: 0}
+  canFlashHit_VFX: 0
+  canShakeCamera: 0
+  shakeProfile: {fileID: 0}
+  canHitStop: 1
+--- !u!114 &8144389588642282056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1797586497502430404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4b6e4119489a604bad90f57fe2511be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knockBackTime: 0.1
+  hitDirectionForce: 4
+  constForce: 0
+  inputForce: 0
+--- !u!114 &-916368819212164692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1797586497502430404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f69aa1a1d52c3b4499c0c86a83e4f2b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canHitStop: 1
+  duration: 0.08

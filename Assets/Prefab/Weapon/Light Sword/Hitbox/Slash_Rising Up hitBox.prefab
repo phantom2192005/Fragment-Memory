@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 4099397339765003815}
   - component: {fileID: 4969326260994843268}
   - component: {fileID: -3051903895590111179}
+  - component: {fileID: -8182887728923037282}
+  - component: {fileID: 941781411465472926}
+  - component: {fileID: -8448949284981712509}
   m_Layer: 0
   m_Name: Slash_Rising Up hitBox
   m_TagString: PlayerHitBox
@@ -108,3 +111,51 @@ MonoBehaviour:
   damage: -30
   isSingleHit: 1
   damageInterval: 0.05
+--- !u!114 &-8182887728923037282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7539939902784722611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03abe23079aeb62498501918069d9308, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canKnockBack: 1
+  hitDirection: {x: 0, y: 0}
+  canFlashHit_VFX: 0
+  canShakeCamera: 0
+  shakeProfile: {fileID: 0}
+  canHitStop: 1
+--- !u!114 &941781411465472926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7539939902784722611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f69aa1a1d52c3b4499c0c86a83e4f2b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canHitStop: 1
+  duration: 0.15
+--- !u!114 &-8448949284981712509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7539939902784722611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4b6e4119489a604bad90f57fe2511be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knockBackTime: 0.1
+  hitDirectionForce: 10
+  constForce: 0
+  inputForce: 0

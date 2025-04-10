@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8760053153857488839}
   - component: {fileID: 1290134339423494056}
   - component: {fileID: 6860384949413323855}
+  - component: {fileID: -4364734856045396969}
   m_Layer: 0
   m_Name: Slash Down hitBox
   m_TagString: PlayerHitBox
@@ -109,7 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c4a506365dce1d47ba038ff7622ada7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: -30
+  damage: -25
   isSingleHit: 1
   damageInterval: 0
 --- !u!114 &1290134339423494056
@@ -124,7 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03abe23079aeb62498501918069d9308, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canKnockBack: 0
+  canKnockBack: 1
   hitDirection: {x: 0, y: 0}
   canFlashHit_VFX: 0
   canShakeCamera: 0
@@ -143,4 +144,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canHitStop: 1
-  duration: 0.1
+  duration: 0.08
+--- !u!114 &-4364734856045396969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2526954471723497084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4b6e4119489a604bad90f57fe2511be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knockBackTime: 0.1
+  hitDirectionForce: 5
+  constForce: 0
+  inputForce: 0
