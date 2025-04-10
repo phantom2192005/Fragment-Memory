@@ -2653,6 +2653,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 476067163}
   m_CullTransparentMesh: 1
+--- !u!1001 &490395797
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5478978503978160323, guid: ccbe4b5938630e545874571e74db3d0f, type: 3}
+      propertyPath: m_Name
+      value: Blood Tree 1 Sprite Sheet1 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5673848687527852870, guid: ccbe4b5938630e545874571e74db3d0f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -51.54856
+      objectReference: {fileID: 0}
+    - target: {fileID: 5673848687527852870, guid: ccbe4b5938630e545874571e74db3d0f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 91.88796
+      objectReference: {fileID: 0}
+    - target: {fileID: 5673848687527852870, guid: ccbe4b5938630e545874571e74db3d0f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.2585492
+      objectReference: {fileID: 0}
+    - target: {fileID: 5673848687527852870, guid: ccbe4b5938630e545874571e74db3d0f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5673848687527852870, guid: ccbe4b5938630e545874571e74db3d0f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5673848687527852870, guid: ccbe4b5938630e545874571e74db3d0f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5673848687527852870, guid: ccbe4b5938630e545874571e74db3d0f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5673848687527852870, guid: ccbe4b5938630e545874571e74db3d0f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5673848687527852870, guid: ccbe4b5938630e545874571e74db3d0f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5673848687527852870, guid: ccbe4b5938630e545874571e74db3d0f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ccbe4b5938630e545874571e74db3d0f, type: 3}
 --- !u!1 &499529159
 GameObject:
   m_ObjectHideFlags: 0
@@ -65461,6 +65518,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1732844159240160233, guid: a38967939d8c2034faa2a110421be7e3, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1732844159240160233, guid: a38967939d8c2034faa2a110421be7e3, type: 3}
       propertyPath: m_SortingLayerID
       value: 1159639471
       objectReference: {fileID: 0}
@@ -65513,8 +65574,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4324197708709948778, guid: a38967939d8c2034faa2a110421be7e3, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4324197708709948778, guid: a38967939d8c2034faa2a110421be7e3, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5047782716462988354, guid: a38967939d8c2034faa2a110421be7e3, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5987066852295023638, guid: a38967939d8c2034faa2a110421be7e3, type: 3}
       propertyPath: hand
@@ -69307,3 +69376,4 @@ SceneRoots:
   - {fileID: 1487825810}
   - {fileID: 312276287}
   - {fileID: 811272106}
+  - {fileID: 490395797}
