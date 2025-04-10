@@ -733,6 +733,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24d477e43ddf22f4dbf1d609c89be563, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  settingPage: {fileID: 0}
 --- !u!1 &116945292
 GameObject:
   m_ObjectHideFlags: 0
@@ -66689,11 +66690,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2516252026542351187, guid: 9f0fe440fb776a94ba833a96b062a583, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -50.76
+      value: -50.46
       objectReference: {fileID: 0}
     - target: {fileID: 2516252026542351187, guid: 9f0fe440fb776a94ba833a96b062a583, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 97.42
+      value: 97.39
       objectReference: {fileID: 0}
     - target: {fileID: 2516252026542351187, guid: 9f0fe440fb776a94ba833a96b062a583, type: 3}
       propertyPath: m_LocalPosition.z
@@ -66757,7 +66758,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5508552689253972836, guid: 9f0fe440fb776a94ba833a96b062a583, type: 3}
       propertyPath: m_Name
-      value: Item
+      value: HealthFlask
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

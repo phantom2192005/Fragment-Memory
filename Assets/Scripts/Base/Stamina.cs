@@ -5,7 +5,7 @@ using UnityEngine;
 public class Stamina : MonoBehaviour
 {
     [SerializeField]
-    public float MaxStamina;
+    public int maxStamina;
 
     [SerializeField]
     private float currentStamina;
@@ -19,9 +19,9 @@ public class Stamina : MonoBehaviour
 
     private void Start()
     {
-        currentStamina = MaxStamina;
+        currentStamina = maxStamina;
     }
-    public void ModifyStamia(float value)
+    public void ModifyStamina(float value)
     {
         if(currentStamina <= 0) { return;}
         currentStamina += value;
@@ -35,13 +35,13 @@ public class Stamina : MonoBehaviour
 
     public void Update()
     {
-        if (currentStamina < MaxStamina)
+        if (currentStamina < maxStamina)
         {
             currentStamina += staminaRegenRate * Time.deltaTime;
             staminaBar.SetValue(currentStamina);
-            if (currentStamina > MaxStamina)
+            if (currentStamina > maxStamina)
             {
-                currentStamina = MaxStamina;
+                currentStamina = maxStamina;
             }
         }
     }

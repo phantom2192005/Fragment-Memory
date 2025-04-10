@@ -35,7 +35,7 @@ public class StaminaBar : MonoBehaviour
 
     public void SetValue(float newValue)
     {
-        float staminaRatio = newValue / stamina.MaxStamina;
+        float staminaRatio = newValue / stamina.maxStamina;
         float newRightMask = Mathf.Lerp(minRightMask, maxRightMask, 1 - staminaRatio);
 
         var padding = mask.padding;
