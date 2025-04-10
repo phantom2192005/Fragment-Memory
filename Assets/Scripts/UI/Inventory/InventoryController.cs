@@ -50,12 +50,21 @@ namespace Inventory
 
         private void UpdateInventoryUI(Dictionary<int, InventoryItem> inventoryState)
         {
+            // Đảm bảo inventory UI được khởi tạo
+            if (inventoryUI == null) return;
+
             inventoryUI.ResetAllItems();
             foreach (var item in inventoryState)
             {
-                inventoryUI.UpdateData(item.Key, item.Value.item.ItemImage, item.Value.quantity);
+                if (item.Value.item != null && item.Key < inventoryUI.listOfUIItems.Count)
+                {
+                    inventoryUI.UpdateData(
+                        item.Key,
+                        item.Value.item.ItemImage,
+                        item.Value.quantity
+                    );
+                }
             }
-
         }
 
         public void PrepareUI()
@@ -108,9 +117,9 @@ namespace Inventory
             itemWorldSpace.itemState = inventoryItem.itemState;
             itemWorldSpace.Quantity = inventoryItem.quantity;
             itemWorldSpace.InventoryItem = inventoryItem.item;
-            
 
-            Instantiate(DropItemPrefab,transform.position + new Vector3(4,0,0), Quaternion.identity);
+            GameObject detectObject = GameObject.FindGameObjectWithTag("PlayerDetect");
+            Instantiate(DropItemPrefab, detectObject.transform.position + new Vector3(1,0,0), Quaternion.identity);
             inventorySO.RemoveItem(itemIndex, quantity);
             inventoryUI.ResetSelection();
             audioSource.PlayOneShot(dropClip);

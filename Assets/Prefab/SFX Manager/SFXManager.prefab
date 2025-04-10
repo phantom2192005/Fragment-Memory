@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8338460921567622570
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4030788266893319340}
+  - component: {fileID: 3361925191501822909}
+  m_Layer: 0
+  m_Name: SFXManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4030788266893319340
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8338460921567622570}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -48.854908, y: 96.99996, z: 0.5176223}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3361925191501822909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8338460921567622570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84326269037278741b2e6b75d734877d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxList:
+  - key: Walk_0
+    clip: {fileID: 8300000, guid: 40a2c7e773bbb6443a291d333045eec6, type: 3}
+  - key: Walk_1
+    clip: {fileID: 8300000, guid: ab67f68dbef518641bcc765d91f23556, type: 3}
+  - key: Walk_2
+    clip: {fileID: 8300000, guid: 20956619cf579124f98b586957ef2e8c, type: 3}
+  - key: Walk_3
+    clip: {fileID: 8300000, guid: e06271bc92db0064ca50826cce83c990, type: 3}
+  - key: Walk_4
+    clip: {fileID: 8300000, guid: cb4cfda7c783de346848538208fadae8, type: 3}
+  - key: Walk_5
+    clip: {fileID: 8300000, guid: 8d3e228620054164484048e6b076b699, type: 3}
+  - key: Walk_6
+    clip: {fileID: 8300000, guid: b723d46a11366734cadeb5bd0941f6f3, type: 3}
+  - key: Walk_7
+    clip: {fileID: 8300000, guid: 1f9083013be678348b20d3c16c0d7b07, type: 3}
+  - key: Walk_8
+    clip: {fileID: 8300000, guid: 19fdd5d40dd4ac64ca8143bca2df82fe, type: 3}
+  - key: Walk_9
+    clip: {fileID: 8300000, guid: bd28d13fb4de76c4fbb25e63c4684019, type: 3}
+  - key: Walk_10
+    clip: {fileID: 8300000, guid: 2bfc22547a750e248b8ab6d92cb8461e, type: 3}
+  - key: Run_1
+    clip: {fileID: 8300000, guid: b8e73aca0d161d140b9a9539992e2ef5, type: 3}
+  - key: Run_2
+    clip: {fileID: 8300000, guid: e43bd4bd5fc4c4f4ba25672e8d0864eb, type: 3}
+  - key: Run_3
+    clip: {fileID: 8300000, guid: 0e5c5fc3c3669404b9baef6a31c858aa, type: 3}
+  - key: Run_4
+    clip: {fileID: 8300000, guid: 0e5c5fc3c3669404b9baef6a31c858aa, type: 3}
+  - key: Run_5
+    clip: {fileID: 8300000, guid: 330359bd97ae5c04390820b7811d913d, type: 3}
+  - key: Run_6
+    clip: {fileID: 8300000, guid: 17f2daebedb99684099d72bfde032a0c, type: 3}
+  - key: Run_7
+    clip: {fileID: 8300000, guid: 78530e433678d524e9c0f6ea89226206, type: 3}
+  - key: Run_8
+    clip: {fileID: 8300000, guid: 59f4d94e81765344b8ca2ddceac5c734, type: 3}
+  - key: Roll
+    clip: {fileID: 8300000, guid: 140c214a2caf228448f806b793e87229, type: 3}
+  - key: Open Menu
+    clip: {fileID: 8300000, guid: 27b744ef3403a984883d58365250c661, type: 3}
+  - key: Close Menu
+    clip: {fileID: 8300000, guid: 83c3e832fd35d8d4bbb68504457ad415, type: 3}
+  - key: MainMenuMusic
+    clip: {fileID: 8300000, guid: f363b4d76f48fcd4ca59c992f7dd0e8c, type: 3}
+  - key: MainGameMusic
+    clip: {fileID: 8300000, guid: 9c621e64a69f06f4db5b942c6e8ea185, type: 3}

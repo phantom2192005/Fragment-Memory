@@ -155,10 +155,22 @@ namespace Inventory.Model
             InformAboutChange();
         }
 
+        public void ClearInventory()
+        {
+            for (int i = 0; i < inventoryItems.Count; i++)
+            {
+                inventoryItems[i] = InventoryItem.GetEmptyItem();
+            }
+
+            InformAboutChange();
+        }
+
+
         public void InformAboutChange()
         {
             OnInventoryUpdated?.Invoke(GetCurrentInventoryState());
         }
+
     }
 
     [Serializable]

@@ -12,6 +12,7 @@ public abstract class Weapon : MonoBehaviour
     public Animator WeaponVFXAnimator;
 
     [SerializeField] public List<GameObject> hitBoxes = new List<GameObject>();
+    [SerializeField] public List<AudioClip> weaponSFX = new List<AudioClip>();
 
     public abstract void AttachAnimator();
     public abstract void Attack(int comboAttackIndex, Animator base_animator, Animator weaponSprite_animator, Animator weaponSFX_animator);

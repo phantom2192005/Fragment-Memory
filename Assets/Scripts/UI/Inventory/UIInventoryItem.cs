@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -34,21 +34,58 @@ namespace Inventory.UI
 
         public void ResetData()
         {
-            itemImage.gameObject.SetActive(false);
+            if (itemImage != null) // Thêm kiểm tra null
+            {
+                itemImage.gameObject.SetActive(false);
+            }
+            if (quantityTxt != null) // Thêm kiểm tra null
+            {
+                quantityTxt.text = "";
+            }
             empty = true;
         }
 
         public void Deselect()
         {
-            borderImage.enabled = false;
+            if (borderImage != null) // Thêm kiểm tra null
+            {
+                borderImage.enabled = false;
+            }
         }
 
         public void SetData(Sprite sprite, int quantity)
         {
-            itemImage.gameObject.SetActive(true);
-            itemImage.sprite = sprite;
-            quantityTxt.text = "x" + quantity;
-            empty = false;
+            try
+            {
+                if (itemImage != null)
+                {
+                    itemImage.gameObject.SetActive(true);
+                    itemImage.sprite = sprite;
+                }
+
+                if (quantityTxt != null)
+                {
+                    quantityTxt.text = "x" + quantity;
+                    quantityTxt.gameObject.SetActive(quantity > 1);
+                }
+
+                empty = false;
+            }
+            catch (MissingReferenceException)
+            {
+                // Xử lý trường hợp component bị destroy
+                ReinitializeComponents();
+            }
+        }
+
+        private void ReinitializeComponents()
+        {
+            itemImage = GetComponentInChildren<Image>();
+            quantityTxt = GetComponentInChildren<TMP_Text>();
+            borderImage = GetComponent<Image>();
+
+            if (itemImage != null) itemImage.gameObject.SetActive(false);
+            if (quantityTxt != null) quantityTxt.text = "";
         }
 
         public void Select()

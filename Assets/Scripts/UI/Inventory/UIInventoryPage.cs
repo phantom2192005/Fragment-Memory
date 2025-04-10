@@ -19,7 +19,7 @@ namespace Inventory.UI
         [SerializeField]
         private MouseFollower mouseFollower;
 
-        List<UIInventoryItem> listOfUIItems = new List<UIInventoryItem>();
+        public List<UIInventoryItem> listOfUIItems = new List<UIInventoryItem>();
 
         private int currentlyDraggedItemIndex = -1;
 
@@ -31,6 +31,7 @@ namespace Inventory.UI
 
         [SerializeField]
         private ItemActionPanel actionPanel;
+
 
         public void Awake()
         {
@@ -158,21 +159,46 @@ namespace Inventory.UI
             ResetDragItem();
         }
 
-        internal void ResetAllItems()
-        {
-            foreach(var item in listOfUIItems)
-            {
-                item.ResetData();
-                item.Deselect();
-            }
-        }
-        public void ClearAllItems()
+        public void ResetAllItems()
         {
             foreach (var item in listOfUIItems)
             {
-                Destroy(item.gameObject); // Xoá game object khỏi scene
+                if (item != null) // Thêm kiểm tra null
+                {
+                    item.ResetData();
+                    item.Deselect();
+                }
             }
-            listOfUIItems.Clear(); // Xóa khỏi danh sách
+        }
+
+        public void ClearAllItems()
+        {
+            // Thay đổi cách xử lý - không destroy items
+            foreach (var item in listOfUIItems)
+            {
+                if (item != null)
+                {
+                    item.ResetData();
+                    item.Deselect();
+                }
+            }
+        }
+
+        public void InitializeInventoryUI(int inventorySize)
+        {
+            // Xóa các items null trước khi khởi tạo
+            listOfUIItems.RemoveAll(item => item == null);
+
+            if (listOfUIItems.Count >= inventorySize) return;
+
+            int itemsToCreate = inventorySize - listOfUIItems.Count;
+            for (int i = 0; i < itemsToCreate; i++)
+            {
+                UIInventoryItem uiItem = Instantiate(itemPrefab, contentPanel.transform);
+                uiItem.gameObject.SetActive(true); // Đảm bảo item được kích hoạt
+                listOfUIItems.Add(uiItem);
+                // ... các event handlers
+            }
         }
 
     }

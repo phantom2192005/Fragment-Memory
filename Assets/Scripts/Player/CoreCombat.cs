@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class CoreCombat : MonoBehaviour
@@ -10,14 +11,22 @@ public class CoreCombat : MonoBehaviour
     public float comboTimer;
     public float coolDownTimer;
     public int comboAttackIndex;
+    private AudioSource audioSource;
+    public List<AudioClip> weaponSFX = new List<AudioClip>();
 
     public bool isCooldown;
     private void Start()
     {
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
     private void Update()
     {
+        if(weaponSFX.Count == 0 && currentWeaponHandler.GetWeapon().weaponSFX.Count>0)
+        {
+            weaponSFX = currentWeaponHandler.GetWeapon().weaponSFX;
+            Debug.Log("Get SFX");
+        }
         if (coolDownTimer > 0 && isCooldown)
         {
             coolDownTimer -= Time.deltaTime;
@@ -54,6 +63,7 @@ public class CoreCombat : MonoBehaviour
 
         //Debug.Log("Attack in CoreCombat is call");
         currentWeaponHandler.Attack(comboAttackIndex);
+        audioSource.PlayOneShot(weaponSFX[comboAttackIndex-1],0.4f);
 
         coolDownTimer = currentWeaponHandler.GetWeapon().CooldownTime;
 

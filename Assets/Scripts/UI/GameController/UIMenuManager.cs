@@ -12,7 +12,9 @@ public class UIMenuManager : MonoBehaviour
 
     public void Show()
     {
+        
         InGameMenu.SetActive(true);
+        AudioSource.PlayClipAtPoint(SFXManager.Instance.SFX["Open Menu"], Camera.main.transform.position);
         Time.timeScale = 0f; // Dừng thời gian
         isPaused = true;
     }
@@ -22,10 +24,12 @@ public class UIMenuManager : MonoBehaviour
         InGameMenu.SetActive(false);
         Time.timeScale = 1f; // Tiếp tục thời gian
         isPaused = false;
+        AudioSource.PlayClipAtPoint(SFXManager.Instance.SFX["Close Menu"], Camera.main.transform.position);
     }
 
     private void Start()
     {
+        if(InGameMenu != null)
         InGameMenu.SetActive(false);
         Time.timeScale = 1f; // Đảm bảo thời gian chạy bình thường lúc khởi động
     }

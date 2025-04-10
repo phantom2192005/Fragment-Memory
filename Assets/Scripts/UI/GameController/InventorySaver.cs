@@ -53,5 +53,43 @@ public class InventorySaver : MonoBehaviour
     {
         return Path.Combine(Application.persistentDataPath, $"inventory_slot{inventoryData_index}.json");
     }
+    public void DeleteAllInventoryFiles()
+    {
+        try
+        {
+            string directoryPath = Application.persistentDataPath;
+            string filePattern = $"inventory*.json";
+
+            // Kiểm tra thư mục tồn tại
+            if (!Directory.Exists(directoryPath))
+            {
+                Debug.LogWarning("Thư mục lưu trữ không tồn tại");
+                return;
+            }
+
+            // Lấy danh sách tất cả file inventory
+            string[] inventoryFiles = Directory.GetFiles(directoryPath, filePattern);
+
+            // Xóa từng file
+            foreach (string filePath in inventoryFiles)
+            {
+                try
+                {
+                    File.Delete(filePath);
+                    Debug.Log($"Đã xóa file inventory: {Path.GetFileName(filePath)}");
+                }
+                catch (Exception ex)
+                {
+                    Debug.LogError($"Lỗi khi xóa {filePath}: {ex.Message}");
+                }
+            }
+
+            Debug.Log($"Đã xóa thành công {inventoryFiles.Length} file inventory");
+        }
+        catch (Exception ex)
+        {
+            Debug.LogError($"Lỗi tổng khi xóa inventory: {ex.Message}");
+        }
+    }
 
 }

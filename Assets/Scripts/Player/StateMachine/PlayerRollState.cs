@@ -23,7 +23,7 @@ public class PlayerRollState : IPlayerState
         float inputY = player.GetAnimator().GetFloat("InputY");
         rollDirection = new Vector2(inputX, inputY);
 
-
+        AudioSource.PlayClipAtPoint(SFXManager.Instance.SFX["Roll"],Camera.main.transform.position,0.2f);
         player.PlayAnimation("Roll");
         player.stamina.ModifyStamina(-20.0f);
         player.HurtBox.GetComponent<Collider2D>().enabled = false;

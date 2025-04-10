@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using TMPro;
 using Inventory.Model;
+using UnityEngine.SceneManagement;
 
 public class SaveController : MonoBehaviour
 {
@@ -27,6 +28,7 @@ public class SaveController : MonoBehaviour
 
     private string saveFileSOPath => Path.Combine(Application.persistentDataPath, "saveFileSO.json");
 
+
     private void Start()
     {
         LoadSaveFileSO(); // Tải dữ liệu SaveFileSO từ file JSON khi game bắt đầu
@@ -39,6 +41,11 @@ public class SaveController : MonoBehaviour
         lastSaveLocation = saveFileSO.lastSaveLocation;
         LoadExsitFileName();
         LoadGame();
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            LoadFileSave();
+            LoadFileSave();
+        }
     }
 
     void AddEventTrigger(TMP_InputField inputField, int index)
@@ -143,7 +150,22 @@ public class SaveController : MonoBehaviour
         if (File.Exists(lastSaveLocation))
         {
             SaveData saveData = JsonUtility.FromJson<SaveData>(File.ReadAllText(lastSaveLocation));
-            GameObject.FindGameObjectWithTag("Player").transform.position = saveData.playerPosition;
+            // Tìm player một lần và lưu vào biến để tối ưu hiệu năng
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+
+            // Kiểm tra sự tồn tại của player trước khi thao tác
+            if (player != null)
+            {
+                // Chỉ cập nhật vị trí khi có dữ liệu lưu hợp lệ
+                if (saveData != null && saveData.playerPosition != null)
+                {
+                    player.transform.position = saveData.playerPosition;
+                }
+            }
+            else
+            {
+                Debug.LogWarning("Không tìm thấy Player trong scene!");
+            }
 
             for (int i = 0; i < saveFileSO.saveLocations.Length; i++)
             {
@@ -167,7 +189,22 @@ public class SaveController : MonoBehaviour
         if (File.Exists(lastSaveLocation))
         {
             SaveData saveData = JsonUtility.FromJson<SaveData>(File.ReadAllText(lastSaveLocation));
-            GameObject.FindGameObjectWithTag("Player").transform.position = saveData.playerPosition;
+            // Tìm player một lần và lưu vào biến để tối ưu hiệu năng
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+
+            // Kiểm tra sự tồn tại của player trước khi thao tác
+            if (player != null)
+            {
+                // Chỉ cập nhật vị trí khi có dữ liệu lưu hợp lệ
+                if (saveData != null && saveData.playerPosition != null)
+                {
+                    player.transform.position = saveData.playerPosition;
+                }
+            }
+            else
+            {
+                Debug.LogWarning("Không tìm thấy Player trong scene!");
+            }
 
             for (int i = 0; i < saveFileSO.saveLocations.Length; i++)
             {
@@ -175,6 +212,10 @@ public class SaveController : MonoBehaviour
                 {
                     currentSlot_index = i;
                     currentFileNameInput = Path.GetFileNameWithoutExtension(saveFileSO.saveLocations[i]);
+                    if(PressedIcon.Length == 0)
+                    {
+                        return;
+                    }
                     PressedIcon[currentSlot_index].enabled = true;
                     PressedBorder[currentSlot_index].enabled = true;
                     inventorySaver.inventoryData_index = currentSlot_index;
@@ -243,6 +284,34 @@ public class SaveController : MonoBehaviour
         saveFileSO.lastFileName = data.lastFileName;
         saveFileSO.lastSaveLocation = data.lastSaveLocation;
         saveFileSO.lastSlotIndex = data.lastSlotIndex;
+    }
+
+    public void DeleteAllSaves()
+    {
+        // Xóa file SaveFileSO.json
+        if (File.Exists(saveFileSOPath))
+        {
+            File.Delete(saveFileSOPath);
+            Debug.Log("Đã xóa SaveFileSO");
+        }
+
+        // Xóa 3 file save game
+        foreach (string savePath in saveFileSO.saveLocations)
+        {
+            if (!string.IsNullOrEmpty(savePath) && File.Exists(savePath))
+            {
+                File.Delete(savePath);
+                Debug.Log("Đã xóa file save: " + savePath);
+            }
+        }
+
+        // Reset dữ liệu trong SaveFileSO
+        saveFileSO.saveLocations = new string[3]; // Tạo mới mảng 3 phần tử
+        saveFileSO.lastSaveLocation = string.Empty;
+        saveFileSO.lastFileName = "NewGame";
+        saveFileSO.lastSlotIndex = 0;
+
+        Debug.Log("Đã xóa toàn bộ dữ liệu save!");
     }
 }
 
