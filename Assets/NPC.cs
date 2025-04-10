@@ -13,6 +13,10 @@ public class NPC : MonoBehaviour, IInteractable
     private int dialogueIndex;
     private bool isTyping, isDialogueActive;
 
+    void Start()
+    {
+        dialoguePanel.SetActive(false);
+    }
     public bool CanInteract()
     {
         return !isDialogueActive;

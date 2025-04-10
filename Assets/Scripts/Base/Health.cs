@@ -6,6 +6,7 @@ public class Health : MonoBehaviour
     [SerializeField] public float currentHealth = 0;
     Animator animator;
     public HealthBar healthBar;
+    public DropLootSimple droplootSimple;
 
     private DamageFlash damageFlash;
 
@@ -14,6 +15,7 @@ public class Health : MonoBehaviour
         currentHealth = maxHealth;
         animator = GetComponent<Animator>();
         damageFlash = GetComponent<DamageFlash>();
+        droplootSimple = GetComponent<DropLootSimple>();
     }
 
     private void Update()
@@ -39,6 +41,10 @@ public class Health : MonoBehaviour
             Debug.Log("SetHealthBar is call");
             healthBar.SetValue((int)currentHealth);
 
+        }
+        if(droplootSimple != null && currentHealth <= 0)
+        {
+            droplootSimple.DropLoot();
         }
     }
 }

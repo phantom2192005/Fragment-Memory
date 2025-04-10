@@ -660,6 +660,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 80765bf3-9262-4f62-bd50-3fcaa0226d24
     m_ActionName: Player/Run
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 824051118873164958}
+        m_TargetAssemblyTypeName: InteractionDetector, Assembly-CSharp
+        m_MethodName: OnInteract
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 2e7181db-2d81-429c-9569-5403fc740dab
+    m_ActionName: Player/Interact[/Keyboard/e]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -1058,7 +1074,7 @@ SpriteRenderer:
   m_SortingLayerID: 1159639471
   m_SortingLayer: 2
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: 396ca3e06827aa54b8408dbd693e9dbf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 563cdc7df07fcd34da9b8f8fee86a08e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1336,6 +1352,7 @@ MonoBehaviour:
   maxHealth: 400
   currentHealth: 0
   healthBar: {fileID: 0}
+  droplootSimple: {fileID: 0}
 --- !u!114 &4508970958358373231
 MonoBehaviour:
   m_ObjectHideFlags: 0
