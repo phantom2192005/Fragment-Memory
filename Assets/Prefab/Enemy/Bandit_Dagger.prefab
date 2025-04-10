@@ -81,7 +81,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 928f40b651ba77d4eb441c18a98d5702, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 200
+  maxHealth: 150
   currentHealth: 0
   healthBar: {fileID: 0}
 --- !u!114 &1757780965896712050
@@ -409,7 +409,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2e1a5f018111c44d837d044d325c6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chasingSpeed: 3
+  chasingSpeed: 0.8
   enemyMovementAI: {fileID: 2200149636453633838}
 --- !u!114 &2738174376780863562
 MonoBehaviour:
@@ -423,8 +423,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0c3e58083b9d1145b8ccc3eddde82cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrolSpeed: 3
-  waitTime: 1
+  patrolSpeed: 1
+  waitTime: 5
   Path: {fileID: 0}
 --- !u!1 &1434739995651296718
 GameObject:
@@ -538,7 +538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c4a506365dce1d47ba038ff7622ada7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: -20
+  damage: -50
   isSingleHit: 1
   damageInterval: 0
 --- !u!1 &2448395962874522097
@@ -932,7 +932,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b9975da9ab93414d8b8e2f30870bee8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coolDownTime: 2
+  coolDownTime: 0.5
   meleeAttackAnimationParameters:
   - Slash_1
   - Slash_2
@@ -1182,6 +1182,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c4a506365dce1d47ba038ff7622ada7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: -20
+  damage: -35
   isSingleHit: 1
   damageInterval: 0
