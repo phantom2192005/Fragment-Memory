@@ -107,11 +107,11 @@ public class WeaponHandler : MonoBehaviour
 
         if (player.GetAnimator().GetFloat("InputY") == 1)
         {
-            weaponSprite_spriteRenderer.sortingOrder = 0;
+            weaponSprite_spriteRenderer.sortingOrder = 3;
         }
         else
         {
-            weaponSprite_spriteRenderer.sortingOrder = 1;
+            weaponSprite_spriteRenderer.sortingOrder = 4;
         }
         switch (player.currentState)
         {
