@@ -1,0 +1,2060 @@
+fileFormatVersion: 2
+guid: a6c2d8740067a4e47885ea05fc76f63e
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Blood Desert Tileset_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 277
+        width: 24
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17caf4e466a8a1d4caeda0e30a15ad96
+      internalID: -1598801865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_1
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 287
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64b6494709df25d4388acea0ebb5a518
+      internalID: 1763438719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_2
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 286
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28aabbb3a0bdc384aaa7862230eb6af6
+      internalID: -2112582991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_3
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 286
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4d0d71fdcd304a4bbb3cbd37151313f
+      internalID: 1818977209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_4
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 266
+        width: 21
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a7160b4451c231459d6ee6ed6255f91
+      internalID: 1734655624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_5
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 270
+        width: 58
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9776e10c19284824886fa294ddd80cea
+      internalID: 1068241889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_6
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 209
+        width: 81
+        height: 54
+      alignment: 9
+      pivot: {x: 0.4094485, y: 0.53741425}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -19.5, y: 7}
+        - {x: -34.5, y: 3}
+        - {x: -38.5, y: -8}
+        - {x: -23.5, y: -14}
+        - {x: 7.5, y: -18}
+        - {x: 31.5, y: -15}
+        - {x: 38.5, y: -11}
+        - {x: 15.5, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bf462fa515142e40aeb7cf4145cf642
+      internalID: -2058658302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_7
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 226
+        width: 64
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c1debb64f5972b45acacff292a9ef3b
+      internalID: 868005993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_8
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 270
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae08636f77aca1d449521ce3ae74de11
+      internalID: -1008906325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_9
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 255
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0b09664fe3c4cf489d4dbb4f749e2be
+      internalID: 278329319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_10
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 248
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e55fd60a71f52844a8810900ba8dbefd
+      internalID: -1988766848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_11
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 259
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1be70d7f9bc6df94384fd666d31d96f1
+      internalID: -71007562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_12
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 252
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6846c396a581c884cb9430c1d8a3882b
+      internalID: 82797909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_13
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 248
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 457558c16a50b244eac2df4ff4337a53
+      internalID: 951875979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_14
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 247
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71938e2f569a34e44b890bee22797d4c
+      internalID: 1700595704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_15
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 238
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06e2e8045a3094649a6fbebbf760c144
+      internalID: -65092361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_16
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 239
+        width: 5
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1396b4c659786d74c96b8dc5fa02ab49
+      internalID: -29406613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_17
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 238
+        width: 6
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b988f29831827ce4cb9cbc04c7fc3e9b
+      internalID: 1681514396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_18
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 240
+        width: 11
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90ab40dda337a6348a999b4062340be3
+      internalID: -749060599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_19
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 232
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e03c260c5a06ff458c97ef7c23c1736
+      internalID: 1689440180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_20
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 233
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eac17a383c79b3e4b9a1651f6b02874b
+      internalID: -525636812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_21
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 231
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7555feacc2118ad40a606c0620a4f48e
+      internalID: 1960904061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_22
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 232
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cab2336c7d932a41ba6e4c40883ab76
+      internalID: -1332987791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_23
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 234
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 341f8a893c9c8694bb973511efd70048
+      internalID: 1642458333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_24
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 232
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d310f73ac19339d4b96e7581ae28a18b
+      internalID: -380708104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_25
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 227
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e04ffa997bdb6a8478c57a6030ea4366
+      internalID: 2114947713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_26
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 210
+        width: 18
+        height: 18
+      alignment: 9
+      pivot: {x: 0.6194585, y: 0.1744817}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 689ee7eb9f5aed44182ea51dbe1056c9
+      internalID: -838944599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 181
+        width: 64
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8e0c22340f83674d8f9c8758365bda1
+      internalID: -1048191863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_28
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 191
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a9969c18a88c8c459d9107b54f7ef04
+      internalID: 1065100916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_29
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 170
+        width: 12
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7233c126d8219ee41bfc6260fca9d623
+      internalID: 1365252300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_30
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 191
+        width: 14
+        height: 15
+      alignment: 9
+      pivot: {x: 0.5610455, y: 0.24079284}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fca7e7d0969876d4f8ec64eb5ddc0ae2
+      internalID: -1089017252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_32
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 193
+        width: 12
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e777bd83e9eecd41bdd36c9160583c0
+      internalID: 513201817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_33
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 195
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39525c80c49139b44bc65d0f926fe169
+      internalID: 942589030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_34
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 208
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28bfbf75cc2e63044a8d9690044103ca
+      internalID: 99132146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_35
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 187
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f579d03cdfd711e48be6f59697e6e2d2
+      internalID: 1885901551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_36
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 190
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f874f8956a883ce42bb0a062ec428f1d
+      internalID: -197124935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_37
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 190
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdb29e0b302ee4b44abb7998a188eeca
+      internalID: 1306028990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_38
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 143
+        width: 59
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4665b3ba3d0360849b7af3075d16d463
+      internalID: -1093710993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_39
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 174
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45f1e28faea80fc42adba6eb391a97d5
+      internalID: 1720487287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_40
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 156
+        width: 22
+        height: 32
+      alignment: 9
+      pivot: {x: 0.4795737, y: 0.4301873}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 967b86652876320418b614bb68edd8e8
+      internalID: -1150159388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_41
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 174
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc7cac4dd76cd074d846deb64b9b3f03
+      internalID: -14872357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_42
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 97
+        width: 139
+        height: 93
+      alignment: 9
+      pivot: {x: 0.47795665, y: 0.48972574}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 12.5, y: -24.5}
+        - {x: 33.5, y: -24.5}
+        - {x: 37.5, y: -12.5}
+        - {x: 43.5, y: -11.5}
+        - {x: 60.5, y: -6.5}
+        - {x: 59.5, y: 8.5}
+        - {x: 34.5, y: 13}
+        - {x: 16.5, y: 12.5}
+        - {x: 4.5, y: 15.5}
+        - {x: -11.5, y: 15.5}
+        - {x: -26.5, y: 10.5}
+        - {x: -36.5, y: -1.5}
+        - {x: -36.5, y: -8.5}
+        - {x: -45.5, y: -15.5}
+        - {x: -68.5, y: -15.5}
+        - {x: -67.5, y: -21.5}
+        - {x: -56.5, y: -25.5}
+        - {x: -54.5, y: -32.5}
+        - {x: -45.5, y: -44.5}
+        - {x: -35.5, y: -45.5}
+        - {x: -24.5, y: -36.5}
+        - {x: -23.5, y: -23.5}
+        - {x: -17.5, y: -13.5}
+        - {x: -5.5, y: -13.5}
+        - {x: -0.5, y: -20.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: c506b957eb1a517469846d0ac4ae54e0
+      internalID: 1935406080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_43
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 159
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d036940b375a824b8c0b768c3b38172
+      internalID: -1433151640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_44
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 152
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9690422e49c3b14429c755b182d64fad
+      internalID: 969300859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_45
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 163
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8db0a891a10274a41a6836bef54c0bd8
+      internalID: 359142592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_46
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 156
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77149d1e3a9e45a4a9c7ebe817f11d2f
+      internalID: 1960570651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_48
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 152
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d33e0893b89ec4d44830beaa1234345b
+      internalID: -655094345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_49
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 142
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6db1b95f1b6ddf4090eaf8b51b69388
+      internalID: -1390988747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_50
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 151
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72c13a8b07df21846ba0bb51661cd4ba
+      internalID: -1733482621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_51
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 147
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 205750166fa610f4eb6b5cc95a8dd2b8
+      internalID: 141803519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_52
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 147
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dffffe2df78bc6d4ba125c170d946374
+      internalID: 724837073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_53
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 142
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee0f1582ea70fe640bdfcbaf8bf8b040
+      internalID: -1493636496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_54
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 131
+        width: 11
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee9b5421b776157488694c14e23571cb
+      internalID: 439642915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_55
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 144
+        width: 11
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32daf124ca4b48144b81c5d3eb13ad86
+      internalID: -2113361119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_56
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 146
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe34ebc342f81ee42a4574c6a1f10269
+      internalID: 600301119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_57
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 129
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebc3cda168e44af48bb100a7077c2079
+      internalID: 331256904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_58
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 110
+        width: 32
+        height: 38
+      alignment: 9
+      pivot: {x: 0.4381423, y: 0.2211633}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31890f8c4f6f9d040b798ead9ba6cb25
+      internalID: -599244398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_59
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 110
+        width: 32
+        height: 38
+      alignment: 9
+      pivot: {x: 0.43450356, y: 0.22422731}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24b3b7a985ec4ad43a09f65445f03202
+      internalID: 1555290033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_60
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 110
+        width: 28
+        height: 38
+      alignment: 9
+      pivot: {x: 0.15484619, y: 0.23035552}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa8b75b3bd6aaa44ba4b5495db95e31e
+      internalID: 2116026379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_61
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 133
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da3f5cad1afa7d345b5ce2328dabff80
+      internalID: -845597439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_62
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 142
+        width: 6
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6affdead2d7459a4bb97e9e939d02381
+      internalID: -2106838568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_64
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 136
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6a2539da452a4c44b0b351488f9d5a7
+      internalID: 1611769689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_65
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 132
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a37209add965a48449a496a8ad571a1a
+      internalID: -583941615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_66
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 131
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 034f2cd694fc0b947ac401908404a641
+      internalID: -1280450158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_67
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 136
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 358ceea93e85e164cb04ce0de8141e45
+      internalID: 547588886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_68
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 138
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e4a70e91d8b23143ac149f65549f8c8
+      internalID: 575180873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_69
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 130
+        width: 4
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93a07a2ed751e4541b4157679e79466d
+      internalID: 410613660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_70
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 131
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cd6b544ee180cd4281338c06d6159c9
+      internalID: -1189324730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_71
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 117
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa5b2e0a3ff5c5441a642929c5e53ab8
+      internalID: 1077495777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_72
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 124
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7db3ba954c74fb849b8ed89bc03a0e5b
+      internalID: 295039774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_77
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 97
+        width: 40
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -2, y: 3}
+        - {x: -14, y: 10}
+        - {x: -20, y: 9}
+        - {x: -20, y: 4}
+        - {x: -6, y: -3}
+        - {x: -4, y: -10}
+        - {x: -1, y: -12}
+        - {x: 3, y: -8}
+        - {x: 9, y: -7}
+        - {x: 13, y: 1}
+        - {x: 2, y: 7}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d99bf4423fd21e468cde0ad18dc4000
+      internalID: 8323872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_78
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 114
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b629c8f8ab3ebe94985a139f5416df3c
+      internalID: -1832584387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_79
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 78
+        width: 11
+        height: 30
+      alignment: 9
+      pivot: {x: 0.5, y: 0.33777517}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6091ad61978d2fb45aae4739504e95f2
+      internalID: -404270573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_81
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 82
+        width: 21
+        height: 19
+      alignment: 9
+      pivot: {x: 0.38751402, y: 0.4334986}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97c8a7c69bbb63841a9dce8c8c03591a
+      internalID: 1494586145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_83
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 79
+        width: 7
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e6da4ba2a6eae34ab55185ffc5aeedd
+      internalID: 539709366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_84
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 73
+        width: 35
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8acc74dc51616db428cb075a6fb2e24d
+      internalID: -1512061495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_85
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 80
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcb4fdcf3cd7a554b84652c0e6ee556c
+      internalID: 717022149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_86
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 80
+        width: 11
+        height: 13
+      alignment: 9
+      pivot: {x: 0.19536036, y: 0.30561417}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f272c36ad7714a247986de5a81e3bbde
+      internalID: 1064813509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_87
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 2
+        width: 140
+        height: 91
+      alignment: 9
+      pivot: {x: 0.47077265, y: 0.52499115}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 12.5, y: -24.5}
+        - {x: 33.5, y: -24.5}
+        - {x: 37.5, y: -12.5}
+        - {x: 43.5, y: -11.5}
+        - {x: 60.5, y: -6.5}
+        - {x: 59.5, y: 8.5}
+        - {x: 34.5, y: 13}
+        - {x: 16.5, y: 12.5}
+        - {x: 4.5, y: 15.5}
+        - {x: -11.5, y: 15.5}
+        - {x: -26.5, y: 10.5}
+        - {x: -36.5, y: -1.5}
+        - {x: -36.5, y: -8.5}
+        - {x: -45.5, y: -15.5}
+        - {x: -68.5, y: -15.5}
+        - {x: -67.5, y: -21.5}
+        - {x: -56.5, y: -25.5}
+        - {x: -54.5, y: -32.5}
+        - {x: -45.5, y: -44.5}
+        - {x: -35.5, y: -45.5}
+        - {x: -24.5, y: -36.5}
+        - {x: -23.5, y: -23.5}
+        - {x: -17.5, y: -13.5}
+        - {x: -5.5, y: -13.5}
+        - {x: -0.5, y: -20.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae34f6c499b9cd540b5f3689d87b2849
+      internalID: -1282162738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_88
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 0
+        width: 53
+        height: 54
+      alignment: 9
+      pivot: {x: 0.1947139, y: 0.3274269}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f713f6738e1ae54ab3dd6e1e15995e6
+      internalID: -257551597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_90
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 47
+        height: 46
+      alignment: 9
+      pivot: {x: 0.3932362, y: 0.23953263}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f77f520d8c8eabd4a9760e184642f679
+      internalID: -1811495867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_91
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 0
+        width: 47
+        height: 49
+      alignment: 9
+      pivot: {x: 0.3866996, y: 0.22622076}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d15581d8fca0e91468854d35042db48d
+      internalID: -18450792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_99
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 243
+        width: 19
+        height: 21
+      alignment: 9
+      pivot: {x: 0.5203102, y: 0.33461508}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09c26343150f7bd41a94a286788faa78
+      internalID: 1247826363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Desert Tileset_31
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 270
+        width: 68
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e97f08e26c6b77468bc72da622739f2
+      internalID: -748510529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Blood Desert Tileset_0: -1598801865
+      Blood Desert Tileset_1: 1763438719
+      Blood Desert Tileset_10: -1988766848
+      Blood Desert Tileset_11: -71007562
+      Blood Desert Tileset_12: 82797909
+      Blood Desert Tileset_13: 951875979
+      Blood Desert Tileset_14: 1700595704
+      Blood Desert Tileset_15: -65092361
+      Blood Desert Tileset_16: -29406613
+      Blood Desert Tileset_17: 1681514396
+      Blood Desert Tileset_18: -749060599
+      Blood Desert Tileset_19: 1689440180
+      Blood Desert Tileset_2: -2112582991
+      Blood Desert Tileset_20: -525636812
+      Blood Desert Tileset_21: 1960904061
+      Blood Desert Tileset_22: -1332987791
+      Blood Desert Tileset_23: 1642458333
+      Blood Desert Tileset_24: -380708104
+      Blood Desert Tileset_25: 2114947713
+      Blood Desert Tileset_26: -838944599
+      Blood Desert Tileset_27: -1048191863
+      Blood Desert Tileset_28: 1065100916
+      Blood Desert Tileset_29: 1365252300
+      Blood Desert Tileset_3: 1818977209
+      Blood Desert Tileset_30: -1089017252
+      Blood Desert Tileset_31: -748510529
+      Blood Desert Tileset_32: 513201817
+      Blood Desert Tileset_33: 942589030
+      Blood Desert Tileset_34: 99132146
+      Blood Desert Tileset_35: 1885901551
+      Blood Desert Tileset_36: -197124935
+      Blood Desert Tileset_37: 1306028990
+      Blood Desert Tileset_38: -1093710993
+      Blood Desert Tileset_39: 1720487287
+      Blood Desert Tileset_4: 1734655624
+      Blood Desert Tileset_40: -1150159388
+      Blood Desert Tileset_41: -14872357
+      Blood Desert Tileset_42: 1935406080
+      Blood Desert Tileset_43: -1433151640
+      Blood Desert Tileset_44: 969300859
+      Blood Desert Tileset_45: 359142592
+      Blood Desert Tileset_46: 1960570651
+      Blood Desert Tileset_47: 518439634
+      Blood Desert Tileset_48: -655094345
+      Blood Desert Tileset_49: -1390988747
+      Blood Desert Tileset_5: 1068241889
+      Blood Desert Tileset_50: -1733482621
+      Blood Desert Tileset_51: 141803519
+      Blood Desert Tileset_52: 724837073
+      Blood Desert Tileset_53: -1493636496
+      Blood Desert Tileset_54: 439642915
+      Blood Desert Tileset_55: -2113361119
+      Blood Desert Tileset_56: 600301119
+      Blood Desert Tileset_57: 331256904
+      Blood Desert Tileset_58: -599244398
+      Blood Desert Tileset_59: 1555290033
+      Blood Desert Tileset_6: -2058658302
+      Blood Desert Tileset_60: 2116026379
+      Blood Desert Tileset_61: -845597439
+      Blood Desert Tileset_62: -2106838568
+      Blood Desert Tileset_63: 835199213
+      Blood Desert Tileset_64: 1611769689
+      Blood Desert Tileset_65: -583941615
+      Blood Desert Tileset_66: -1280450158
+      Blood Desert Tileset_67: 547588886
+      Blood Desert Tileset_68: 575180873
+      Blood Desert Tileset_69: 410613660
+      Blood Desert Tileset_7: 868005993
+      Blood Desert Tileset_70: -1189324730
+      Blood Desert Tileset_71: 1077495777
+      Blood Desert Tileset_72: 295039774
+      Blood Desert Tileset_73: -148769456
+      Blood Desert Tileset_74: -1442780341
+      Blood Desert Tileset_75: -25169180
+      Blood Desert Tileset_76: -1096002664
+      Blood Desert Tileset_77: 8323872
+      Blood Desert Tileset_78: -1832584387
+      Blood Desert Tileset_79: -404270573
+      Blood Desert Tileset_8: -1008906325
+      Blood Desert Tileset_80: 1140659958
+      Blood Desert Tileset_81: 1494586145
+      Blood Desert Tileset_82: -175327404
+      Blood Desert Tileset_83: 539709366
+      Blood Desert Tileset_84: -1512061495
+      Blood Desert Tileset_85: 717022149
+      Blood Desert Tileset_86: 1064813509
+      Blood Desert Tileset_87: -1282162738
+      Blood Desert Tileset_88: -257551597
+      Blood Desert Tileset_89: -1291522310
+      Blood Desert Tileset_9: 278329319
+      Blood Desert Tileset_90: -1811495867
+      Blood Desert Tileset_91: -18450792
+      Blood Desert Tileset_92: 1105278001
+      Blood Desert Tileset_93: 641925680
+      Blood Desert Tileset_94: -2106216863
+      Blood Desert Tileset_95: -1674889863
+      Blood Desert Tileset_96: 1821822010
+      Blood Desert Tileset_97: -1103742980
+      Blood Desert Tileset_98: 595952014
+      Blood Desert Tileset_99: 1247826363
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
