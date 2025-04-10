@@ -93,7 +93,7 @@ public class SeekBehaviour : SteeringBehaviour
         if (!showGizmo)
             return;
 
-        Gizmos.DrawSphere(targetPositionCached, 0.2f);
+        Gizmos.DrawSphere(targetPositionCached, 0.1f);
 
         if (Application.isPlaying && interestsTemp != null)
         {
@@ -105,7 +105,7 @@ public class SeekBehaviour : SteeringBehaviour
             if (!reachedLastTarget)
             {
                 Gizmos.color = Color.red;
-                Gizmos.DrawSphere(targetPositionCached, 0.1f);
+                Gizmos.DrawSphere(targetPositionCached, 0.05f);
             }
         }
     }

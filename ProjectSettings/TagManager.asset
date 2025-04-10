@@ -58,9 +58,9 @@ TagManager:
   - name: Item
     uniqueID: 3927062847
     locked: 0
-  - name: UI
-    uniqueID: 2068148085
-    locked: 0
   - name: VFX
     uniqueID: 2035271111
+    locked: 0
+  - name: UI
+    uniqueID: 2068148085
     locked: 0
