@@ -733,6 +733,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24d477e43ddf22f4dbf1d609c89be563, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  settingPage: {fileID: 0}
 --- !u!1 &116945292
 GameObject:
   m_ObjectHideFlags: 0
@@ -1415,6 +1416,10 @@ PrefabInstance:
     - target: {fileID: 5444956398703093020, guid: 94c400891910b384299ee5e1732d1795, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5911442716957587902, guid: 94c400891910b384299ee5e1732d1795, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -24.730461
       objectReference: {fileID: 0}
     - target: {fileID: 8419633926236943542, guid: 94c400891910b384299ee5e1732d1795, type: 3}
       propertyPath: m_AnchorMax.x
@@ -2363,7 +2368,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 298128832}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 116058071}
+        m_TargetAssemblyTypeName: SettingPage, Assembly-CSharp
+        m_MethodName: Home
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &298128832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62891,7 +62908,7 @@ GameObject:
   - component: {fileID: 881109958}
   - component: {fileID: 881109957}
   m_Layer: 5
-  m_Name: Menu Canvas
+  m_Name: Inventory Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -65758,7 +65775,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4324197708709948778, guid: a38967939d8c2034faa2a110421be7e3, type: 3}
       propertyPath: m_SortingOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4324197708709948778, guid: a38967939d8c2034faa2a110421be7e3, type: 3}
       propertyPath: m_SpriteSortPoint
@@ -67023,7 +67040,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1604961651}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 116058071}
+        m_TargetAssemblyTypeName: SettingPage, Assembly-CSharp
+        m_MethodName: Quit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1604961651
 MonoBehaviour:
   m_ObjectHideFlags: 0
