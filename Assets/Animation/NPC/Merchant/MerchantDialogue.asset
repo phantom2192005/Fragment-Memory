@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f42f8780a3c2dc4fa275e25937cc7f3, type: 3}
+  m_Name: MerchantDialogue
+  m_EditorClassIdentifier: 
+  npcName: Merchant
+  npcPortrait: {fileID: 1815213173, guid: 36f823045ca41ed44834cde38402c6d0, type: 3}
+  dialogueLine:
+  - Hello Young Man, Wanna buy something?
+  - My stuff is top notch
+  typingSpeed: 0.1
+  voiceSound: {fileID: 8300000, guid: f1dd131383d187a4faccb2dafc628a05, type: 3}
+  voicePitch: 1
+  autoProgressLines: 0100
+  autoProgressDelay: 1.5

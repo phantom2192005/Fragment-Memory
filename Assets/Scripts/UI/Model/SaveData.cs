@@ -7,5 +7,11 @@ using UnityEngine;
 public class SaveData
 {
     public Vector3 playerPosition;
+
+    public float currentHealth;
+    public float maxHealth;
+
+    public float currentStamina;
+    public float maxStamina;
 }
 

@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    [SerializeField] public int maxHealth = 50;
-    [SerializeField] public int currentHealth = 0;
+    [SerializeField] public float maxHealth = 50;
+    [SerializeField] public float currentHealth = 0;
     Animator animator;
     public HealthBar healthBar;
 
@@ -21,7 +21,7 @@ public class Health : MonoBehaviour
 
     }
 
-    public void ModifyHealth(int amount)
+    public void ModifyHealth(float amount)
     {
         if (amount > 0 && animator != null) 
         {
@@ -36,7 +36,8 @@ public class Health : MonoBehaviour
         // call knock back
         if (healthBar != null)
         {
-            healthBar.SetValue(currentHealth);
+            Debug.Log("SetHealthBar is call");
+            healthBar.SetValue((int)currentHealth);
 
         }
     }

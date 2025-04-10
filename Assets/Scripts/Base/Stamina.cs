@@ -8,13 +8,13 @@ public class Stamina : MonoBehaviour
     public float maxStamina;
 
     [SerializeField]
-    private float currentStamina;
+    public float currentStamina;
 
     [SerializeField]
     private float staminaRegenRate;
 
     [SerializeField]
-    private StaminaBar staminaBar;
+    public StaminaBar staminaBar;
 
 
     private void Start()

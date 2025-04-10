@@ -43,7 +43,6 @@ public class HealthBar : MonoBehaviour
 
         float target = healthFillMask.padding.z;
 
-        // Di chuyển giá trị hiện tại về phía target với tốc độ ReduceSpeed (giá trị càng cao -> nhanh)
         currentLostEffectPaddingRight = Mathf.MoveTowards(
             currentLostEffectPaddingRight,
             target,
@@ -54,7 +53,6 @@ public class HealthBar : MonoBehaviour
         padding.z = currentLostEffectPaddingRight;
         healthLostMask.padding = padding;
 
-        // Khi đã đến gần giá trị target, tắt hiệu ứng
         if (Mathf.Approximately(currentLostEffectPaddingRight, target))
         {
             healthLostEffect = false;
