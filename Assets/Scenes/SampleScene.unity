@@ -65525,6 +65525,10 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 1159639471
       objectReference: {fileID: 0}
+    - target: {fileID: 1732844159240160233, guid: a38967939d8c2034faa2a110421be7e3, type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3131859193549426363, guid: a38967939d8c2034faa2a110421be7e3, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
@@ -65578,12 +65582,20 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4324197708709948778, guid: a38967939d8c2034faa2a110421be7e3, type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4324197708709948778, guid: a38967939d8c2034faa2a110421be7e3, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5047782716462988354, guid: a38967939d8c2034faa2a110421be7e3, type: 3}
       propertyPath: m_SortingOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5047782716462988354, guid: a38967939d8c2034faa2a110421be7e3, type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5987066852295023638, guid: a38967939d8c2034faa2a110421be7e3, type: 3}
       propertyPath: hand
