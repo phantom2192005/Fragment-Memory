@@ -21,7 +21,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4940137547231061241
 Transform:
   m_ObjectHideFlags: 0
@@ -349,8 +349,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delayTimeFire: 0.5
   coolDownTime: 3
-  velocity: {x: 0, y: -25}
-  OffSetDistance: {x: 0, y: 20}
+  velocity: {x: 0, y: -50}
+  OffSetDistance: {x: 0, y: 10}
   projectilePrefab: {fileID: 8703726872347469226, guid: 2e6ddcfa855ff2149858b4f15cae5fe8, type: 3}
   rangedAttackAnimationParameters:
   - Air_Strike
