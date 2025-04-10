@@ -107,11 +107,13 @@ public class WeaponHandler : MonoBehaviour
 
         if (player.GetAnimator().GetFloat("InputY") == 1)
         {
-            weaponSprite_spriteRenderer.sortingOrder = 3;
+            // Nhìn lên → cho vũ khí ra phía sau
+            WeaponSprite.transform.localPosition = new Vector3(0, 0, -1f);
         }
         else
         {
-            weaponSprite_spriteRenderer.sortingOrder = 4;
+            // Nhìn xuống → cho vũ khí lên trước
+            WeaponSprite.transform.localPosition = new Vector3(0, 0, 1f);
         }
         switch (player.currentState)
         {
