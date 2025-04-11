@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class PlayerDeathState : IPlayerState
 {
@@ -12,15 +14,16 @@ public class PlayerDeathState : IPlayerState
     public void Enter()
     {
         player.PlayAnimation("Death");
+        player.StartCoroutine(RespawnAfterDelay());
     }
 
-    public void Update() 
+    private IEnumerator RespawnAfterDelay()
     {
-
-    }
-    public void Exit()
-    {
-        
+        yield return new WaitForSeconds(3f);
+        SceneManager.LoadScene(0);
     }
 
+    public void Update() { }
+
+    public void Exit() { }
 }

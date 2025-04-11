@@ -348,9 +348,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delayTimeFire: 0.5
-  coolDownTime: 3
-  velocity: {x: 0, y: -50}
-  OffSetDistance: {x: 0, y: 10}
+  coolDownTime: 1
+  velocity: {x: 0, y: -60}
+  OffSetDistance: {x: 0, y: 0}
   projectilePrefab: {fileID: 8703726872347469226, guid: 2e6ddcfa855ff2149858b4f15cae5fe8, type: 3}
   rangedAttackAnimationParameters:
   - Air_Strike
@@ -743,6 +743,7 @@ GameObject:
   - component: {fileID: 5013081959906662638}
   - component: {fileID: 909478977525969766}
   - component: {fileID: 3721982944790047158}
+  - component: {fileID: 1938227617082150503}
   m_Layer: 7
   m_Name: HurtBox
   m_TagString: HurtBox
@@ -815,6 +816,9 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 0}
+  dropItem: {fileID: 0}
+  HitSFX: {fileID: 8300000, guid: 8e182c8c5c957e24c82757c1b9e96ef7, type: 3}
+  DeathSFX: {fileID: 8300000, guid: 048c347435f22474793b41f8d78f19a9, type: 3}
 --- !u!114 &3721982944790047158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -829,3 +833,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _flashColor: {r: 1, g: 1, b: 1, a: 1}
   _flashTime: 0.25
+--- !u!114 &1938227617082150503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7284482532128682342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ce90671c4603dd4c9b88140b77d7c21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lootItems:
+  - prefab: {fileID: 0}
+    dropChance: 0
+  - prefab: {fileID: 0}
+    dropChance: 0
+  - prefab: {fileID: 0}
+    dropChance: 0
+  minDrop: 1
+  maxDrop: 3
+  dropSpread: 1

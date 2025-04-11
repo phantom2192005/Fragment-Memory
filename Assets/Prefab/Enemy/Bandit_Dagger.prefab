@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2262393325790629639}
   - component: {fileID: 3809731885125860746}
   - component: {fileID: 1757780965896712050}
+  - component: {fileID: 447875383410264313}
   m_Layer: 7
   m_Name: HurtBox
   m_TagString: HurtBox
@@ -84,6 +85,9 @@ MonoBehaviour:
   maxHealth: 150
   currentHealth: 0
   healthBar: {fileID: 0}
+  dropItem: {fileID: 0}
+  HitSFX: {fileID: 8300000, guid: 8e182c8c5c957e24c82757c1b9e96ef7, type: 3}
+  DeathSFX: {fileID: 8300000, guid: 048c347435f22474793b41f8d78f19a9, type: 3}
 --- !u!114 &1757780965896712050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98,6 +102,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _flashColor: {r: 1, g: 1, b: 1, a: 1}
   _flashTime: 0.25
+--- !u!114 &447875383410264313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26359061217953355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ce90671c4603dd4c9b88140b77d7c21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lootItems:
+  - prefab: {fileID: 3679549741941097967, guid: be04e8aa4cdb3dd4580f5acc4872a2fd, type: 3}
+    dropChance: 0.797
+  - prefab: {fileID: 431757068087498979, guid: 8b0e2a2e4a23dd343a1053fe00ff75d6, type: 3}
+    dropChance: 0.526
+  - prefab: {fileID: 7831002663958161752, guid: 4bdef1addac4a654aa8156f1efb2ebf5, type: 3}
+    dropChance: 0.654
+  minDrop: 1
+  maxDrop: 3
+  dropSpread: 1
 --- !u!1 &354400090884492640
 GameObject:
   m_ObjectHideFlags: 0
@@ -253,7 +279,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1860945408373422679
 Transform:
   m_ObjectHideFlags: 0

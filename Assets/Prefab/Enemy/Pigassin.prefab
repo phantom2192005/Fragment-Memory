@@ -211,7 +211,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7517264326868131218
 Transform:
   m_ObjectHideFlags: 0
@@ -655,6 +655,8 @@ GameObject:
   - component: {fileID: 6530861960145445991}
   - component: {fileID: 1690147792766908250}
   - component: {fileID: 4422632941125465453}
+  - component: {fileID: 6921364219904964085}
+  - component: {fileID: 3833329402258353742}
   m_Layer: 7
   m_Name: HurtBox
   m_TagString: HurtBox
@@ -727,6 +729,9 @@ MonoBehaviour:
   maxHealth: 200
   currentHealth: 0
   healthBar: {fileID: 0}
+  dropItem: {fileID: 0}
+  HitSFX: {fileID: 8300000, guid: 90b2d02a1daeb6840b46fd9d59d48836, type: 3}
+  DeathSFX: {fileID: 8300000, guid: 87054db4e5ead1b42b79d69911fe1128, type: 3}
 --- !u!114 &4422632941125465453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -741,6 +746,44 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _flashColor: {r: 1, g: 1, b: 1, a: 1}
   _flashTime: 0.25
+--- !u!114 &6921364219904964085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5376602340585771050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ce90671c4603dd4c9b88140b77d7c21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lootItems:
+  - prefab: {fileID: 3679549741941097967, guid: be04e8aa4cdb3dd4580f5acc4872a2fd, type: 3}
+    dropChance: 0.609
+  - prefab: {fileID: 431757068087498979, guid: 8b0e2a2e4a23dd343a1053fe00ff75d6, type: 3}
+    dropChance: 0.564
+  - prefab: {fileID: 3679549741941097967, guid: be04e8aa4cdb3dd4580f5acc4872a2fd, type: 3}
+    dropChance: 0.737
+  minDrop: 1
+  maxDrop: 3
+  dropSpread: 1
+--- !u!114 &3833329402258353742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5376602340585771050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ce90671c4603dd4c9b88140b77d7c21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lootItems: []
+  minDrop: 1
+  maxDrop: 3
+  dropSpread: 1
 --- !u!1 &5781067481073812787
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class Health : MonoBehaviour
 {
@@ -6,7 +7,10 @@ public class Health : MonoBehaviour
     [SerializeField] public float currentHealth = 0;
     Animator animator;
     public HealthBar healthBar;
-    public DropLootSimple droplootSimple;
+    public DropItem dropItem;
+
+    public AudioClip HitSFX;
+    public AudioClip DeathSFX;
 
     private DamageFlash damageFlash;
 
@@ -15,7 +19,7 @@ public class Health : MonoBehaviour
         currentHealth = maxHealth;
         animator = GetComponent<Animator>();
         damageFlash = GetComponent<DamageFlash>();
-        droplootSimple = GetComponent<DropLootSimple>();
+        dropItem = GetComponent<DropItem>();
     }
 
     private void Update()
@@ -25,13 +29,17 @@ public class Health : MonoBehaviour
 
     public void ModifyHealth(float amount)
     {
-        if (amount > 0 && animator != null) 
+        if (amount > 0 && animator != null)
         {
             animator.Play("Heal_VFX");
         }
         currentHealth += amount;
+        if (HitSFX != null && amount <0 )
+        {
+            AudioSource.PlayClipAtPoint(HitSFX, Camera.main.transform.position, 0.3f);
+        }
         // call damage Flash
-        if (damageFlash != null && amount < 0 )
+        if (damageFlash != null && amount < 0)
         {
             damageFlash.CallDamageFlash();
         }
@@ -42,9 +50,16 @@ public class Health : MonoBehaviour
             healthBar.SetValue((int)currentHealth);
 
         }
-        if(droplootSimple != null && currentHealth <= 0)
+        if (currentHealth <= 0) 
         {
-            droplootSimple.DropLoot();
+            if (DeathSFX != null)
+            {
+                AudioSource.PlayClipAtPoint(DeathSFX, Camera.main.transform.position, 0.3f);
+            }
+        }
+        if (dropItem != null && currentHealth <= 0)
+        {
+            dropItem.DropLoot();
         }
     }
 }
